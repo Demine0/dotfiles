@@ -5,12 +5,12 @@
 { config, pkgs, ... }:
 
 {
-  nix = {
-    package = pkgs.nixUnstable;
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
-  };
+ # nix = {
+ #   package = pkgs.nixUnstable;
+ #   extraOptions = ''
+ #     experimental-features = nix-command flakes
+ #   '';
+ # };
   imports =
     [
       # Include the results of the hardware scan.
@@ -81,7 +81,7 @@
   #  pulse.enable = true;
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
-  };
+ # };
 
 
   # doas
