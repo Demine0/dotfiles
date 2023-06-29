@@ -25,12 +25,12 @@
               useUserPackages = true;
               users.demine = { pkgs, ... }: {
 	      imports = [ 
-	      ./sway/sway.nix 
+	     ./home
+	     ./sway/sway.nix 
 	      ]; 
 	      home.packages = [ "pkgs.atool pkgs.httpie" ];
-              home.stateVersion = "23.11";
-              programs.waybar.enable = true;
-	      programs.bash.enable = true;
+              #programs.waybar.enable = true;
+	      #programs.bash.enable = true;
            };
 	   };
 	   }
