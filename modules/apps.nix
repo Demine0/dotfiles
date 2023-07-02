@@ -1,11 +1,12 @@
-{ config, pkgs, ...}:
+{ config, pkgs, inputs, ...}:
 {
  environment.systemPackages = with pkgs; [
     # sway
     sway
     swaybg
+    swayosd
     waybar
-    wayland
+    wofi
     xdg-utils # for opening default programs when clicking links
     glib # gsettings
     dracula-theme # gtk theme
@@ -23,11 +24,12 @@
     wdisplays # tool to configure displays
     htop
     foot
+    fzf
     # editors
     neovim
+    gnome-text-editor
     # tools
     gnome.nautilus
-    alacritty
     mpv
     ark
     tlp
@@ -46,7 +48,9 @@
     man
     unzip
     unrar
+    lf
     file
+    vim
     ffmpeg
     wireguard-tools
     neofetch
@@ -54,6 +58,7 @@
     firefox
     microsoft-edge
     # media
+    handbrake
     cider
     spotify
     amberol
@@ -63,6 +68,13 @@
     fluffychat
     # docker
     docker
+    # games
+    osu-lazer
+    # wine
+    wine
+    winetricks
     # other
+    plymouth
+  inputs.stable.legacyPackages."x86_64-linux".waybar
   ];
 }

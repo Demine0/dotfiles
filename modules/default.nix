@@ -8,6 +8,7 @@
     ./tlp.nix
     ./apps.nix
     ./nerworking.nix
+    ./fonts.nix
   ];
 
   users.users.demine = {

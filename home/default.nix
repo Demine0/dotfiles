@@ -1,5 +1,11 @@
 {
   imports = [
+  ./sway.nix
+  ./swaylock.nix
+  ./foot.nix
+  ./htop.nix
+  ./waybar.nix
+  ./lf.nix
   ];
 
   home = {
