@@ -6,6 +6,8 @@
   ./htop.nix
   ./waybar.nix
   ./lf.nix
+  ./swaynag.nix
+  ./swayidle.nix
   ];
 
   home = {
