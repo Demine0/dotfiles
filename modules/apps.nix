@@ -54,6 +54,7 @@
     ffmpeg
     wireguard-tools
     neofetch
+    jq
     # browsers
     firefox
     microsoft-edge
@@ -71,7 +72,7 @@
     # games
     osu-lazer
     # wine
-    wine
+    wineWowPackages.waylandFull
     winetricks
     # other
     plymouth
