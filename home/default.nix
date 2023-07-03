@@ -16,6 +16,8 @@
   };
 
   programs.waybar.enable = true;
+  services.swayidle.enable = true;
+  programs.swaylock.enable = true;
   programs.bash.enable = true;
   programs.home-manager.enable = true;
 }

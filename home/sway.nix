@@ -29,7 +29,6 @@ let
         l) swaymsg exit ;;
         p) systemctl poweroff ;;
         r) systemctl reboot ;;
-	h) systemctl hibryd-sleep ;;
       esac
     '';
   };

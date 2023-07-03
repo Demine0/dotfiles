@@ -25,6 +25,7 @@
     htop
     foot
     fzf
+    gnome.gdm
     # editors
     neovim
     gnome-text-editor

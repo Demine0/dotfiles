@@ -9,6 +9,7 @@
     ./apps.nix
     ./nerworking.nix
     ./fonts.nix
+    ./gdm.nix
   ];
 
   users.users.demine = {
