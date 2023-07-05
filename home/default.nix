@@ -8,6 +8,7 @@
   ./lf.nix
   ./swaynag.nix
   ./swayidle.nix
+  ./mako.nix
   ];
 
   home = {

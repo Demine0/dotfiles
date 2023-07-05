@@ -222,6 +222,11 @@ wayland.windowManager.sway.config = {
       xkb_layout = "us,ru";
       xkb_options = "grp:caps_toggle";
     };
+    "type:pointer" = {
+    natural_scroll = "disabled";
+    accel_profile = "adaptive";
+    pointer_accel = "-0.34"; # set mouse sensitivity (between -1 and 1)
+    };
     "type:touchpad" = {
       tap = "enabled";
       natural_scroll = "enabled";

@@ -6,7 +6,7 @@
     borderColor = "#82AAFF";
     borderSize = 1;
     defaultTimeout = 5000;
-    font = "SF-Pro-Display";
+    font = "SF-Pro-Display 10";
     padding = "15";
     progressColor = "source #303030";
   };

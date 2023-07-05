@@ -36,6 +36,7 @@
     tlp
     easyeffects
     mc
+    tmux
     blueman
     # cli
     bluez5
@@ -70,9 +71,8 @@
     fluffychat
     # docker
     docker
-    # games
-    osu-lazer
     # wine
+    bottles
     wineWowPackages.waylandFull
     winetricks
     # other
