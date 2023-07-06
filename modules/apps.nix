@@ -62,7 +62,6 @@
     microsoft-edge
     # media
     handbrake
-    cider
     spotify
     amberol
     tdesktop
