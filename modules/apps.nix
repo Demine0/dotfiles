@@ -22,7 +22,7 @@
     libinput
     cava #visual
     wdisplays # tool to configure displays
-    htop
+    btop
     foot
     fzf
     gnome.gdm
@@ -69,8 +69,9 @@
     obs-studio
     discord
     fluffychat
-    # docker
-    docker
+    # codecs
+    x265
+    libde265
     # wine
     bottles
     wineWowPackages.waylandFull
