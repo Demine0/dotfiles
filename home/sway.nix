@@ -217,7 +217,7 @@ wayland.windowManager.sway.config = {
   };
 
   # Input
-  input = {
+ input = {
     "type:keyboard" = {
       xkb_layout = "us,ru";
       xkb_options = "grp:caps_toggle";
@@ -234,4 +234,13 @@ wayland.windowManager.sway.config = {
   };
 	   output."*".bg = "/home/demine/.local/share/User/background fill";
 };
+ home.pointerCursor = {
+      name = "macOS-Monterey";
+      package = pkgs.apple-cursor;
+      size = 23;
+      x11 = {
+        enable = true;
+        defaultCursor = "macOS-Monterey";
+      };
+    };
 }

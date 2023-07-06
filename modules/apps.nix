@@ -76,6 +76,7 @@
     wineWowPackages.waylandFull
     winetricks
     # other
+    apple-cursor
     plymouth
   inputs.stable.legacyPackages."x86_64-linux".waybar
   ];
