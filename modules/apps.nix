@@ -1,44 +1,30 @@
 { config, pkgs, inputs, ...}:
 {
  environment.systemPackages = with pkgs; [
-    # sway
-    sway
-    swaybg
-    swayosd
-    waybar
-    wofi
-    xdg-utils # for opening default programs when clicking links
-    glib # gsettings
-    dracula-theme # gtk theme
-    gnome3.adwaita-icon-theme # default gnome cursors
-    swaylock
-    swayidle
-    grim # screenshot functionality
-    slurp # screenshot functionality
-    wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
-    bemenu # wayland clone of dmenu
-    mako # notification system developed by swaywm maintainer
-    networkmanagerapplet
-    libinput
-    cava #visual
-    wdisplays # tool to configure displays
-    btop
-    foot
+    # gnome
+    gnomeExtensions.night-theme-switcher
+    whitesur-icon-theme
+    gnome.gnome-tweaks
     fzf
-    gnome.gdm
+    adw-gtk3
+    authenticator
+    gnomeExtensions.just-perfection
+    gnomeExtensions.quick-settings-audio-panel
+    gnome.gnome-themes-extra
     # editors
     neovim
-    gnome-text-editor
     # tools
-    gnome.nautilus
     mpv
     ark
     tlp
     easyeffects
     mc
     tmux
-    blueman
     # cli
+    antigen
+    zsh-autosuggestions
+    zsh
+    zsh-bd
     bluez5
     doas
     doas-sudo-shim
@@ -50,13 +36,10 @@
     man
     unzip
     unrar
-    lf
-    file
     vim
     ffmpeg
     wireguard-tools
     neofetch
-    jq
     # browsers
     firefox
     microsoft-edge
@@ -78,6 +61,6 @@
     # other
     apple-cursor
     plymouth
-  inputs.stable.legacyPackages."x86_64-linux".waybar
+ # inputs.stable.legacyPackages."x86_64-linux".waybar
   ];
 }

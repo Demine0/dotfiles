@@ -3,13 +3,14 @@
   imports = [
     ./nix.nix
     ./doas.nix
-    ./sway.nix
+    #./sway.nix
     ./zsh
-    ./tlp.nix
+   # ./tlp.nix
     ./apps.nix
     ./nerworking.nix
     ./fonts.nix
-    ./gdm.nix
+    ./gnome.nix
+    #./gdm.nix
   ];
 
   users.users.demine = {
@@ -40,7 +41,6 @@
 
   users.defaultUserShell = pkgs.zsh;
   nix.settings.trusted-users = [ "root" "demine" ];
-  virtualisation.docker.enable = true;
   programs.steam.enable = true;
   services.openssh.enable = true;
   services.printing.enable = true;

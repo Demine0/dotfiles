@@ -6,6 +6,18 @@
       auto-optimise-store = true;
     };
   };
+
+  services = {
+    dbus.enable = true;
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      pulse.enable = true;
+      jack.enable = true;
+    };
+  };
+  security.polkit.enable = true;
+  hardware.bluetooth.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_testing;
   boot.loader.timeout = 15;
   boot.plymouth = {
