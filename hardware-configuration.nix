@@ -28,11 +28,6 @@
       fsType = "ext4";
    };
 
-  fileSystems."/mnt/Arch" =
-   {  device = "/dev/disk/by-uuid/fea8cf3c-27e7-4bb8-bec6-cfe1b131dba1";
-      fsType = "ext4";
-   };
-
   swapDevices = [ {
     device = "/dev/nvme0n1p5";
     #size = 16*1024;

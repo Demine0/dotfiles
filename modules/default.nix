@@ -10,6 +10,7 @@
     ./nerworking.nix
     ./fonts.nix
     ./gnome.nix
+    ./flatpak.nix
     #./gdm.nix
   ];
 
@@ -41,8 +42,8 @@
 
   users.defaultUserShell = pkgs.zsh;
   nix.settings.trusted-users = [ "root" "demine" ];
-  programs.steam.enable = true;
   services.openssh.enable = true;
+  hardware.opengl.driSupport32Bit = true;
   services.printing.enable = true;
   # Don't wait for network startup
   systemd = {

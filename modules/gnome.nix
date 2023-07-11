@@ -4,7 +4,6 @@ services.xserver.enable = true;
 services.xserver.displayManager.gdm.enable = true;
 services.xserver.desktopManager.gnome.enable = true;
  environment.gnome.excludePackages = (with pkgs; [
-   gnome-photos
    gnome-tour
    gnome-browser-connector
  ]) ++ (with pkgs.gnome; [
@@ -13,6 +12,7 @@ services.xserver.desktopManager.gnome.enable = true;
    gnome-maps
    gnome-weather
    gnome-calendar
+   gnome-clocks
    yelp
    gnome-contacts
    gnome-characters
@@ -25,6 +25,7 @@ services.xserver.desktopManager.gnome.enable = true;
    hitori # sudoku game
    atomix # puzzle game
  ]);
+
   hardware.pulseaudio.enable = false;
   environment = {
     sessionVariables = {

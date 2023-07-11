@@ -15,16 +15,20 @@
     neovim
     # tools
     mpv
+    darktable
+    gimp
     ark
     tlp
     easyeffects
     mc
+    openshot-qt
+    komikku
     tmux
+    gnome.gnome-power-manager
+    libreoffice
+    transmission-gtk
     # cli
-    antigen
-    zsh-autosuggestions
     zsh
-    zsh-bd
     bluez5
     doas
     doas-sudo-shim
@@ -50,15 +54,17 @@
     tdesktop
     obs-studio
     discord
-    fluffychat
+    element-desktop
     # codecs
     x265
     libde265
     # wine
     bottles
+    mesa
     wineWowPackages.waylandFull
     winetricks
     # other
+    gzdoom
     apple-cursor
     plymouth
  # inputs.stable.legacyPackages."x86_64-linux".waybar

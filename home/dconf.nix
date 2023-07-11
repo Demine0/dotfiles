@@ -5,9 +5,503 @@ with lib.hm.gvariant;
 
 {
   dconf.settings = {
+    "apps/seahorse/listing" = {
+      keyrings-selected = [ "secret-service:///org/freedesktop/secrets/collection/login" ];
+    };
+
+    "apps/seahorse/windows/key-manager" = {
+      height = 476;
+      width = 947;
+    };
+
+    "com/belmoussaoui/Authenticator" = {
+      is-maximized = false;
+      keyrings-migrated = true;
+      window-height = 600;
+      window-width = 720;
+    };
+
     "com/ftpix/transparentbar" = {
       dark-full-screen = true;
       transparency = 47;
+    };
+
+    "com/github/wwmm/easyeffects" = {
+      bypass = false;
+      last-used-input-preset = "micro";
+      last-used-output-preset = "AAAAAAAaaaaa";
+      shutdown-on-window-close = false;
+      use-dark-theme = true;
+      window-fullscreen = false;
+      window-height = 438;
+      window-maximized = false;
+      window-width = 863;
+    };
+
+    "com/github/wwmm/easyeffects/spectrum" = {
+      color = mkTuple [ 1.0 1.0 ];
+      color-axis-labels = mkTuple [ 1.0 1.0 ];
+      fill = true;
+      height = 151;
+      line-width = 1.2;
+      maximum-frequency = 22000;
+      minimum-frequency = 20;
+      n-points = 150;
+      show-bar-border = true;
+    };
+
+    "com/github/wwmm/easyeffects/streaminputs" = {
+      blocklist = [];
+      input-device = "alsa_input.pci-0000_04_00.6.analog-stereo";
+      plugins = [ "gate#0" "compressor#0" "filter#0" "deesser#0" "rnnoise#0" "limiter#0" ];
+    };
+
+    "com/github/wwmm/easyeffects/streaminputs/compressor/0" = {
+      sidechain-input-device = "alsa_input.pci-0000_04_00.6.analog-stereo";
+    };
+
+    "com/github/wwmm/easyeffects/streaminputs/filter/0" = {
+      frequency = 80.0;
+      mode = "12dB/oct Highpass";
+    };
+
+    "com/github/wwmm/easyeffects/streaminputs/gate/0" = {
+      attack = 5.0;
+      reduction = 0.0;
+      sidechain-input-device = "alsa_input.pci-0000_04_00.6.analog-stereo";
+    };
+
+    "com/github/wwmm/easyeffects/streaminputs/limiter/0" = {
+      sidechain-input-device = "alsa_input.pci-0000_04_00.6.analog-stereo";
+      threshold = -1.0;
+    };
+
+    "com/github/wwmm/easyeffects/streamoutputs" = {
+      blocklist = [];
+      output-device = "bluez_output.44_F0_9E_73_F0_E4.1";
+      plugins = [ "limiter#0" "convolver#0" "equalizer#0" "bass_enhancer#0" "compressor#0" "crossfeed#0" ];
+    };
+
+    "com/github/wwmm/easyeffects/streamoutputs/autogain/0" = {
+      target = -12.0;
+    };
+
+    "com/github/wwmm/easyeffects/streamoutputs/bassenhancer/0" = {
+      amount = 0.0;
+      blend = 3.0;
+      floor = 20.0;
+      floor-active = true;
+      scope = 100.0;
+    };
+
+    "com/github/wwmm/easyeffects/streamoutputs/compressor/0" = {
+      ratio = 2.0;
+      release = 250.0;
+      sidechain-input-device = "alsa_input.pci-0000_04_00.6.analog-stereo";
+      threshold = -18.0;
+    };
+
+    "com/github/wwmm/easyeffects/streamoutputs/convolver/0" = {
+      input-gain = -4.0;
+      kernel-path = "/home/sergio/.config/easyeffects/irs/Accudio ((48kHz Z.E.)) Earpods HIFI.irs";
+    };
+
+    "com/github/wwmm/easyeffects/streamoutputs/equalizer/0" = {
+      input-gain = 0.0;
+      num-bands = 15;
+      output-gain = 0.0;
+    };
+
+    "com/github/wwmm/easyeffects/streamoutputs/equalizer/0/leftchannel" = {
+      band0-frequency = 25.848931924611133;
+      band0-gain = 6.0;
+      band0-q = 2.209713863811956;
+      band0-type = "Hi-shelf";
+      band1-frequency = 40.96779623970693;
+      band1-gain = 4.0;
+      band1-q = 2.209713863811956;
+      band1-type = "Hi-shelf";
+      band10-frequency = 2584.8931924611115;
+      band10-gain = 2.0;
+      band10-q = 2.209713863811956;
+      band10-type = "Hi-shelf";
+      band11-frequency = 4096.77962397069;
+      band11-gain = 4.0;
+      band11-q = 2.209713863811956;
+      band11-type = "Hi-shelf";
+      band12-frequency = 6492.958137044547;
+      band12-gain = 6.0;
+      band12-q = 2.21;
+      band12-type = "Hi-shelf";
+      band13-frequency = 10290.645150336895;
+      band13-gain = 4.0;
+      band13-q = 2.209713863811956;
+      band13-type = "Hi-shelf";
+      band14-frequency = 16309.573444801914;
+      band14-gain = 2.0;
+      band14-q = 2.209713863811955;
+      band14-type = "Hi-shelf";
+      band15-frequency = 714.34;
+      band15-gain = -1.0;
+      band15-type = "Off";
+      band16-frequency = 899.29;
+      band16-gain = -2.0;
+      band16-type = "Off";
+      band17-frequency = 1132.15;
+      band17-gain = -3.6;
+      band17-type = "Off";
+      band18-frequency = 1425.29;
+      band18-gain = -2.5;
+      band18-type = "Off";
+      band19-frequency = 1794.33;
+      band19-gain = -1.5;
+      band19-type = "Off";
+      band2-frequency = 64.9295813704455;
+      band2-gain = 3.0;
+      band2-q = 2.2097138638119556;
+      band2-type = "Hi-shelf";
+      band20-frequency = 2258.93;
+      band20-type = "Off";
+      band21-frequency = 2843.82;
+      band21-type = "Off";
+      band22-frequency = 3580.16;
+      band22-type = "Off";
+      band23-frequency = 4507.15;
+      band23-type = "Off";
+      band24-frequency = 5674.16;
+      band24-type = "Off";
+      band25-frequency = 7143.35;
+      band25-type = "Off";
+      band26-frequency = 8992.94;
+      band26-type = "Off";
+      band27-frequency = 11321.45;
+      band27-type = "Off";
+      band28-frequency = 14252.86;
+      band28-type = "Off";
+      band29-frequency = 17943.28;
+      band29-type = "Off";
+      band3-frequency = 102.90645150336901;
+      band3-gain = 1.0;
+      band3-q = 2.209713863811956;
+      band3-type = "Hi-shelf";
+      band30-type = "Off";
+      band31-type = "Off";
+      band4-frequency = 163.09573444801924;
+      band4-gain = 0.0;
+      band4-q = 2.2097138638119556;
+      band4-type = "Hi-shelf";
+      band5-frequency = 258.4893192461112;
+      band5-gain = -1.0;
+      band5-q = 2.209713863811955;
+      band5-type = "Hi-shelf";
+      band6-frequency = 409.67796239706917;
+      band6-gain = 1.0;
+      band6-q = 2.2097138638119556;
+      band6-type = "Hi-shelf";
+      band7-frequency = 649.295813704455;
+      band7-gain = -1.0;
+      band7-q = 2.2097138638119556;
+      band7-type = "Hi-shelf";
+      band8-frequency = 1029.06451503369;
+      band8-gain = 0.0;
+      band8-q = 2.2097138638119556;
+      band8-type = "Hi-shelf";
+      band9-frequency = 1630.9573444801922;
+      band9-gain = 0.0;
+      band9-q = 2.209713863811956;
+      band9-type = "Hi-shelf";
+    };
+
+    "com/github/wwmm/easyeffects/streamoutputs/equalizer/0/rightchannel" = {
+      band0-frequency = 25.848931924611133;
+      band0-gain = 6.0;
+      band0-mode = "RLC (BT)";
+      band0-mute = false;
+      band0-q = 2.209713863811956;
+      band0-slope = "x1";
+      band0-solo = false;
+      band0-type = "Hi-shelf";
+      band1-frequency = 40.96779623970693;
+      band1-gain = 4.0;
+      band1-mode = "RLC (BT)";
+      band1-mute = false;
+      band1-q = 2.209713863811956;
+      band1-slope = "x1";
+      band1-solo = false;
+      band1-type = "Hi-shelf";
+      band10-frequency = 2584.8931924611115;
+      band10-gain = 2.0;
+      band10-mode = "RLC (BT)";
+      band10-mute = false;
+      band10-q = 2.209713863811956;
+      band10-slope = "x1";
+      band10-solo = false;
+      band10-type = "Hi-shelf";
+      band11-frequency = 4096.77962397069;
+      band11-gain = 4.0;
+      band11-mode = "RLC (BT)";
+      band11-mute = false;
+      band11-q = 2.209713863811956;
+      band11-slope = "x1";
+      band11-solo = false;
+      band11-type = "Hi-shelf";
+      band12-frequency = 6492.958137044547;
+      band12-gain = 6.0;
+      band12-mode = "RLC (BT)";
+      band12-mute = false;
+      band12-q = 2.21;
+      band12-slope = "x1";
+      band12-solo = false;
+      band12-type = "Hi-shelf";
+      band13-frequency = 10290.645150336895;
+      band13-gain = 4.0;
+      band13-mode = "RLC (BT)";
+      band13-mute = false;
+      band13-q = 2.209713863811956;
+      band13-slope = "x1";
+      band13-solo = false;
+      band13-type = "Hi-shelf";
+      band14-frequency = 16309.573444801914;
+      band14-gain = 2.0;
+      band14-mode = "RLC (BT)";
+      band14-mute = false;
+      band14-q = 2.209713863811955;
+      band14-slope = "x1";
+      band14-solo = false;
+      band14-type = "Hi-shelf";
+      band15-frequency = 714.34;
+      band15-gain = -1.0;
+      band15-mode = "RLC (BT)";
+      band15-mute = false;
+      band15-q = 4.36;
+      band15-slope = "x1";
+      band15-solo = false;
+      band15-type = "Off";
+      band16-frequency = 899.29;
+      band16-gain = -2.0;
+      band16-mode = "RLC (BT)";
+      band16-mute = false;
+      band16-q = 4.36;
+      band16-slope = "x1";
+      band16-solo = false;
+      band16-type = "Off";
+      band17-frequency = 1132.15;
+      band17-gain = -3.6;
+      band17-mode = "RLC (BT)";
+      band17-mute = false;
+      band17-q = 4.36;
+      band17-slope = "x1";
+      band17-solo = false;
+      band17-type = "Off";
+      band18-frequency = 1425.29;
+      band18-gain = -2.5;
+      band18-mode = "RLC (BT)";
+      band18-mute = false;
+      band18-q = 4.36;
+      band18-slope = "x1";
+      band18-solo = false;
+      band18-type = "Off";
+      band19-frequency = 1794.33;
+      band19-gain = -1.5;
+      band19-mode = "RLC (BT)";
+      band19-mute = false;
+      band19-q = 4.36;
+      band19-slope = "x1";
+      band19-solo = false;
+      band19-type = "Off";
+      band2-frequency = 64.9295813704455;
+      band2-gain = 3.0;
+      band2-mode = "RLC (BT)";
+      band2-mute = false;
+      band2-q = 2.2097138638119556;
+      band2-slope = "x1";
+      band2-solo = false;
+      band2-type = "Hi-shelf";
+      band20-frequency = 2258.93;
+      band20-gain = 0.0;
+      band20-mode = "RLC (BT)";
+      band20-mute = false;
+      band20-q = 4.36;
+      band20-slope = "x1";
+      band20-solo = false;
+      band20-type = "Off";
+      band21-frequency = 2843.82;
+      band21-gain = 0.0;
+      band21-mode = "RLC (BT)";
+      band21-mute = false;
+      band21-q = 4.36;
+      band21-slope = "x1";
+      band21-solo = false;
+      band21-type = "Off";
+      band22-frequency = 3580.16;
+      band22-gain = 0.0;
+      band22-mode = "RLC (BT)";
+      band22-mute = false;
+      band22-q = 4.36;
+      band22-slope = "x1";
+      band22-solo = false;
+      band22-type = "Off";
+      band23-frequency = 4507.15;
+      band23-gain = 0.0;
+      band23-mode = "RLC (BT)";
+      band23-mute = false;
+      band23-q = 4.36;
+      band23-slope = "x1";
+      band23-solo = false;
+      band23-type = "Off";
+      band24-frequency = 5674.16;
+      band24-gain = 0.0;
+      band24-mode = "RLC (BT)";
+      band24-mute = false;
+      band24-q = 4.36;
+      band24-slope = "x1";
+      band24-solo = false;
+      band24-type = "Off";
+      band25-frequency = 7143.35;
+      band25-gain = 0.0;
+      band25-mode = "RLC (BT)";
+      band25-mute = false;
+      band25-q = 4.36;
+      band25-slope = "x1";
+      band25-solo = false;
+      band25-type = "Off";
+      band26-frequency = 8992.94;
+      band26-gain = 0.0;
+      band26-mode = "RLC (BT)";
+      band26-mute = false;
+      band26-q = 4.36;
+      band26-slope = "x1";
+      band26-solo = false;
+      band26-type = "Off";
+      band27-frequency = 11321.45;
+      band27-gain = 0.0;
+      band27-mode = "RLC (BT)";
+      band27-mute = false;
+      band27-q = 4.36;
+      band27-slope = "x1";
+      band27-solo = false;
+      band27-type = "Off";
+      band28-frequency = 14252.86;
+      band28-gain = 0.0;
+      band28-mode = "RLC (BT)";
+      band28-mute = false;
+      band28-q = 4.36;
+      band28-slope = "x1";
+      band28-solo = false;
+      band28-type = "Off";
+      band29-frequency = 17943.28;
+      band29-gain = 0.0;
+      band29-mode = "RLC (BT)";
+      band29-mute = false;
+      band29-q = 4.36;
+      band29-slope = "x1";
+      band29-solo = false;
+      band29-type = "Off";
+      band3-frequency = 102.90645150336901;
+      band3-gain = 1.0;
+      band3-mode = "RLC (BT)";
+      band3-mute = false;
+      band3-q = 2.209713863811956;
+      band3-slope = "x1";
+      band3-solo = false;
+      band3-type = "Hi-shelf";
+      band30-frequency = 14552.2;
+      band30-gain = 0.0;
+      band30-mode = "RLC (BT)";
+      band30-mute = false;
+      band30-q = 4.36;
+      band30-slope = "x1";
+      band30-solo = false;
+      band30-type = "Off";
+      band31-frequency = 18058.4;
+      band31-gain = 0.0;
+      band31-mode = "RLC (BT)";
+      band31-mute = false;
+      band31-q = 4.36;
+      band31-slope = "x1";
+      band31-solo = false;
+      band31-type = "Off";
+      band4-frequency = 163.09573444801924;
+      band4-gain = 0.0;
+      band4-mode = "RLC (BT)";
+      band4-mute = false;
+      band4-q = 2.2097138638119556;
+      band4-slope = "x1";
+      band4-solo = false;
+      band4-type = "Hi-shelf";
+      band5-frequency = 258.4893192461112;
+      band5-gain = -1.0;
+      band5-mode = "RLC (BT)";
+      band5-mute = false;
+      band5-q = 2.209713863811955;
+      band5-slope = "x1";
+      band5-solo = false;
+      band5-type = "Hi-shelf";
+      band6-frequency = 409.67796239706917;
+      band6-gain = 1.0;
+      band6-mode = "RLC (BT)";
+      band6-mute = false;
+      band6-q = 2.2097138638119556;
+      band6-slope = "x1";
+      band6-solo = false;
+      band6-type = "Hi-shelf";
+      band7-frequency = 649.295813704455;
+      band7-gain = -1.0;
+      band7-mode = "RLC (BT)";
+      band7-mute = false;
+      band7-q = 2.2097138638119556;
+      band7-slope = "x1";
+      band7-solo = false;
+      band7-type = "Hi-shelf";
+      band8-frequency = 1029.06451503369;
+      band8-gain = 0.0;
+      band8-mode = "RLC (BT)";
+      band8-mute = false;
+      band8-q = 2.2097138638119556;
+      band8-slope = "x1";
+      band8-solo = false;
+      band8-type = "Hi-shelf";
+      band9-frequency = 1630.9573444801922;
+      band9-gain = 0.0;
+      band9-mode = "RLC (BT)";
+      band9-mute = false;
+      band9-q = 2.209713863811956;
+      band9-slope = "x1";
+      band9-solo = false;
+      band9-type = "Hi-shelf";
+    };
+
+    "com/github/wwmm/easyeffects/streamoutputs/exciter/0" = {
+      amount = 6.0;
+      harmonics = 8.000000000000002;
+      input-gain = -2.0;
+      scope = 5500.0;
+    };
+
+    "com/github/wwmm/easyeffects/streamoutputs/limiter/0" = {
+      lookahead = 10.0;
+      oversampling = "None";
+      sidechain-input-device = "alsa_input.pci-0000_04_00.6.analog-stereo";
+    };
+
+    "com/github/wwmm/easyeffects/streamoutputs/maximizer/0" = {
+      release = 3.149999999999997;
+      threshold = -3.0000000000000013;
+    };
+
+    "com/raggesilver/BlackBox" = {
+      font = "Menlo 12";
+    };
+
+    "com/usebottles/bottles" = {
+      startup-view = "page_list";
+      window-height = 1017;
+      window-width = 1898;
+    };
+
+    "io/bassi/Amberol" = {
+      window-height = 671;
+      window-width = 600;
     };
 
     "io/github/jeffshee/hanabi-extension" = {
@@ -21,9 +515,29 @@ with lib.hm.gvariant;
       video-path = "/home/demine/Documents/files/TopoDesktop.mp4";
     };
 
+    "org/blueman/general" = {
+      window-properties = [ 1898 1017 0 0 ];
+    };
+
+    "org/blueman/plugins/autoconnect" = {
+      services = [ (mkTuple [ "/org/bluez/hci0/dev_40_ED_98_18_F7_D9" "00000000-0000-0000-0000-000000000000" ]) ];
+    };
+
+    "org/blueman/plugins/powermanager" = {
+      auto-power-on = "@mb true";
+    };
+
+    "org/blueman/plugins/recentconns" = {
+      recent-connections = "[{'adapter': '4C:D5:77:1D:25:C2', 'address': '40:ED:98:18:F7:D9', 'alias': 'FiiO μBTR', 'icon': 'audio-headset', 'name': 'Audio and input profiles', 'uuid': '00000000-0000-0000-0000-000000000000', 'time': '1688426308.2279701', 'device': '/org/bluez/hci0/dev_40_ED_98_18_F7_D9'}, {'adapter': '4C:D5:77:1D:25:C2', 'address': '44:F0:9E:73:F0:E4', 'alias': 'AirPods Pro - Find My', 'icon': 'audio-headphones', 'name': 'Audio and input profiles', 'uuid': '00000000-0000-0000-0000-000000000000', 'time': '1688658948.0042043', 'device': '/org/bluez/hci0/dev_44_F0_9E_73_F0_E4'}]";
+    };
+
+    "org/gnome/Connections" = {
+      first-run = false;
+    };
+
     "org/gnome/Console" = {
       last-window-size = mkTuple [ 1056 530 ];
-      theme = "auto";
+      theme = "night";
     };
 
     "org/gnome/Disks" = {
@@ -37,9 +551,17 @@ with lib.hm.gvariant;
       sample-size-mib = 10;
     };
 
+    "org/gnome/Geary" = {
+      migrated-config = true;
+    };
+
     "org/gnome/TextEditor" = {
       custom-font = "SF Pro Display Medium 11";
+      highlight-current-line = false;
       restore-session = false;
+      show-grid = false;
+      show-map = false;
+      style-scheme = "Adwaita-dark";
       use-system-font = false;
     };
 
@@ -85,8 +607,8 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/control-center" = {
-      last-panel = "network";
-      window-state = mkTuple [ 972 599 ];
+      last-panel = "wifi";
+      window-state = mkTuple [ 980 640 ];
     };
 
     "org/gnome/desktop/a11y" = {
@@ -107,11 +629,11 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/app-folders" = {
-      folder-children = [ "Utilities" "YaST" "0dea3f6d-020f-41f5-ac1e-477a9c320a34" "2d94385c-577a-460a-a388-24d93ac4596b" "e1485ecd-b605-49fd-8a1d-20d324f1ab70" "65cb1aa3-822a-4ec8-a42b-7f5dc70adf13" "09e85eec-5de4-4c72-95a5-1e129b81eb23" "56032ff7-064a-4bdb-9af3-2ef7c35c91ee" "1bf3fc55-0e17-45f3-b21a-04c1b55b1c92" ];
+      folder-children = [ "Utilities" "YaST" "0dea3f6d-020f-41f5-ac1e-477a9c320a34" "2d94385c-577a-460a-a388-24d93ac4596b" "e1485ecd-b605-49fd-8a1d-20d324f1ab70" "65cb1aa3-822a-4ec8-a42b-7f5dc70adf13" "09e85eec-5de4-4c72-95a5-1e129b81eb23" "56032ff7-064a-4bdb-9af3-2ef7c35c91ee" "1bf3fc55-0e17-45f3-b21a-04c1b55b1c92" "c1f99882-e3db-4653-a851-fc03137bd821" ];
     };
 
     "org/gnome/desktop/app-folders/folders/09e85eec-5de4-4c72-95a5-1e129b81eb23" = {
-      apps = [ "ckb-next.desktop" "cpu-x.desktop" "cups.desktop" "org.kde.isoimagewriter.desktop" ];
+      apps = [ "ckb-next.desktop" "cpu-x.desktop" "org.kde.isoimagewriter.desktop" ];
       name = "Hardware";
       translate = false;
     };
@@ -139,15 +661,15 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/app-folders/folders/65cb1aa3-822a-4ec8-a42b-7f5dc70adf13" = {
-      apps = [ "winetricks.desktop" "protontricks.desktop" "appimagelaunchersettings.desktop" "org.bleachbit.BleachBit.desktop" "it.mijorus.gearlever.desktop" ];
+      apps = [ "winetricks.desktop" "protontricks.desktop" "appimagelaunchersettings.desktop" "org.bleachbit.BleachBit.desktop" "it.mijorus.gearlever.desktop" "com.usebottles.bottles.desktop" ];
       name = "Настройка приложений";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/Utilities" = {
-      apps = [ "org.gnome.DiskUtility.desktop" "org.gnome.baobab.desktop" "gparted.desktop" "org.gnome.PowerStats.desktop" "gnome-system-monitor.desktop" "org.gnome.Console.desktop" "org.gnome.TextEditor.desktop" "org.gnome.Evince.desktop" "org.gnome.font-viewer.desktop" "page.codeberg.JakobDev.jdDesktopEntryEdit.desktop" "com.github.tchx84.Flatseal.desktop" "pavucontrol.desktop" "org.kde.ark.desktop" "org.gnome.Logs.desktop" "org.gnome.Loupe.desktop" "org.gnome.Extensions.desktop" "org.gnome.tweaks.desktop" "org.gnome.Firmware.desktop" ];
+      apps = [ "org.gnome.DiskUtility.desktop" "org.gnome.baobab.desktop" "gparted.desktop" "org.gnome.PowerStats.desktop" "gnome-system-monitor.desktop" "org.gnome.Console.desktop" "org.gnome.TextEditor.desktop" "org.gnome.Evince.desktop" "org.gnome.font-viewer.desktop" "page.codeberg.JakobDev.jdDesktopEntryEdit.desktop" "com.github.tchx84.Flatseal.desktop" "pavucontrol.desktop" "org.kde.ark.desktop" "org.gnome.Logs.desktop" "org.gnome.Loupe.desktop" "org.gnome.Extensions.desktop" "org.gnome.tweaks.desktop" "org.gnome.Firmware.desktop" "nixos-manual.desktop" "nvim.desktop" "xterm.desktop" "org.gnome.Connections.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.clocks.desktop" "org.gnome.FileRoller.desktop" "cups.desktop" "simple-scan.desktop" ];
       categories = [ "X-GNOME-Utilities" ];
-      excluded-apps = [ "io.bassi.Amberol.desktop" "mpv.desktop" "org.gnome.FileRoller.desktop" "bvnc.desktop" "lstopo.desktop" "bssh.desktop" ];
+      excluded-apps = [ "io.bassi.Amberol.desktop" "mpv.desktop" "bvnc.desktop" "lstopo.desktop" "bssh.desktop" ];
       name = "X-GNOME-Utilities.directory";
       translate = true;
     };
@@ -158,9 +680,15 @@ with lib.hm.gvariant;
       translate = true;
     };
 
+    "org/gnome/desktop/app-folders/folders/c1f99882-e3db-4653-a851-fc03137bd821" = {
+      apps = [ "draw.desktop" "base.desktop" "impress.desktop" "math.desktop" "startcenter.desktop" "writer.desktop" "calc.desktop" ];
+      name = "Офис";
+    };
+
     "org/gnome/desktop/app-folders/folders/e1485ecd-b605-49fd-8a1d-20d324f1ab70" = {
-      apps = [ "io.bassi.Amberol.desktop" "com.github.wwmm.easyeffects.desktop" "mpv.desktop" "uxplay.desktop" ];
-      name = "Аудио и видео";
+      apps = [ "io.bassi.Amberol.desktop" "com.github.wwmm.easyeffects.desktop" "mpv.desktop" "uxplay.desktop" "umpv.desktop" "org.gnome.eog.desktop" ];
+      name = "Медия";
+      translate = false;
     };
 
     "org/gnome/desktop/background" = {
@@ -186,7 +714,7 @@ with lib.hm.gvariant;
       clock-show-weekday = false;
       color-scheme = "default";
       cursor-size = 24;
-      cursor-theme = "macOS-Monterey";
+      cursor-theme = "macOS-Monterey-White";
       document-font-name = "SF Pro Display 11";
       enable-animations = true;
       enable-hot-corners = true;
@@ -210,7 +738,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "org-telegram-desktop" "org-gnome-console" "org-gnome-software" "org-gnome-epiphany" "org-gnome-nautilus" "org-gnome-fileroller" "gnome-power-panel" "firefox" "cider" "org-gnome-settings" "org-gnome-shell-extensions-gsconnect" "com-usebottles-bottles" "org-gnome-extensions-desktop" "gnome-network-panel" "com-valvesoftware-steam" "ryzen-controller" "steam" "microsoft-edge" "de-haeckerfelix-fragments" "org-qbittorrent-qbittorrent" "photoshop" "minecraft-launcher" "page-codeberg-jakobdev-jddesktopentryedit" "appimagekit-a6d9ede25932d52f8f4f2f3255b6d24f-wiregui" "appimagekit-ad45268b9d47f3bf1b8b3288f20ec82f-cider" "ckb-next" "tor-browser" "com-spotify-client" "com-discordapp-discord" "com-obsproject-studio" "org-ryujinx-ryujinx" "com-rawtherapee-rawtherapee" "org-gimp-gimp" "org-openshot-openshot" "mpv" "org-gnome-diskutility" "com-github-unrud-videodownloader" "io-gitlab-adhami3310-impression" "org-deluge-torrent-deluge" "fr-handbrake-ghb" "gnome-system-monitor" "com-github-wwmm-easyeffects" "org-gnome-texteditor" ];
+      application-children = [ "org-telegram-desktop" "org-gnome-console" "org-gnome-software" "org-gnome-epiphany" "org-gnome-nautilus" "org-gnome-fileroller" "gnome-power-panel" "firefox" "cider" "org-gnome-settings" "org-gnome-shell-extensions-gsconnect" "com-usebottles-bottles" "org-gnome-extensions-desktop" "gnome-network-panel" "com-valvesoftware-steam" "ryzen-controller" "steam" "microsoft-edge" "de-haeckerfelix-fragments" "org-qbittorrent-qbittorrent" "photoshop" "minecraft-launcher" "page-codeberg-jakobdev-jddesktopentryedit" "appimagekit-a6d9ede25932d52f8f4f2f3255b6d24f-wiregui" "appimagekit-ad45268b9d47f3bf1b8b3288f20ec82f-cider" "ckb-next" "tor-browser" "com-spotify-client" "com-discordapp-discord" "com-obsproject-studio" "org-ryujinx-ryujinx" "com-rawtherapee-rawtherapee" "org-gimp-gimp" "org-openshot-openshot" "mpv" "org-gnome-diskutility" "com-github-unrud-videodownloader" "io-gitlab-adhami3310-impression" "org-deluge-torrent-deluge" "fr-handbrake-ghb" "gnome-system-monitor" "com-github-wwmm-easyeffects" "org-gnome-texteditor" "spotify" ];
       show-banners = true;
     };
 
@@ -264,6 +792,10 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/notifications/application/de-haeckerfelix-fragments" = {
       application-id = "de.haeckerfelix.Fragments.desktop";
+    };
+
+    "org/gnome/desktop/notifications/application/discord" = {
+      application-id = "discord.desktop";
     };
 
     "org/gnome/desktop/notifications/application/firefox" = {
@@ -378,6 +910,10 @@ with lib.hm.gvariant;
       application-id = "ryzen-controller.desktop";
     };
 
+    "org/gnome/desktop/notifications/application/spotify" = {
+      application-id = "spotify.desktop";
+    };
+
     "org/gnome/desktop/notifications/application/steam" = {
       application-id = "steam.desktop";
     };
@@ -393,13 +929,13 @@ with lib.hm.gvariant;
     "org/gnome/desktop/peripherals/mouse" = {
       accel-profile = "default";
       natural-scroll = false;
-      speed = -0.2831541218637993;
+      speed = -0.283154;
     };
 
     "org/gnome/desktop/peripherals/touchpad" = {
       disable-while-typing = false;
       send-events = "enabled";
-      speed = 0.17346938775510212;
+      speed = 0.173469;
       tap-to-click = true;
       two-finger-scrolling-enabled = true;
     };
@@ -435,17 +971,27 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/sound" = {
+      allow-volume-above-100-percent = true;
       event-sounds = true;
       theme-name = "default";
     };
 
     "org/gnome/desktop/wm/keybindings" = {
       activate-window-menu = [];
+      begin-move = [];
+      begin-resize = [ "<Shift><Super>r" ];
+      close = [ "<Super>x" ];
+      cycle-group = [];
+      cycle-group-backward = [];
+      cycle-windows = [];
+      cycle-windows-backward = [];
       move-to-workspace-1 = [ "<Shift><Super>1" ];
       move-to-workspace-2 = [ "<Shift><Super>2" ];
       move-to-workspace-3 = [ "<Shift><Super>3" ];
       move-to-workspace-4 = [ "<Shift><Super>4" ];
       panel-run-dialog = [];
+      switch-group = [];
+      switch-group-backward = [];
       switch-input-source = [];
       switch-input-source-backward = [];
       switch-to-workspace-1 = [ "<Super>1" ];
@@ -484,7 +1030,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/evince/default" = {
-      window-ratio = mkTuple [ 1.5549429289998067 1.0956175298804782 ];
+      window-ratio = mkTuple [ 1.554943 1.095618 ];
     };
 
     "org/gnome/evolution-data-server" = {
@@ -527,7 +1073,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/gnome-system-monitor" = {
-      current-tab = "processes";
+      current-tab = "resources";
       maximized = false;
       network-total-in-bits = false;
       resources-memory-in-iec = false;
@@ -535,7 +1081,7 @@ with lib.hm.gvariant;
       show-whose-processes = "all";
       smooth-refresh = true;
       update-interval = 2000;
-      window-state = mkTuple [ 960 1042 ];
+      window-state = mkTuple [ 960 1044 ];
     };
 
     "org/gnome/gnome-system-monitor/disktreenew" = {
@@ -598,7 +1144,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/maps" = {
-      last-viewed-location = [ 45.19222914210437 33.35834391610777 ];
+      last-viewed-location = [ 45.192229 33.358344 ];
       map-type = "MapsStreetSource";
       show-scale = false;
       transportation-type = "pedestrian";
@@ -627,6 +1173,7 @@ with lib.hm.gvariant;
 
     "org/gnome/nautilus/list-view" = {
       default-zoom-level = "small";
+      use-tree-view = false;
     };
 
     "org/gnome/nautilus/preferences" = {
@@ -653,6 +1200,11 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nm-applet/eap/1d9cbefe-63d7-4e4c-ac4e-60dc5c205cda" = {
+      ignore-ca-cert = false;
+      ignore-phase2-ca-cert = false;
+    };
+
+    "org/gnome/nm-applet/eap/21954125-bfcd-454a-88bd-f399cc6d6d0c" = {
       ignore-ca-cert = false;
       ignore-phase2-ca-cert = false;
     };
@@ -692,12 +1244,22 @@ with lib.hm.gvariant;
       ignore-phase2-ca-cert = false;
     };
 
+    "org/gnome/nm-applet/eap/626be83e-b292-4690-bbf3-70c2d516e9de" = {
+      ignore-ca-cert = false;
+      ignore-phase2-ca-cert = false;
+    };
+
     "org/gnome/nm-applet/eap/63936e43-26a3-4c0e-9c37-b5b839989bba" = {
       ignore-ca-cert = false;
       ignore-phase2-ca-cert = false;
     };
 
     "org/gnome/nm-applet/eap/69131a4d-feca-4bee-8c88-61dfe281f586" = {
+      ignore-ca-cert = false;
+      ignore-phase2-ca-cert = false;
+    };
+
+    "org/gnome/nm-applet/eap/702d97c2-e5d5-467a-aa0e-2c7acf4245e3" = {
       ignore-ca-cert = false;
       ignore-phase2-ca-cert = false;
     };
@@ -718,6 +1280,11 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nm-applet/eap/86cd0ccc-6314-4f86-a4a3-9977a635a09f" = {
+      ignore-ca-cert = false;
+      ignore-phase2-ca-cert = false;
+    };
+
+    "org/gnome/nm-applet/eap/8f49bcf4-6983-454c-a119-ee3b3f155cb4" = {
       ignore-ca-cert = false;
       ignore-phase2-ca-cert = false;
     };
@@ -777,6 +1344,11 @@ with lib.hm.gvariant;
       ignore-phase2-ca-cert = false;
     };
 
+    "org/gnome/nm-applet/eap/ddfe49b1-be04-4bed-87dc-62892842233a" = {
+      ignore-ca-cert = false;
+      ignore-phase2-ca-cert = false;
+    };
+
     "org/gnome/nm-applet/eap/deb5d9eb-0a2c-4d3d-8e99-25a1b870c00b" = {
       ignore-ca-cert = false;
       ignore-phase2-ca-cert = false;
@@ -788,6 +1360,11 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nm-applet/eap/eb922b1f-8492-412d-a122-6e30d4e7f1ba" = {
+      ignore-ca-cert = false;
+      ignore-phase2-ca-cert = false;
+    };
+
+    "org/gnome/nm-applet/eap/f22afa99-11f7-48d9-9818-a9d9065c21f2" = {
       ignore-ca-cert = false;
       ignore-phase2-ca-cert = false;
     };
@@ -872,10 +1449,11 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/color" = {
       night-light-enabled = true;
-      night-light-last-coordinates = mkTuple [ 45.20343599137703 33.3460379 ];
+      night-light-last-coordinates = mkTuple [ 45.20318246680242 33.3460301 ];
       night-light-schedule-automatic = false;
       night-light-schedule-from = 23.0;
       night-light-schedule-to = 5.0;
+      night-light-temperature = mkUint32 3818;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
@@ -903,12 +1481,12 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell" = {
-      app-picker-layout = "[{'Utilities': <{'position': <0>}>, '2d94385c-577a-460a-a388-24d93ac4596b': <{'position': <1>}>, 'e1485ecd-b605-49fd-8a1d-20d324f1ab70': <{'position': <2>}>, '1bf3fc55-0e17-45f3-b21a-04c1b55b1c92': <{'position': <3>}>, 'org.gnome.Settings.desktop': <{'position': <4>}>, 'com.belmoussaoui.Authenticator.desktop': <{'position': <5>}>, 'org.gnome.Calculator.desktop': <{'position': <6>}>}]";
+      app-picker-layout = "[{'org.gnome.Calculator.desktop': <{'position': <0>}>, 'org.gnome.Settings.desktop': <{'position': <1>}>, 'transmission-gtk.desktop': <{'position': <2>}>, 'firefox.desktop': <{'position': <3>}>, 'com.belmoussaoui.Authenticator.desktop': <{'position': <4>}>, 'info.febvre.Komikku.desktop': <{'position': <5>}>, '65cb1aa3-822a-4ec8-a42b-7f5dc70adf13': <{'position': <6>}>, 'Utilities': <{'position': <7>}>, 'e1485ecd-b605-49fd-8a1d-20d324f1ab70': <{'position': <8>}>, 'c1f99882-e3db-4653-a851-fc03137bd821': <{'position': <9>}>, 'gzdoom.desktop': <{'position': <10>}>}]";
       command-history = [ "sudp pacman -S wiregui" "r" ];
       disable-user-extensions = false;
       disabled-extensions = [ "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" "places-menu@gnome-shell-extensions.gcampax.github.com" "apps-menu@gnome-shell-extensions.gcampax.github.com" "hanabi-extension@jeffshee.github.io" "freq-boost-switch@metal03326" "drive-menu@gnome-shell-extensions.gcampax.github.com" "windowsNavigator@gnome-shell-extensions.gcampax.github.com" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com" "vertical-workspaces@G-dH.github.com" "hibernate-status@dromi" "gestureImprovements@gestures" "grand-theft-focus@zalckos.github.com" "mousefollowsfocus@matthes.biz" "SwitchFocusType@romano.rgtti.com" "burn-my-windows@schneegans.github.com" "caffeine@patapon.info" ];
       enabled-extensions = [ "x11gestures@joseexposito.github.io" "display-scale-switcher@knokelmaat.gitlab.com" "material-you-theme@asubbiah.com" "trash-indicator@Dieg0Js.github.io" "user-theme@gnome-shell-extensions.gcampax.github.com" "app-hider@lynith.dev" "huawei-wmi@apps.sdore.me" "gnome-wireguard-extension@SJBERTRAND.github.com" "transparent-top-bar@zhanghai.me" "pano@elhan.io" "transparent-shell@siroj42.github.io" "gnome-compact-top-bar@metehan-arslan.github.io" "dynamic-panel-transparency@rockon999.github.io" "transparent-top-bar@ftpix.com" "blur-my-shell@aunetx" "tophat@fflewddur.github.io" "cpufreq@konkor" "supergfxctl-gex@asus-linux.org" "GPU_profile_selector@lorenzo9904.gmail.com" "advanced-alt-tab@G-dH.github.com" "rounded-window-corners@yilozt" "dock-from-dash@fthx" "search-light@icedman.github.com" "appindicatorsupport@rgcjonas.gmail.com" "gsconnect@andyholmes.github.io" "clipboard-indicator@tudmotu.com" "Battery-Health-Charging@maniacx.github.com" "quick-settings-audio-panel@rayzeq.github.io" "nightthemeswitcher@romainvigier.fr" "just-perfection-desktop@just-perfection" ];
-      favorite-apps = [ "com.valvesoftware.Steam.desktop" "org.gnome.Nautilus.desktop" "org.telegram.desktop.desktop" "microsoft-edge.desktop" "firefox.desktop" "transmission-gtk.desktop" "com.discordapp.Discord.desktop" "com.spotify.Client.desktop" "photoshop.desktop" "org.darktable.Darktable.desktop" "org.gimp.GIMP.desktop" "org.gnome.Software.desktop" "osu-wine.desktop" "sh.ppy.osu.desktop" "com.obsproject.Studio.desktop" "fr.handbrake.ghb.desktop" ];
+      favorite-apps = [ "steam.desktop" "org.gnome.Nautilus.desktop" "org.telegram.desktop.desktop" "Fluffychat.desktop" "microsoft-edge.desktop" "discord.desktop" "spotify.desktop" "org.darktable.darktable.desktop" "gimp.desktop" "org.openshot.OpenShot.desktop" "OSU--osu!--1688498594.394172.desktop" "org.gnome.Software.desktop" "com.obsproject.Studio.desktop" "fr.handbrake.ghb.desktop" ];
       last-selected-power-profile = "power-saver";
       welcome-dialog-last-shown-version = "43.5";
     };
@@ -1168,7 +1746,7 @@ with lib.hm.gvariant;
 
     "org/gnome/shell/extensions/gsconnect/device/8C6BCB012E4A4AAD99D23F69D47CF410/plugin/notification" = {
       applications = ''
-        {"Принтеры":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Уведомление о сигнале Evolution":{"iconName":"appointment-soon","enabled":true},"Telegram Desktop":{"iconName":"telegram","enabled":true},"Диски":{"iconName":"org.gnome.DiskUtility","enabled":true},"Центр приложений":{"iconName":"org.gnome.Software","enabled":true},"Дата и время":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Анализатор использования дисков":{"iconName":"org.gnome.baobab","enabled":true},"Электропитание":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Консоль":{"iconName":"org.gnome.Console","enabled":true},"Цвет":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Файлы":{"iconName":"org.gnome.Nautilus","enabled":true},"Часы":{"iconName":"org.gnome.clocks","enabled":true},"Менеджер архивов":{"iconName":"org.gnome.FileRoller","enabled":true},"Bottles":{"iconName":"com.usebottles.bottles","enabled":true},"Питание":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Komikku":{"iconName":"info.febvre.Komikku","enabled":true},"Spotify":{"iconName":"com.spotify.Client","enabled":true},"Easy Effects":{"iconName":"com.github.wwmm.easyeffects","enabled":true}}
+        {"Принтеры":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Уведомление о сигнале Evolution":{"iconName":"appointment-soon","enabled":true},"Telegram Desktop":{"iconName":"telegram","enabled":true},"Диски":{"iconName":"org.gnome.DiskUtility","enabled":true},"Центр приложений":{"iconName":"org.gnome.Software","enabled":true},"Дата и время":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Анализатор использования дисков":{"iconName":"org.gnome.baobab","enabled":true},"Электропитание":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Консоль":{"iconName":"org.gnome.Console","enabled":true},"Цвет":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Файлы":{"iconName":"org.gnome.Nautilus","enabled":true},"Часы":{"iconName":"org.gnome.clocks","enabled":true},"Менеджер архивов":{"iconName":"org.gnome.FileRoller","enabled":true},"Bottles":{"iconName":"com.usebottles.bottles","enabled":true},"Питание":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Komikku":{"iconName":"info.febvre.Komikku","enabled":true},"Spotify":{"iconName":"com.spotify.Client","enabled":true},"Easy Effects":{"iconName":"com.github.wwmm.easyeffects","enabled":true}}\n
       '';
     };
 
@@ -1246,7 +1824,7 @@ with lib.hm.gvariant;
     "org/gnome/shell/extensions/nightthemeswitcher/cursor-variants" = {
       day = "macOS-Monterey-White";
       enabled = true;
-      night = "macOS-Moneterey";
+      night = "Adwaita";
     };
 
     "org/gnome/shell/extensions/nightthemeswitcher/gtk-variants" = {
@@ -1268,6 +1846,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/nightthemeswitcher/time" = {
+      location = mkTuple [ 45.17504618755854 33.3460353 ];
       manual-schedule = true;
       nightthemeswitcher-ondemand-keybinding = [ "<Shift><Super>t" ];
       sunrise = 5.0;
@@ -1354,7 +1933,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/user-theme" = {
-      name = "Marble-blue-dark";
+      name = "Marble-blue-light";
     };
 
     "org/gnome/shell/extensions/vertical-workspaces" = {
@@ -1390,11 +1969,6 @@ with lib.hm.gvariant;
       toggle-overview = [];
     };
 
-    #"org/gnome/shell/weather" = {
-     # automatic-location = true;
-     # locations = "[<(uint32 2, <("Simferopol'", 'UKFF', true, [(0.77987128161503527, 0.59573904552963364)], [(0.78452549877145117, 0.59515727493006643)])>)>]";
-    #};
-
     "org/gnome/shell/world-clocks" = {
       locations = "@av []";
     };
@@ -1414,7 +1988,7 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 1.0 1.0 ]) (mkTuple [ 0.0 0.0 ]) (mkTuple [ 1.0 1.0 ]) (mkTuple [ 0.0 0.0 ]) (mkTuple [ 0.9803921580314636 0.9803921580314636 ]) (mkTuple [ 0.0 0.0 ]) (mkTuple [ 0.0 0.0 ]) (mkTuple [ 0.7490196228027344 0.250980406999588 ]) ];
+      custom-colors = [ (mkTuple [ 1.0 1.0 ]) (mkTuple [ 0.0 0.0 ]) (mkTuple [ 1.0 1.0 ]) (mkTuple [ 0.0 0.0 ]) (mkTuple [ 0.980392 0.980392 ]) (mkTuple [ 0.0 0.0 ]) (mkTuple [ 0.0 0.0 ]) (mkTuple [ 0.74902 0.25098 ]) ];
       selected-color = mkTuple [ true 1.0 ];
     };
 
@@ -1434,8 +2008,8 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 0.9607843137254902 0.5098039215686274 ]) (mkTuple [ 0.6705882352941176 9.411764705882353e-2 ]) ];
-      selected-color = mkTuple [ true 0.9607843137254902 ];
+      custom-colors = [ (mkTuple [ 0.960784 0.509804 ]) (mkTuple [ 0.670588 9.4118e-2 ]) ];
+      selected-color = mkTuple [ true 0.960784 ];
     };
 
     "org/gtk/settings/file-chooser" = {
