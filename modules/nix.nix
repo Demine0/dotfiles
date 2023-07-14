@@ -17,13 +17,23 @@
     };
   };
   security.polkit.enable = true;
+  zramSwap = {
+    enable = true;
+    algorithm = "zstd";
+    #memoryPercent = ;
+};
+ services.flatpak.enable = true;
+  users.users.demine = {
+    packages = with pkgs; [
+      flatpak
+      gnome.gnome-software
+    ];
+  };
+
   hardware.bluetooth.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_testing;
   boot.loader.timeout = 15;
-  boot.plymouth = {
-  enable = true;
-  #font = "${pkgs.san-francisco-pro}/share/fonts/truetype/SF-Pro-Display-Regular.ttf"; 
-  };
+  boot.plymouth.enable = true;
   boot.loader.systemd-boot = {
    enable = true;
    editor = false; };

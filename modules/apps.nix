@@ -1,5 +1,5 @@
-{ config, pkgs, inputs, ...}:
-{
+{ config, lib, pkgs, inputs, ...}:
+{ 
  environment.systemPackages = with pkgs; [
     # gnome
     gnomeExtensions.night-theme-switcher
@@ -44,9 +44,10 @@
     ffmpeg
     wireguard-tools
     neofetch
-    # browsers
+   # browsers
     firefox
-    microsoft-edge
+    #inputs.stable.legacyPackages."x86_64-linux".microsoft-edge
+    microsoft-edge-dev
     # media
     handbrake
     spotify
@@ -61,12 +62,11 @@
     # wine
     bottles
     mesa
-    wineWowPackages.waylandFull
+    wine64
     winetricks
     # other
     gzdoom
     apple-cursor
     plymouth
- # inputs.stable.legacyPackages."x86_64-linux".waybar
   ];
 }
