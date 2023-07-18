@@ -19,7 +19,6 @@ services.xserver.desktopManager.gnome.enable = true;
    epiphany # web browser
    geary # email reader
    evince # document viewer
-   totem # video player
    tali # poker game
    iagno # go game
    hitori # sudoku game

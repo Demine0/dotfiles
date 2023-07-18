@@ -6,6 +6,7 @@
     whitesur-icon-theme
     gnome.gnome-tweaks
     fzf
+    gnomeExtensions.gsconnect
     adw-gtk3
     authenticator
     gnomeExtensions.just-perfection
@@ -14,6 +15,7 @@
     # editors
     neovim
     # tools
+    ventoy-full
     mpv
     darktable
     gimp
@@ -44,10 +46,8 @@
     ffmpeg
     wireguard-tools
     neofetch
-   # browsers
-    firefox
-    #inputs.stable.legacyPackages."x86_64-linux".microsoft-edge
-    microsoft-edge-dev
+    # browsers
+    google-chrome
     # media
     handbrake
     spotify
@@ -61,12 +61,9 @@
     libde265
     # wine
     bottles
-    mesa
     wine64
     winetricks
     # other
-    gzdoom
     apple-cursor
-    plymouth
   ];
 }

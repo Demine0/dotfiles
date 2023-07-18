@@ -22,6 +22,7 @@
     algorithm = "zstd";
     #memoryPercent = ;
 };
+ programs.darling.enable = true;
  services.flatpak.enable = true;
   users.users.demine = {
     packages = with pkgs; [
