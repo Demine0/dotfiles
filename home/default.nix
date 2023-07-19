@@ -1,6 +1,6 @@
 {
   imports = [
- # ./dconf.nix
+  ./dconf.nix
   ];
 
   home = {

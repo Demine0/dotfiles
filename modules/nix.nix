@@ -9,6 +9,9 @@
 
   services = {
     dbus.enable = true;
+    mpd = {
+      enable = true; 
+      };
     pipewire = {
       enable = true;
       alsa.enable = true;
