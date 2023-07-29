@@ -6,6 +6,8 @@ height=476
 width=947
 
 [com/belmoussaoui/Authenticator]
+auto-lock=true
+download-favicons=true
 is-maximized=false
 keyrings-migrated=true
 window-height=600
@@ -68,11 +70,11 @@ show-blocklisted-apps=false
 target=-12.0
 
 [com/github/wwmm/easyeffects/streamoutputs/bassenhancer/0]
-amount=4.7999999999999998
-blend=0.0
-floor=10.0
-floor-active=false
-scope=80.0
+amount=0.0
+blend=3.0
+floor=20.0
+floor-active=true
+scope=100.0
 
 [com/github/wwmm/easyeffects/streamoutputs/compressor/0]
 ratio=2.0
@@ -81,8 +83,8 @@ sidechain-input-device='alsa_input.pci-0000_04_00.6.analog-stereo'
 threshold=-18.0
 
 [com/github/wwmm/easyeffects/streamoutputs/convolver/0]
-input-gain=-2.0
-kernel-path='<PRESETS_DIRECTORY>/irs/Razor Surround ((48k Z-Edition)) 2.Stereo +20 bass.irs'
+input-gain=-4.0
+kernel-path='/home/sergio/.config/easyeffects/irs/Accudio ((48kHz Z.E.)) Earpods HIFI.irs'
 
 [com/github/wwmm/easyeffects/streamoutputs/equalizer/0]
 input-gain=-0.29999999999999999
@@ -472,8 +474,8 @@ steam-programs=false
 steam-proton-support=false
 temp=true
 ubisoft-connect=false
-window-height=1017
-window-width=1898
+window-height=920
+window-width=766
 
 [io/bassi/Amberol]
 window-height=673
@@ -505,7 +507,7 @@ recent-connections="[{'adapter': '4C:D5:77:1D:25:C2', 'address': '40:ED:98:18:F7
 first-run=false
 
 [org/gnome/Console]
-last-window-size=(1166, 524)
+last-window-size=(1174, 524)
 theme='night'
 
 [org/gnome/Disks]
@@ -522,6 +524,7 @@ migrated-config=true
 
 [org/gnome/TextEditor]
 custom-font='SF Pro Display Medium 11'
+discover-settings=true
 highlight-current-line=false
 restore-session=false
 show-grid=false
@@ -676,7 +679,7 @@ autorun-x-content-open-folder=@as []
 autorun-x-content-start-app=['x-content/ostree-repository']
 
 [org/gnome/desktop/notifications]
-application-children=['org-telegram-desktop', 'org-gnome-console', 'org-gnome-software', 'org-gnome-epiphany', 'org-gnome-nautilus', 'org-gnome-fileroller', 'gnome-power-panel', 'firefox', 'cider', 'org-gnome-settings', 'org-gnome-shell-extensions-gsconnect', 'com-usebottles-bottles', 'org-gnome-extensions-desktop', 'gnome-network-panel', 'com-valvesoftware-steam', 'ryzen-controller', 'steam', 'microsoft-edge', 'de-haeckerfelix-fragments', 'org-qbittorrent-qbittorrent', 'photoshop', 'minecraft-launcher', 'page-codeberg-jakobdev-jddesktopentryedit', 'appimagekit-a6d9ede25932d52f8f4f2f3255b6d24f-wiregui', 'appimagekit-ad45268b9d47f3bf1b8b3288f20ec82f-cider', 'ckb-next', 'tor-browser', 'com-spotify-client', 'com-discordapp-discord', 'com-obsproject-studio', 'org-ryujinx-ryujinx', 'com-rawtherapee-rawtherapee', 'org-gimp-gimp', 'org-openshot-openshot', 'mpv', 'org-gnome-diskutility', 'com-github-unrud-videodownloader', 'io-gitlab-adhami3310-impression', 'org-deluge-torrent-deluge', 'fr-handbrake-ghb', 'gnome-system-monitor', 'com-github-wwmm-easyeffects', 'org-gnome-texteditor', 'spotify', 'google-chrome']
+application-children=['org-telegram-desktop', 'org-gnome-console', 'org-gnome-software', 'org-gnome-epiphany', 'org-gnome-nautilus', 'org-gnome-fileroller', 'gnome-power-panel', 'firefox', 'cider', 'org-gnome-settings', 'org-gnome-shell-extensions-gsconnect', 'com-usebottles-bottles', 'org-gnome-extensions-desktop', 'gnome-network-panel', 'com-valvesoftware-steam', 'ryzen-controller', 'steam', 'microsoft-edge', 'de-haeckerfelix-fragments', 'org-qbittorrent-qbittorrent', 'photoshop', 'minecraft-launcher', 'page-codeberg-jakobdev-jddesktopentryedit', 'appimagekit-a6d9ede25932d52f8f4f2f3255b6d24f-wiregui', 'appimagekit-ad45268b9d47f3bf1b8b3288f20ec82f-cider', 'ckb-next', 'tor-browser', 'com-spotify-client', 'com-discordapp-discord', 'com-obsproject-studio', 'org-ryujinx-ryujinx', 'com-rawtherapee-rawtherapee', 'org-gimp-gimp', 'org-openshot-openshot', 'mpv', 'org-gnome-diskutility', 'com-github-unrud-videodownloader', 'io-gitlab-adhami3310-impression', 'org-deluge-torrent-deluge', 'fr-handbrake-ghb', 'gnome-system-monitor', 'com-github-wwmm-easyeffects', 'org-gnome-texteditor', 'spotify', 'google-chrome', 'draw', 'org-gnome-eog', 'discord']
 show-banners=true
 
 [org/gnome/desktop/notifications/application/appimagekit-a6d9ede25932d52f8f4f2f3255b6d24f-wiregui]
@@ -720,6 +723,9 @@ application-id='de.haeckerfelix.Fragments.desktop'
 
 [org/gnome/desktop/notifications/application/discord]
 application-id='discord.desktop'
+
+[org/gnome/desktop/notifications/application/draw]
+application-id='draw.desktop'
 
 [org/gnome/desktop/notifications/application/firefox]
 application-id='firefox.desktop'
@@ -765,6 +771,9 @@ application-id='org.gnome.Console.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-diskutility]
 application-id='org.gnome.DiskUtility.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-eog]
+application-id='org.gnome.eog.desktop'
 
 [org/gnome/desktop/notifications/application/org-gnome-epiphany]
 application-id='org.gnome.Epiphany.desktop'
@@ -1037,7 +1046,7 @@ experimental-features=['scale-monitor-framebuffer']
 restore-shortcuts=@as []
 
 [org/gnome/nautilus/compression]
-default-compression-format='zip'
+default-compression-format='tar.xz'
 
 [org/gnome/nautilus/icon-view]
 default-zoom-level='medium'
@@ -1278,7 +1287,7 @@ info-stats-type='discharge-accuracy'
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-enabled=true
-night-light-last-coordinates=(45.193895736336984, 33.346030300000002)
+night-light-last-coordinates=(45.217314356475534, 33.346031099999998)
 night-light-schedule-automatic=false
 night-light-schedule-from=23.0
 night-light-schedule-to=5.0
@@ -1306,17 +1315,248 @@ sleep-inactive-battery-timeout=900
 sleep-inactive-battery-type='suspend'
 
 [org/gnome/shell]
-app-picker-layout=[{'Utilities': <{'position': <0>}>, 'e1485ecd-b605-49fd-8a1d-20d324f1ab70': <{'position': <1>}>, 'c1f99882-e3db-4653-a851-fc03137bd821': <{'position': <2>}>, 'org.gnome.Settings.desktop': <{'position': <3>}>, 'org.gnome.Calculator.desktop': <{'position': <4>}>, 'com.belmoussaoui.Authenticator.desktop': <{'position': <5>}>, 'info.febvre.Komikku.desktop': <{'position': <6>}>}]
+app-picker-layout=[{'Utilities': <{'position': <0>}>, 'e1485ecd-b605-49fd-8a1d-20d324f1ab70': <{'position': <1>}>, 'c1f99882-e3db-4653-a851-fc03137bd821': <{'position': <2>}>, 'org.gnome.Settings.desktop': <{'position': <3>}>, 'org.gnome.Calculator.desktop': <{'position': <4>}>, 'com.belmoussaoui.Authenticator.desktop': <{'position': <5>}>, 'info.febvre.Komikku.desktop': <{'position': <6>}>, 'kdesystemsettings.desktop': <{'position': <7>}>}]
 command-history=['sudp pacman -S wiregui', 'r']
 disable-user-extensions=false
 disabled-extensions=['auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'launch-new-instance@gnome-shell-extensions.gcampax.github.com', 'places-menu@gnome-shell-extensions.gcampax.github.com', 'apps-menu@gnome-shell-extensions.gcampax.github.com', 'hanabi-extension@jeffshee.github.io', 'freq-boost-switch@metal03326', 'drive-menu@gnome-shell-extensions.gcampax.github.com', 'windowsNavigator@gnome-shell-extensions.gcampax.github.com', 'workspace-indicator@gnome-shell-extensions.gcampax.github.com', 'window-list@gnome-shell-extensions.gcampax.github.com', 'screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com', 'vertical-workspaces@G-dH.github.com', 'hibernate-status@dromi', 'gestureImprovements@gestures', 'grand-theft-focus@zalckos.github.com', 'mousefollowsfocus@matthes.biz', 'SwitchFocusType@romano.rgtti.com', 'burn-my-windows@schneegans.github.com', 'caffeine@patapon.info']
 enabled-extensions=['x11gestures@joseexposito.github.io', 'display-scale-switcher@knokelmaat.gitlab.com', 'material-you-theme@asubbiah.com', 'trash-indicator@Dieg0Js.github.io', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'app-hider@lynith.dev', 'huawei-wmi@apps.sdore.me', 'gnome-wireguard-extension@SJBERTRAND.github.com', 'transparent-top-bar@zhanghai.me', 'pano@elhan.io', 'transparent-shell@siroj42.github.io', 'gnome-compact-top-bar@metehan-arslan.github.io', 'dynamic-panel-transparency@rockon999.github.io', 'transparent-top-bar@ftpix.com', 'blur-my-shell@aunetx', 'tophat@fflewddur.github.io', 'cpufreq@konkor', 'supergfxctl-gex@asus-linux.org', 'GPU_profile_selector@lorenzo9904.gmail.com', 'advanced-alt-tab@G-dH.github.com', 'rounded-window-corners@yilozt', 'dock-from-dash@fthx', 'search-light@icedman.github.com', 'appindicatorsupport@rgcjonas.gmail.com', 'gsconnect@andyholmes.github.io', 'clipboard-indicator@tudmotu.com', 'Battery-Health-Charging@maniacx.github.com', 'quick-settings-audio-panel@rayzeq.github.io', 'nightthemeswitcher@romainvigier.fr', 'just-perfection-desktop@just-perfection']
 favorite-apps=['com.valvesoftware.Steam.desktop', 'org.gnome.Nautilus.desktop', 'org.telegram.desktop.desktop', 'element-desktop.desktop', 'discord.desktop', 'google-chrome.desktop', 'microsoft-edge.desktop', 'firefox.desktop', 'transmission-gtk.desktop', 'spotify.desktop', 'org.darktable.darktable.desktop', 'gimp.desktop', 'org.openshot.OpenShot.desktop', 'OSU--osu!--1688498594.394172.desktop', 'org.gnome.Software.desktop', 'com.obsproject.Studio.desktop', 'fr.handbrake.ghb.desktop']
-last-selected-power-profile='power-saver'
+last-selected-power-profile='performance'
+remember-mount-password=false
 welcome-dialog-last-shown-version='43.5'
 
 [org/gnome/shell/app-switcher]
 current-workspace-only=false
+
+[org/gnome/shell/extensions/Battery-Health-Charging]
+amend-power-indicator=false
+ctl-path='/usr/local/bin/batteryhealthchargingctl-demine'
+default-threshold=true
+device-type=8
+dummy-default-threshold=false
+icon-style-type=0
+indicator-position-max=3
+install-service=0
+show-battery-panel2=false
+
+[org/gnome/shell/extensions/GPU_profile_selector]
+coolbits=false
+force-composition-pipeline=false
+force-topbar-view=false
+rtd3=false
+
+[org/gnome/shell/extensions/advanced-alt-tab-window-switcher]
+app-switcher-popup-include-show-apps-icon=true
+app-switcher-popup-search-pref-running=true
+app-switcher-popup-show-wins-on-activate=0
+app-switcher-popup-titles=false
+switcher-popup-position=3
+switcher-popup-preview-selected=1
+win-switch-include-modals=true
+win-switch-mark-minimized=false
+win-switch-minimized-to-end=false
+
+[org/gnome/shell/extensions/app-hider]
+hidden-apps=['org.gnome.Extensions.desktop', 'lstopo.desktop', 'qv4l2.desktop', 'qvidcap.desktop', 'bvnc.desktop', 'bssh.desktop', 'io.github.Foldex.AdwSteamGtk.desktop']
+
+[org/gnome/shell/extensions/appindicator]
+custom-icons='@a(sss) []'
+icon-opacity=255
+tray-pos='left'
+
+[org/gnome/shell/extensions/blur-my-shell]
+hacks-level=3
+
+[org/gnome/shell/extensions/blur-my-shell/appfolder]
+blur=false
+style-dialogs=3
+
+[org/gnome/shell/extensions/blur-my-shell/applications]
+blur=true
+blur-on-overview=true
+brightness=1.0
+customize=true
+enable-all=false
+opacity=111
+sigma=16
+whitelist=@as []
+
+[org/gnome/shell/extensions/blur-my-shell/dash-to-dock]
+blur=false
+brightness=0.90000000000000002
+customize=false
+override-background=false
+sigma=40
+style-dash-to-dock=0
+unblur-in-overview=true
+
+[org/gnome/shell/extensions/blur-my-shell/hidetopbar]
+compatibility=true
+
+[org/gnome/shell/extensions/blur-my-shell/lockscreen]
+blur=false
+customize=false
+
+[org/gnome/shell/extensions/blur-my-shell/overview]
+blur=true
+brightness=1.0
+customize=false
+style-components=0
+
+[org/gnome/shell/extensions/blur-my-shell/panel]
+customize=false
+override-background=true
+override-background-dynamically=true
+static-blur=true
+unblur-in-overview=true
+
+[org/gnome/shell/extensions/blur-my-shell/screenshot]
+blur=false
+customize=false
+
+[org/gnome/shell/extensions/blur-my-shell/window-list]
+blur=false
+customize=true
+
+[org/gnome/shell/extensions/burn-my-windows]
+active-profile='/home/demine/.config/burn-my-windows/profiles/1683280316572421.conf'
+last-extension-version=31
+last-prefs-version=31
+prefs-open-count=2
+preview-effect=''
+
+[org/gnome/shell/extensions/caffeine]
+countdown-timer=15
+enable-fullscreen=true
+indicator-position-max=3
+inhibit-apps=@as []
+show-notifications=false
+
+[org/gnome/shell/extensions/clipboard-indicator]
+clear-history=@as []
+display-mode=0
+history-size=30
+next-entry=@as []
+prev-entry=@as []
+preview-size=100
+toggle-menu=['<Super>v']
+
+[org/gnome/shell/extensions/cpufreq]
+dark-theme=true
+profile-id='user'
+save-settings=true
+window-height=720
+window-maximized=false
+window-width=783
+window-x=0
+window-y=0
+
+[org/gnome/shell/extensions/dash-to-dock]
+always-center-icons=false
+animate-show-apps=true
+application-counter-overrides-notifications=false
+apply-custom-theme=false
+background-opacity=1.0
+custom-theme-shrink=true
+dash-max-icon-size=64
+disable-overview-on-startup=true
+dock-fixed=false
+dock-position='BOTTOM'
+extend-height=false
+height-fraction=0.90000000000000002
+hide-tooltip=true
+icon-size-fixed=false
+isolate-locations=true
+isolate-monitors=false
+isolate-workspaces=false
+middle-click-action='launch'
+preferred-monitor=-2
+preferred-monitor-by-connector='eDP-1'
+preview-size-scale=0.0
+running-indicator-style='DEFAULT'
+scroll-to-focused-application=true
+shift-click-action='minimize'
+shift-middle-click-action='launch'
+show-apps-at-top=true
+show-icons-emblems=true
+show-icons-notifications-counter=true
+show-mounts=false
+show-mounts-only-mounted=true
+show-running=true
+show-show-apps-button=false
+show-trash=false
+show-windows-preview=false
+transparency-mode='DYNAMIC'
+
+[org/gnome/shell/extensions/display-scale-switcher]
+last-selected-display-scale=2.0
+
+[org/gnome/shell/extensions/dynamic-panel-transparency]
+enable-background-color=false
+enable-opacity=true
+enable-text-color=false
+icon-shadow=false
+icon-shadow-position=(0, 2)
+maximized-opacity=255
+remove-panel-styling=false
+text-shadow=false
+text-shadow-position=(0, 3)
+transition-windows-touch=false
+transition-with-overview=true
+unmaximized-opacity=138
+
+[org/gnome/shell/extensions/freq-boost-switch]
+boost=true
+persist=false
+
+[org/gnome/shell/extensions/gestureImprovements]
+allow-minimize-window=false
+default-overview=true
+default-session-workspace=true
+forward-back-application-keyboard-shortcuts="{'firefox.desktop': (5, false), 'org.chromium.Chromium.desktop': (5, false), 'microsoft-edge.desktop': (5, false), 'google-chrome.desktop': (5, false), 'org.gnome.gThumb.desktop': (2, false), 'org.gnome.eog.desktop': (3, false), 'org.gnome.Photos.desktop': (3, false), 'shotwell.desktop': (3, false), 'com.spotify.Client.desktop': (4, false), 'code.desktop': (5, false), 'code-insiders.desktop': (5, false), 'org.gnome.Terminal.desktop': (5, false), 'com.gexperts.Tilix.desktop': (5, false), 'org.gnome.TextEditor.desktop': (5, false)}"
+pinch-3-finger-gesture='SHOW_DESKTOP'
+pinch-4-finger-gesture='NONE'
+
+[org/gnome/shell/extensions/gsconnect]
+devices=['8C6BCB012E4A4AAD99D23F69D47CF410']
+enabled=false
+id='a45ef867-a7f1-4c7f-845f-65608ba46918'
+keep-alive-when-locked=true
+name='nixos'
+show-indicators=true
+
+[org/gnome/shell/extensions/gsconnect/device/8C6BCB012E4A4AAD99D23F69D47CF410]
+certificate-pem='-----BEGIN CERTIFICATE-----\nMIIDEjCCAfoCAQowDQYJKoZIhvcNAQEEBQAwTzEUMBIGA1UECwwLS2RlIGNvbm5l\nY3QxDDAKBgNVBAoMA0tERTEpMCcGA1UEAwwgOEM2QkNCMDEyRTRBNEFBRDk5RDIz\nRjY5RDQ3Q0Y0MTAwHhcNMjIxMTExMTYwMTIxWhcNMjMxMTExMTYwMTIxWjBPMRQw\nEgYDVQQLDAtLZGUgY29ubmVjdDEMMAoGA1UECgwDS0RFMSkwJwYDVQQDDCA4QzZC\nQ0IwMTJFNEE0QUFEOTlEMjNGNjlENDdDRjQxMDCCASIwDQYJKoZIhvcNAQEBBQAD\nggEPADCCAQoCggEBALV9F4dp6Ad7owTOkPvd4GQenP9mXOISpZgak972gDbtBK/O\naz5dUiXVwEQaTxxf0kXPgKOWxwF9tFt2dqzVHuesFcYsNikBUPoi7+lXwLNjB/yK\naEQbKB4RkoD/Z1Fssacy9ZMETepCvl+xfh26KmTiR8kqVr8V3vvq7c/rbHExeJg1\nYS9/678BJq7PgUFWpywxPjO7JEUQ7qNJ7h0M+896jXvUVvxq+Lt4N6i9H7HiVXAW\nbDxVpDOiP7iBM8Y3v7Rv1wCTIQS01/Tv2fThp5pTikeWj8MzAkBHvUsW1FQPJY8L\nBnMmVPthTQ3vusFb/+gs1WCO1M99M+Gj++3XzVcCAwEAATANBgkqhkiG9w0BAQQF\nAAOCAQEAotWpLmlTf0lyH6YiNNfY7ueXErbCq4EjPMR99qHE8gsLGb99CpF9mw1m\nKvNNlP7fzlKYlXHn5tR6cJ5LijGFmdaApThAgHbewCWdo3z5nFqfeSfa9IP4bBIE\niUbN3Ji7eKDl9dIH4Dn/axp3oRqaGiGRxjfD8QI7O5RPD+1gUxvztle5BQyezwaP\nL0RXo7SnQM8hfRuy87AmmEYu9eXhnss3Xn/SnqXTDryxA2pQ9OES7dh+c5K6ClVC\nxlNju2QV+2DroRGUKKurmTawfKJxjcghHPtL+Vzn4aYr9YD02medj4Pb3JfFLY7u\nnJOndu8qsHByLdWdoSCnP2Vj9PTHOA==\n-----END CERTIFICATE-----\n'
+incoming-capabilities=['kdeconnect.battery', 'kdeconnect.battery.request', 'kdeconnect.clipboard', 'kdeconnect.clipboard.connect', 'kdeconnect.findmyphone.request', 'kdeconnect.ping', 'kdeconnect.runcommand', 'kdeconnect.share.request']
+keybindings='@a{ss} {}'
+last-connection='lan://192.168.1.104:1717'
+name='iPhone Demine'
+outgoing-capabilities=['kdeconnect.battery', 'kdeconnect.battery.request', 'kdeconnect.clipboard', 'kdeconnect.clipboard.connect', 'kdeconnect.findmyphone.request', 'kdeconnect.mousepad.request', 'kdeconnect.ping', 'kdeconnect.presenter', 'kdeconnect.runcommand.request', 'kdeconnect.share.request']
+paired=true
+supported-plugins=['battery', 'clipboard', 'findmyphone', 'mousepad', 'ping', 'presenter', 'runcommand', 'share']
+type='phone'
+
+[org/gnome/shell/extensions/gsconnect/device/8C6BCB012E4A4AAD99D23F69D47CF410/plugin/battery]
+custom-battery-notification-value=uint32 80
+full-battery-notification=false
+send-statistics=false
+
+[org/gnome/shell/extensions/gsconnect/device/8C6BCB012E4A4AAD99D23F69D47CF410/plugin/clipboard]
+receive-content=true
+send-content=true
+
+[org/gnome/shell/extensions/gsconnect/device/8C6BCB012E4A4AAD99D23F69D47CF410/plugin/mousepad]
+share-control=true
+
+[org/gnome/shell/extensions/gsconnect/device/8C6BCB012E4A4AAD99D23F69D47CF410/plugin/notification]
+applications='{"Принтеры":{"iconName":"org.gnome.Settings-printers-symbolic","enabled":true},"Bottles":{"iconName":"com.usebottles.bottles","enabled":true},"Уведомление о сигнале Evolution":{"iconName":"appointment-soon","enabled":true},"Telegram Desktop":{"iconName":"telegram","enabled":true},"Диски":{"iconName":"org.gnome.DiskUtility","enabled":true},"Easy Effects":{"iconName":"com.github.wwmm.easyeffects","enabled":true},"Центр приложений":{"iconName":"org.gnome.Software","enabled":true},"Дата и время":{"iconName":"org.gnome.Settings-time-symbolic","enabled":true},"Питание":{"iconName":"org.gnome.Settings-power-symbolic","enabled":true},"Анализатор использования дисков":{"iconName":"org.gnome.baobab","enabled":true},"Цвет":{"iconName":"org.gnome.Settings-color-symbolic","enabled":true},"Komikku":{"iconName":"info.febvre.Komikku","enabled":true},"Консоль":{"iconName":"org.gnome.Console","enabled":true},"Файлы":{"iconName":"org.gnome.Nautilus","enabled":true},"Менеджер архивов":{"iconName":"org.gnome.FileRoller","enabled":true}}'
+
+[org/gnome/shell/extensions/gsconnect/device/8C6BCB012E4A4AAD99D23F69D47CF410/plugin/share]
+receive-directory='/home/demine/Downloads'
+
+[org/gnome/shell/extensions/gsconnect/preferences]
+window-maximized=false
+window-size=(928, 579)
 
 [org/gnome/shell/extensions/just-perfection]
 accessibility-menu=false
@@ -1378,6 +1618,9 @@ world-clock=false
 [org/gnome/shell/extensions/libpanel]
 layout=[['gnome@main']]
 
+[org/gnome/shell/extensions/material-you-theme]
+scheme='Default'
+
 [org/gnome/shell/extensions/nightthemeswitcher/cursor-variants]
 day='macOS-Monterey-White'
 enabled=true
@@ -1405,6 +1648,40 @@ nightthemeswitcher-ondemand-keybinding=['<Shift><Super>t']
 sunrise=5.0
 sunset=22.0
 
+[org/gnome/shell/extensions/pano]
+active-item-border-color='rgba(0,0,0,0.37)'
+exclusion-list=@as []
+global-shortcut=['<Super>v']
+hovered-item-border-color='rgba(0,0,0,0.313333)'
+incognito-window-background-color='rgba(0,0,0,0.246667)'
+keep-search-entry=false
+link-previews=false
+play-audio-on-copy=false
+send-notification-on-copy=false
+show-indicator=false
+watch-exclusion-list=false
+window-background-color='rgba(0,0,0,0.353333)'
+
+[org/gnome/shell/extensions/pano/color-item]
+header-bg-color='rgba(0,0,0,0.246667)'
+metadata-bg-color='rgba(0,0,0,0.246667)'
+
+[org/gnome/shell/extensions/pano/file-item]
+body-bg-color='rgba(0,0,0,0.246667)'
+header-bg-color='rgba(0,0,0,0.246667)'
+header-color='rgb(255,255,255)'
+
+[org/gnome/shell/extensions/pano/image-item]
+body-bg-color='rgba(0,0,0,0.246667)'
+header-bg-color='rgba(0,0,0,0.246667)'
+header-color='rgb(255,255,255)'
+metadata-bg-color='rgba(0,0,0,0.246667)'
+
+[org/gnome/shell/extensions/pano/text-item]
+body-bg-color='rgba(0,0,0,0.246667)'
+header-bg-color='rgba(0,0,0,0.246667)'
+header-color='rgb(255,255,255)'
+
 [org/gnome/shell/extensions/quick-settings-audio-panel]
 always-show-input-slider=false
 create-mixer-sliders=false
@@ -1412,6 +1689,47 @@ media-control='move'
 merge-panel=true
 move-master-volume=false
 panel-position='bottom'
+
+[org/gnome/shell/extensions/rounded-window-corners]
+custom-rounded-corner-settings='@a{sv} {}'
+global-rounded-corner-settings="{'padding': <{'left': <uint32 1>, 'right': <uint32 1>, 'top': <uint32 1>, 'bottom': <uint32 1>}>, 'keep_rounded_corners': <{'maximized': <false>, 'fullscreen': <false>}>, 'border_radius': <uint32 12>, 'smoothing': <uint32 0>}"
+settings-version=uint32 5
+
+[org/gnome/shell/extensions/search-light]
+background-color=(1.0, 1.0)
+blur-brightness=0.59999999999999998
+blur-sigma=30.0
+entry-font-size=1
+monitor-count=1
+scale-height=0.10000000000000001
+scale-width=0.10000000000000001
+shortcut-search=['<Alt>space']
+
+[org/gnome/shell/extensions/tophat]
+show-cpu=false
+show-disk=false
+show-icons=true
+show-mem=false
+show-net=false
+
+[org/gnome/shell/extensions/transparent-shell]
+dash=false
+search=false
+top-panel=false
+
+[org/gnome/shell/extensions/user-theme]
+name='Marble-blue-light'
+
+[org/gnome/shell/extensions/vertical-workspaces]
+center-dash-to-ws=true
+dash-position=2
+profile-data-2="{'workspaceThumbnailsPosition': '0', 'wsMaxSpacing': '350', 'wsPreviewScale': '100', 'secWsPreviewScale': '100', 'secWsPreviewShift': 'false', 'wsThumbnailsFull': 'false', 'secWsThumbnailsPosition': '2', 'dashPosition': '2', 'dashPositionAdjust': '0', 'wsTmbPositionAdjust': '0', 'showWsTmbLabels': '3', 'showWsTmbLabelsOnHover': 'false', 'closeWsButtonMode': '2', 'secWsTmbPositionAdjust': '0', 'dashMaxIconSize': '48', 'dashShowWindowsIcon': '1', 'dashShowRecentFilesIcon': '1', 'centerDashToWs': 'true', 'showAppsIconPosition': '1', 'wsThumbnailScale': '13', 'wsThumbnailScaleAppGrid': '13', 'secWsThumbnailScale': '13', 'showSearchEntry': 'false', 'centerSearch': 'true', 'centerAppGrid': 'false', 'dashBgOpacity': '80', 'dashBgRadius': '17', 'enablePageShortcuts': 'false', 'showWsSwitcherBg': 'true', 'showWsPreviewBg': 'false', 'wsPreviewBgRadius': '30', 'showBgInOverview': 'true', 'overviewBgBrightness': '95', 'overviewBgBlurSigma': '0', 'appGridBgBlurSigma': '40', 'smoothBlurTransitions': 'false', 'appGridAnimation': '4', 'searchViewAnimation': '4', 'workspaceAnimation': '1', 'animationSpeedFactor': '100', 'fixUbuntuDock': 'true', 'winPreviewIconSize': '1', 'alwaysShowWinTitles': 'true', 'startupState': '2', 'overviewMode': '0', 'workspaceSwitcherAnimation': '1', 'searchIconSize': '96', 'searchViewScale': '104', 'appGridIconSize': '-1', 'appGridColumns': '0', 'appGridRows': '0', 'appGridFolderIconSize': '-1', 'appGridFolderColumns': '0', 'appGridFolderRows': '0', 'appGridFolderIconGrid': '3', 'appGridContent': '2', 'appGridIncompletePages': 'true', 'appGridOrder': '0', 'appGridNamesMode': '0', 'appGridActivePreview': 'false', 'appGridFolderCenter': 'false', 'appGridPageWidthScale': '90', 'appGridSpacing': '12', 'searchWindowsEnable': 'true', 'searchRecentFilesEnable': 'true', 'searchFuzzy': 'false', 'searchMaxResultsRows': '5', 'dashShowWindowsBeforeActivation': '1', 'dashIconScroll': '1', 'searchWindowsIconScroll': '1', 'panelVisibility': '0', 'panelPosition': '0', 'windowAttentionMode': '0', 'wsSwPopupHPosition': '50', 'wsSwPopupVPosition': '95', 'wsSwPopupMode': '1', 'favoritesNotify': '1', 'notificationPosition': '2', 'osdPosition': '6', 'hotCornerAction': '1', 'hotCornerPosition': '0', 'hotCornerFullscreen': 'false', 'hotCornerRipples': 'true', 'alwaysActivateSelectedWindow': 'false', 'windowIconClickSearch': 'true', 'overlayKeySecondary': '1', 'workspaceThumbnailsModule': 'true', 'workspaceSwitcherPopupModule': 'true', 'workspaceAnimationModule': 'true', 'workspaceModule': 'true', 'windowManagerModule': 'true', 'windowPreviewModule': 'true', 'winAttentionHandlerModule': 'true', 'swipeTrackerModule': 'true', 'searchModule': 'true', 'panelModule': 'true', 'overlayKeyModule': 'true', 'osdWindowModule': 'true', 'messageTrayModule': 'true', 'layoutModule': 'true', 'dashModule': 'true', 'appFavoritesModule': 'true', 'appDisplayModule': 'true', 'profileName1': 'GNOME 3', 'profileName2': 'GNOME 40+ - Bottom Hot Edge', 'profileName3': 'Hot Corner Centric - Top Left Hot Corner', 'profileName4': 'Dock Overview - Bottom Hot Edge'}"
+profile-data-3="{'workspaceThumbnailsPosition': '0', 'wsMaxSpacing': '350', 'wsPreviewScale': '100', 'secWsPreviewScale': '100', 'secWsPreviewShift': 'false', 'wsThumbnailsFull': 'false', 'secWsThumbnailsPosition': '2', 'dashPosition': '2', 'dashPositionAdjust': '0', 'wsTmbPositionAdjust': '0', 'showWsTmbLabels': '3', 'showWsTmbLabelsOnHover': 'false', 'closeWsButtonMode': '2', 'secWsTmbPositionAdjust': '0', 'dashMaxIconSize': '48', 'dashShowWindowsIcon': '1', 'dashShowRecentFilesIcon': '1', 'centerDashToWs': 'true', 'showAppsIconPosition': '1', 'wsThumbnailScale': '13', 'wsThumbnailScaleAppGrid': '13', 'secWsThumbnailScale': '13', 'showSearchEntry': 'false', 'centerSearch': 'true', 'centerAppGrid': 'false', 'dashBgOpacity': '80', 'dashBgRadius': '17', 'enablePageShortcuts': 'false', 'showWsSwitcherBg': 'true', 'showWsPreviewBg': 'false', 'wsPreviewBgRadius': '30', 'showBgInOverview': 'true', 'overviewBgBrightness': '95', 'overviewBgBlurSigma': '0', 'appGridBgBlurSigma': '40', 'smoothBlurTransitions': 'false', 'appGridAnimation': '4', 'searchViewAnimation': '4', 'workspaceAnimation': '1', 'animationSpeedFactor': '100', 'fixUbuntuDock': 'true', 'winPreviewIconSize': '1', 'alwaysShowWinTitles': 'true', 'startupState': '2', 'overviewMode': '0', 'workspaceSwitcherAnimation': '1', 'searchIconSize': '96', 'searchViewScale': '104', 'appGridIconSize': '-1', 'appGridColumns': '0', 'appGridRows': '0', 'appGridFolderIconSize': '-1', 'appGridFolderColumns': '0', 'appGridFolderRows': '0', 'appGridFolderIconGrid': '3', 'appGridContent': '2', 'appGridIncompletePages': 'true', 'appGridOrder': '0', 'appGridNamesMode': '0', 'appGridActivePreview': 'false', 'appGridFolderCenter': 'false', 'appGridPageWidthScale': '90', 'appGridSpacing': '12', 'searchWindowsEnable': 'true', 'searchRecentFilesEnable': 'true', 'searchFuzzy': 'false', 'searchMaxResultsRows': '5', 'dashShowWindowsBeforeActivation': '1', 'dashIconScroll': '1', 'searchWindowsIconScroll': '1', 'panelVisibility': '0', 'panelPosition': '0', 'windowAttentionMode': '0', 'wsSwPopupHPosition': '50', 'wsSwPopupVPosition': '95', 'wsSwPopupMode': '1', 'favoritesNotify': '1', 'notificationPosition': '2', 'osdPosition': '6', 'hotCornerAction': '1', 'hotCornerPosition': '0', 'hotCornerFullscreen': 'false', 'hotCornerRipples': 'true', 'alwaysActivateSelectedWindow': 'false', 'windowIconClickSearch': 'true', 'overlayKeySecondary': '1', 'workspaceThumbnailsModule': 'true', 'workspaceSwitcherPopupModule': 'true', 'workspaceAnimationModule': 'true', 'workspaceModule': 'true', 'windowManagerModule': 'true', 'windowPreviewModule': 'true', 'winAttentionHandlerModule': 'true', 'swipeTrackerModule': 'true', 'searchModule': 'true', 'panelModule': 'true', 'overlayKeyModule': 'true', 'osdWindowModule': 'true', 'messageTrayModule': 'true', 'layoutModule': 'true', 'dashModule': 'true', 'appFavoritesModule': 'true', 'appDisplayModule': 'true', 'profileName1': 'GNOME 3', 'profileName2': 'GNOME 40+ - Bottom Hot Edge', 'profileName3': 'Hot Corner Centric - Top Left Hot Corner', 'profileName4': 'Dock Overview - Bottom Hot Edge'}"
+profile-data-4="{'workspaceThumbnailsPosition': '0', 'wsMaxSpacing': '350', 'wsPreviewScale': '100', 'secWsPreviewScale': '100', 'secWsPreviewShift': 'false', 'wsThumbnailsFull': 'false', 'secWsThumbnailsPosition': '2', 'dashPosition': '2', 'dashPositionAdjust': '0', 'wsTmbPositionAdjust': '0', 'showWsTmbLabels': '3', 'showWsTmbLabelsOnHover': 'false', 'closeWsButtonMode': '2', 'secWsTmbPositionAdjust': '0', 'dashMaxIconSize': '48', 'dashShowWindowsIcon': '1', 'dashShowRecentFilesIcon': '1', 'centerDashToWs': 'true', 'showAppsIconPosition': '1', 'wsThumbnailScale': '13', 'wsThumbnailScaleAppGrid': '13', 'secWsThumbnailScale': '13', 'showSearchEntry': 'false', 'centerSearch': 'true', 'centerAppGrid': 'false', 'dashBgOpacity': '80', 'dashBgRadius': '17', 'enablePageShortcuts': 'false', 'showWsSwitcherBg': 'true', 'showWsPreviewBg': 'false', 'wsPreviewBgRadius': '30', 'showBgInOverview': 'true', 'overviewBgBrightness': '95', 'overviewBgBlurSigma': '0', 'appGridBgBlurSigma': '40', 'smoothBlurTransitions': 'false', 'appGridAnimation': '4', 'searchViewAnimation': '4', 'workspaceAnimation': '1', 'animationSpeedFactor': '100', 'fixUbuntuDock': 'true', 'winPreviewIconSize': '1', 'alwaysShowWinTitles': 'true', 'startupState': '2', 'overviewMode': '0', 'workspaceSwitcherAnimation': '1', 'searchIconSize': '96', 'searchViewScale': '104', 'appGridIconSize': '-1', 'appGridColumns': '0', 'appGridRows': '0', 'appGridFolderIconSize': '-1', 'appGridFolderColumns': '0', 'appGridFolderRows': '0', 'appGridFolderIconGrid': '3', 'appGridContent': '2', 'appGridIncompletePages': 'true', 'appGridOrder': '0', 'appGridNamesMode': '0', 'appGridActivePreview': 'false', 'appGridFolderCenter': 'false', 'appGridPageWidthScale': '90', 'appGridSpacing': '12', 'searchWindowsEnable': 'true', 'searchRecentFilesEnable': 'true', 'searchFuzzy': 'false', 'searchMaxResultsRows': '5', 'dashShowWindowsBeforeActivation': '1', 'dashIconScroll': '1', 'searchWindowsIconScroll': '1', 'panelVisibility': '0', 'panelPosition': '0', 'windowAttentionMode': '0', 'wsSwPopupHPosition': '50', 'wsSwPopupVPosition': '95', 'wsSwPopupMode': '1', 'favoritesNotify': '1', 'notificationPosition': '2', 'osdPosition': '6', 'hotCornerAction': '1', 'hotCornerPosition': '0', 'hotCornerFullscreen': 'false', 'hotCornerRipples': 'true', 'alwaysActivateSelectedWindow': 'false', 'windowIconClickSearch': 'true', 'overlayKeySecondary': '1', 'workspaceThumbnailsModule': 'true', 'workspaceSwitcherPopupModule': 'true', 'workspaceAnimationModule': 'true', 'workspaceModule': 'true', 'windowManagerModule': 'true', 'windowPreviewModule': 'true', 'winAttentionHandlerModule': 'true', 'swipeTrackerModule': 'true', 'searchModule': 'true', 'panelModule': 'true', 'overlayKeyModule': 'true', 'osdWindowModule': 'true', 'messageTrayModule': 'true', 'layoutModule': 'true', 'dashModule': 'true', 'appFavoritesModule': 'true', 'appDisplayModule': 'true', 'profileName1': 'GNOME 3', 'profileName2': 'GNOME 40+ - Bottom Hot Edge', 'profileName3': 'Hot Corner Centric - Top Left Hot Corner', 'profileName4': 'Dock Overview - Bottom Hot Edge'}"
+profile-name-1='GNOME 3'
+profile-name-2='GNOME 40+ - Bottom Hot Edge'
+profile-name-3='Hot Corner Centric - Top Left Hot Corner'
+profile-name-4='Dock Overview - Bottom Hot Edge'
 
 [org/gnome/shell/extensions/window-list]
 display-all-workspaces=false
@@ -1436,9 +1754,9 @@ toggle-overview=@as []
 locations='@av []'
 
 [org/gnome/software]
-check-timestamp=int64 1689676094
+check-timestamp=int64 1690639155
 first-run=false
-flatpak-purge-timestamp=int64 1689675555
+flatpak-purge-timestamp=int64 1690591516
 
 [org/gnome/system/location]
 enabled=true
@@ -1453,7 +1771,7 @@ selected-color=(true, 1.0)
 [org/gtk/gtk4/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=true
+show-hidden=false
 show-size-column=true
 show-type-column=true
 sidebar-width=140
@@ -1471,7 +1789,7 @@ selected-color=(true, 1.0, 1.0, 1.0, 1.0)
 [org/gtk/settings/file-chooser]
 date-format='regular'
 location-mode='path-bar'
-show-hidden=true
+show-hidden=false
 show-size-column=true
 show-type-column=true
 sidebar-width=189
@@ -1482,6 +1800,53 @@ type-format='category'
 window-position=(35, 32)
 window-size=(1231, 902)
 
+[org/virt-manager/virt-manager]
+manager-window-height=550
+manager-window-width=550
+
+[org/virt-manager/virt-manager/confirm]
+delete-storage=false
+forcepoweroff=false
+unapplied-dev=false
+
+[org/virt-manager/virt-manager/connections]
+autoconnect=['qemu:///system']
+uris=['qemu:///system']
+
+[org/virt-manager/virt-manager/conns/qemu:system]
+window-size=(800, 600)
+
+[org/virt-manager/virt-manager/console]
+auto-redirect=false
+grab-keys='65507,65513'
+resize-guest=1
+scaling=1
+
+[org/virt-manager/virt-manager/details]
+show-toolbar=true
+
+[org/virt-manager/virt-manager/new-vm]
+graphics-type='system'
+
+[org/virt-manager/virt-manager/paths]
+image-default='/home/demine/Downloads'
+perms-fix-ignore=['/mnt/Data', '/run/media/demine', '/home/demine', '/run/media/demine/Ventoy']
+
+[org/virt-manager/virt-manager/urls]
+isos=['/run/media/demine/Ventoy/Fedora-Sway-Live-x86_64-38-1.6.iso']
+
+[org/virt-manager/virt-manager/vmlist-fields]
+disk-usage=false
+network-traffic=false
+
+[org/virt-manager/virt-manager/vms/266e5abf6cd24203a0b5f2c6ef85c44f]
+autoconnect=0
+resize-guest=1
+scaling=2
+vm-window-size=(1920, 1005)
+
 [system/locale]
 region='ru_RU.UTF-8'
 
+[system/proxy]
+mode='none'

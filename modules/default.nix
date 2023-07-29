@@ -34,7 +34,7 @@
 
   i18n.defaultLocale = "ru_RU.UTF-8";
   console = {
-    font = "ter-v16n";
+    #font = "ter-v16n";
     keyMap = "ru";
   };
 

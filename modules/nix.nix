@@ -1,4 +1,4 @@
-{ config, pkgs, ...}:
+{ config, pkgs, lib, ...}:
 {
   nix = {
     settings = {
@@ -8,6 +8,11 @@
   };
 
   services = {
+    usbmuxd.enable = true;
+    smartd = {
+    enable = true;
+    };
+    fstrim.enable = true;  
     dbus.enable = true;
     mpd = {
       enable = true; 
@@ -35,17 +40,23 @@
   };
 
   hardware.bluetooth.enable = true;
-  boot.kernelPackages = pkgs.linuxPackages_testing;
-  boot.loader.timeout = 15;
-  boot.plymouth.enable = true;
-  boot.loader.systemd-boot = {
-   enable = true;
+  boot= {
+  kernelPackages = pkgs.linuxPackages_testing;
+  loader.timeout = 0;
+  bootspec.enable = true;
+  lanzaboote = {
+    enable = true;
+    pkiBundle = "/etc/secureboot"; 
+  };
+  plymouth.enable = true;
+  loader.systemd-boot = {
+   enable = lib.mkForce false;
    editor = false; };
-    boot.kernelParams = [
+    kernelParams = [
     "initcall_blacklist=acpi_cpufreq_init"
     "amd_pstate=active"
   ];
-  boot.kernelModules = ["amd-pstate"];
-
+  kernelModules = ["amd-pstate"];
+  };
   nixpkgs.config.allowUnfree = true;
 }

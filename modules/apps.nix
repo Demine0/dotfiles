@@ -30,7 +30,10 @@
     libreoffice
     transmission-gtk
     # cli
+    libimobiledevice
     zsh
+    dconf2nix
+    smartmontools
     bluez5
     doas
     doas-sudo-shim
@@ -46,6 +49,7 @@
     ffmpeg
     wireguard-tools
     neofetch
+    sbctl
     # browsers
     google-chrome
     # media

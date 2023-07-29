@@ -40,7 +40,7 @@ in
 
 {
   fonts = {
-    fonts = with pkgs; [
+    packages = with pkgs; [
       cascadia-code
       cantarell-fonts
       noto-fonts
