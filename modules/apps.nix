@@ -31,6 +31,8 @@
     transmission-gtk
     # cli
     libimobiledevice
+    lynx
+    w3m
     zsh
     dconf2nix
     smartmontools

@@ -38,6 +38,25 @@ let
   };
 in
 
+let
+   sf-mono = pkgs.stdenvNoCC.mkDerivation {
+    pname = "sf-mono";
+    version = "0";
+
+    src = pkgs.fetchzip {
+      stripRoot = false;
+      url = "https://font.gooova.com/d/14165/sf-mono-font.zip";
+      sha256 = "sha256-TsEQupTjL9ZOuIHZc6EBDdXjEuUevot0a9+65B0/ais=";
+    };
+
+    installPhase = ''
+      runHook preInstall
+      install -Dm644 *.ttf -t $out/share/fonts/truetype
+      runHook postInstall
+    '';
+  };
+in
+
 {
   fonts = {
     packages = with pkgs; [
@@ -55,6 +74,7 @@ in
       san-francisco-pro
       cooper-hewitt
       menlo
+      sf-mono
       iosevka ];
     fontconfig = {
       enable = lib.mkForce true;
