@@ -59,6 +59,7 @@ in
 
 {
   fonts = {
+  fontDir.enable = true;
     packages = with pkgs; [
       cascadia-code
       cantarell-fonts

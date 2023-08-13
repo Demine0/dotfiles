@@ -30,6 +30,7 @@
     algorithm = "zstd";
     #memoryPercent = ;
 };
+ programs.java.enable = true;
  programs.darling.enable = true;
  services.flatpak.enable = true;
   users.users.demine = {

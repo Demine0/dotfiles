@@ -6,7 +6,6 @@
     whitesur-icon-theme
     gnome.gnome-tweaks
     fzf
-    gnomeExtensions.gsconnect
     adw-gtk3
     authenticator
     gnomeExtensions.just-perfection
@@ -14,12 +13,12 @@
     gnome.gnome-themes-extra
     # editors
     neovim
+    vim
     # tools
     ventoy-full
     mpv
     darktable
     gimp
-    ark
     tlp
     easyeffects
     mc
@@ -31,6 +30,7 @@
     transmission-gtk
     # cli
     libimobiledevice
+    uwufetch
     lynx
     w3m
     zsh
@@ -47,7 +47,6 @@
     man
     unzip
     unrar
-    vim
     ffmpeg
     wireguard-tools
     neofetch
@@ -65,6 +64,9 @@
     # codecs
     x265
     libde265
+    # games
+    jdk
+    minecraft
     # wine
     bottles
     wine64
