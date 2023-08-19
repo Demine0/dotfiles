@@ -77,7 +77,7 @@ in
           --log-no-syslog"
         # Do i need to explain
 	"swayosd --max-volume=140"
-	"microsoft-edge"
+	"google-chrome-stable"
         "waybar"
       ]);
       fonts = {
@@ -154,7 +154,7 @@ wayland.windowManager.sway.config = {
    criteria = [
    { app_id = "floatin"; }
     #class = "floatin"; 
-    #instance = "alacritty"; }
+    #instance = "foot"; }
    ];
   };
 
@@ -190,7 +190,7 @@ wayland.windowManager.sway.config = {
         "${modifier}+c" = "exec ${floatin} -- clip-menu";
         "${modifier}+i" = "exec ${floatin} -- power-menu";
         "${modifier}+d" = "exec ${pkgs.wofi}/bin/wofi --show run";
-        "${modifier}+Shift+f" = "exec ${pkgs.microsoft-edge}/bin/microsoft-edge";
+        "${modifier}+Shift+f" = "exec ${pkgs.google-chrome}/bin/google-chrome-stable";
         "${modifier}+r" = "exec ${pkgs.foot}/bin/foot";
         "${modifier}+Shift+r" = "mode resize";
         "${modifier}+a" = "fullscreen toggle";
@@ -234,13 +234,4 @@ wayland.windowManager.sway.config = {
   };
 	   output."*".bg = "/home/demine/.local/share/User/background fill";
 };
- home.pointerCursor = {
-      name = "macOS-Monterey";
-      package = pkgs.apple-cursor;
-      size = 23;
-      x11 = {
-        enable = true;
-        defaultCursor = "macOS-Monterey";
-      };
-    };
 }

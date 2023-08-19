@@ -1,5 +1,5 @@
 { config, lib, pkgs, ... }: {
-  services.xserver.displayManager.gdm.enable = true;
+  #services.xserver.displayManager.gdm.enable = true;
   services.xserver.displayManager.gdm.wayland = true;
 
   systemd = with lib; {

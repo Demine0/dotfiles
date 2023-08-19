@@ -1,16 +1,31 @@
 { config, lib, pkgs, inputs, ...}:
 { 
  environment.systemPackages = with pkgs; [
+    # sway
+    sway
+    swaybg
+    swayosd
+    waybar
+    wofi
+    swaylock
+    swayidle
+    grim # screenshot functionality
+    slurp # screenshot functionality
+    wl-clipboard # wl-copy and wl-paste for copy/paste from stdin / stdout
+    bemenu # wayland clone of dmenu
+    mako # notification system developed by swaywm maintainer
+    networkmanagerapplet
+    cava #visual
+    wdisplays # tool to configure displays
+    foot
     # gnome
     gnomeExtensions.night-theme-switcher
-    whitesur-icon-theme
     gnome.gnome-tweaks
     fzf
     adw-gtk3
     authenticator
     gnomeExtensions.just-perfection
     gnomeExtensions.quick-settings-audio-panel
-    gnome.gnome-themes-extra
     # editors
     neovim
     vim
@@ -71,7 +86,5 @@
     bottles
     wine64
     winetricks
-    # other
-    apple-cursor
   ];
 }

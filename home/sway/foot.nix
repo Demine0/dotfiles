@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       main = {
-        font = "Menlo:size=8";
+        font = "Menlo:size=10";
         term = "xterm-256color";
       };
       colors = {

@@ -30,8 +30,9 @@
     algorithm = "zstd";
     #memoryPercent = ;
 };
- programs.java.enable = true;
- programs.darling.enable = true;
+ programs = {
+ java.enable = true;
+ darling.enable = true; };
  services.flatpak.enable = true;
   users.users.demine = {
     packages = with pkgs; [
@@ -43,15 +44,15 @@
   hardware.bluetooth.enable = true;
   boot= {
   kernelPackages = pkgs.linuxPackages_testing;
-  loader.timeout = 0;
-  bootspec.enable = true;
-  lanzaboote = {
-    enable = true;
-    pkiBundle = "/etc/secureboot"; 
-  };
+  loader.timeout = 15;
+  #bootspec.enable = true;
+  #lanzaboote = {
+    #enable = true;
+    #pkiBundle = "/etc/secureboot"; 
+  #};
   plymouth.enable = true;
   loader.systemd-boot = {
-   enable = lib.mkForce false;
+   enable = true; #lib.mkForce false;
    editor = false; };
     kernelParams = [
     "initcall_blacklist=acpi_cpufreq_init"

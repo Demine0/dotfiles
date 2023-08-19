@@ -1,6 +1,7 @@
 {
   imports = [
   ./dconf.nix
+  ./sway
   ];
 
   home = {

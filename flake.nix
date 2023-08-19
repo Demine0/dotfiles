@@ -4,14 +4,14 @@
   inputs = {
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     stable.url =  "github:nixos/nixpkgs/nixos-23.05";
-    lanzaboote.url = "github:nix-community/lanzaboote";
+    #lanzaboote.url = "github:nix-community/lanzaboote";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "unstable";
     };
   };
-  
-  outputs =  inputs@{ self , lanzaboote, stable ,  unstable , nixpkgs , home-manager }: 
+  #lanzaboote = secureboot
+  outputs =  inputs@{ self , stable ,  unstable , nixpkgs , home-manager }: 
   
   {
        nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
@@ -20,7 +20,7 @@
 	  modules = [ 
 	  (import ./configuration.nix)
 	  ./modules
-           lanzaboote.nixosModules.lanzaboote
+           #lanzaboote.nixosModules.lanzaboote
 	   home-manager.nixosModules.home-manager 
 	 {  
 	      home-manager = {

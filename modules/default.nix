@@ -3,7 +3,7 @@
   imports = [
     ./nix.nix
     ./doas.nix
-    #./sway.nix
+    ./sway.nix
     ./zsh
    # ./tlp.nix
     ./apps.nix
@@ -11,7 +11,7 @@
     ./fonts.nix
     ./gnome.nix
     ./flatpak.nix
-    #./gdm.nix
+    ./gdm.nix
   ];
 
   users.users.demine = {
