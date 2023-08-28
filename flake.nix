@@ -18,7 +18,6 @@
 	  system = "x86_64-linux";
 	  specialArgs = {inherit inputs; };
 	  modules = [ 
-	  (import ./configuration.nix)
 	  ./modules
            #lanzaboote.nixosModules.lanzaboote
 	   home-manager.nixosModules.home-manager 
