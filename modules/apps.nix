@@ -81,10 +81,13 @@
     libde265
     # games
     jdk
+    gzdoom
     minecraft
     # wine
     bottles
     wine64
     winetricks
+    # print
+    epson_201207w
   ];
 }

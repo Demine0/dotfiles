@@ -225,7 +225,7 @@ wayland.windowManager.sway.config = {
     "type:pointer" = {
     natural_scroll = "disabled";
     accel_profile = "adaptive";
-    pointer_accel = "-0.34"; # set mouse sensitivity (between -1 and 1)
+    pointer_accel = "-0.28315400000000002"; # set mouse sensitivity (between -1 and 1)
     };
     "type:touchpad" = {
       tap = "enabled";
