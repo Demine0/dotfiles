@@ -1,6 +1,7 @@
 { config, lib, pkgs, inputs, ...}:
 { 
  environment.systemPackages = with pkgs; [
+    # kde
     # sway
     sway
     swaybg

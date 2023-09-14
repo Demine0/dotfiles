@@ -83,7 +83,7 @@ in
       fonts = {
        names = [ "menlo" ];
       style = "monospace";
-      size = 10.0;
+      size = 11.0;
      };
   };
 };

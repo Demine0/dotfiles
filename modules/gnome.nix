@@ -1,8 +1,10 @@
-{ pkgs, config, ...}:
+{ pkgs, config, lib, ...}:
 {
-services.xserver.enable = true;
-services.xserver.displayManager.gdm.enable = true;
-services.xserver.desktopManager.gnome.enable = true;
+services = {
+  xserver = {
+	enable = true;
+	displayManager.gdm.enable = true;
+	desktopManager.gnome.enable = true; }; };
  environment.gnome.excludePackages = (with pkgs; [
    gnome-tour
    gnome-browser-connector
@@ -24,7 +26,6 @@ services.xserver.desktopManager.gnome.enable = true;
    hitori # sudoku game
    atomix # puzzle game
  ]);
-
   hardware.pulseaudio.enable = false;
   environment = {
     sessionVariables = {

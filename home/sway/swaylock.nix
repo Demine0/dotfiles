@@ -1,6 +1,6 @@
 { pkgs, config, ...}:
 {
- # services.swayidle.events = [ {event = "before-sleep"; command = "${pkgs.swaylock}/bin/swaylock";} ];
+ services.swayidle.events = [ {event = "before-sleep"; command = "${pkgs.swaylock}/bin/swaylock";} ];
   programs.swaylock.settings = {
     color = "#000000";
     font = "SF-Pro-Display";

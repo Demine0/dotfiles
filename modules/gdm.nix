@@ -1,7 +1,10 @@
 { config, lib, pkgs, ... }: {
-  #services.xserver.displayManager.gdm.enable = true;
-  services.xserver.displayManager.gdm.wayland = true;
-
+  services = {
+  #xserver.displayManager.gdm.enable = true;
+  xserver.displayManager.gdm.wayland = true;
+  xserver.displayManager.lightdm.enable = lib.mkForce false;
+  xserver.displayManager.defaultSession = "gnome";
+};
   systemd = with lib; {
     defaultUnit = "graphical.target";
     services.display-manager = {

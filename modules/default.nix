@@ -5,13 +5,17 @@
     ./doas.nix
     ./sway.nix
     ./zsh
-   # ./tlp.nix
+   #./tlp.nix
     ./apps.nix
     ./nerworking.nix
     ./fonts.nix
     ./gnome.nix
     ./flatpak.nix
+    ./deepin.nix
     ./gdm.nix
+   #./pantheon.nix
+    ./kde.nix 
+   #./dwm.nix
   ];
 
   users.users.demine = {
