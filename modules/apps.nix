@@ -1,7 +1,6 @@
 { config, lib, pkgs, inputs, ...}:
 { 
  environment.systemPackages = with pkgs; [
-    # kde
     # sway
     sway
     swaybg
@@ -23,6 +22,8 @@
     gnomeExtensions.night-theme-switcher
     gnome.gnome-tweaks
     fzf
+    gparted
+    mission-center
     adw-gtk3
     authenticator
     gnomeExtensions.just-perfection
@@ -32,6 +33,7 @@
     vim
     # tools
     ventoy-full
+    xorg.xlsclients
     mpv
     darktable
     gimp
@@ -50,6 +52,8 @@
     lynx
     w3m
     zsh
+    fakechroot
+    proot
     dconf2nix
     smartmontools
     bluez5
@@ -82,13 +86,16 @@
     libde265
     # games
     jdk
+    toipe
     gzdoom
     minecraft
     # wine
     bottles
     wine64
     winetricks
-    # print
-    epson_201207w
+    # systen
+    zenpower
+    #linuxKernel.packages.linux_testing.zenpower
+    lm_sensors
   ];
 }

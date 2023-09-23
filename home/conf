@@ -491,7 +491,7 @@ disk_percent="on"
 # xmms2d
 # xnoise
 # yarock
-music_player="auto"
+music_player="spotify"
 
 # Format to display song information.
 #

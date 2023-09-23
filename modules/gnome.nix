@@ -18,7 +18,6 @@ services = {
    yelp
    gnome-contacts
    gnome-characters
-   epiphany # web browser
    geary # email reader
    evince # document viewer
    tali # poker game

@@ -46,11 +46,11 @@
   zramSwap = {
     enable = true;
     algorithm = "zstd";
-    #memoryPercent = ;
+    #memoryMax = 100;
+    memoryPercent = 100;
 };
  programs = {
- java.enable = true;
- darling.enable = true; };
+ java.enable = true; };
  services.flatpak.enable = true;
   users.users.demine = {
     packages = with pkgs; [
@@ -64,13 +64,14 @@
   hardware.bluetooth.enable = true;
   boot= {
   kernelPackages = pkgs.linuxPackages_testing;
+  #extraModulePackages = with config.boot.kernelPackages; [ zenpower ];
   loader.timeout = 15;
   #bootspec.enable = true;
   #lanzaboote = {
     #enable = true;
     #pkiBundle = "/etc/secureboot"; 
   #};
-  plymouth.enable = true;
+  #plymouth.enable = true;
   loader.systemd-boot = {
    enable = true; #lib.mkForce false;
    editor = false; };
@@ -81,7 +82,6 @@
   kernelModules = ["amd-pstate" "kvm-amd"];
   initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ];
   initrd.kernelModules = [ ];
-  extraModulePackages = [ ];
   };
   nixpkgs.config.allowUnfree = true;
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";

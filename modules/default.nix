@@ -1,21 +1,19 @@
 { pkgs, ... }:
 {
   imports = [
-    ./nix.nix
-    ./doas.nix
-    ./sway.nix
-    ./zsh
-   #./tlp.nix
     ./apps.nix
-    ./nerworking.nix
+    ./doas.nix
+    ./dwl.nix
+    ./dwm.nix
     ./fonts.nix
-    ./gnome.nix
-    ./flatpak.nix
-    ./deepin.nix
+   #./tlp.nix
     ./gdm.nix
-   #./pantheon.nix
-    ./kde.nix 
-   #./dwm.nix
+    ./gnome.nix
+    ./kde.nix
+    ./networking.nix
+    ./nix.nix
+    ./sway.nix
+    ./zsh 
   ];
 
   users.users.demine = {
@@ -55,3 +53,4 @@
     services.NetworkManager-wait-online.wantedBy = pkgs.lib.mkForce [];
   };
 }
+

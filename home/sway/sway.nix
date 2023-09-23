@@ -197,7 +197,7 @@ wayland.windowManager.sway.config = {
         "${modifier}+x" = "kill";
         "${modifier}+f" = " floating toggle";
 	"Alt+F12" = ''exec exec grim '-g' "$(slurp -d)" - | wl-copy '';
-	"Alt+F11" = ''exec swaymsg -t get_tree | jq -r '.. | (.nodes? // empty)[] | if (.focused) then select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)" else (.floating_nodes? // empty)[] | select(.visible) | select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)" end' | grim -g - - | wl-copy'';
+	"Alt+Ctrl" = ''exec swaymsg -t get_tree | jq -r '.. | (.nodes? // empty)[] | if (.focused) then select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)" else (.floating_nodes? // empty)[] | select(.visible) | select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)" end' | grim -g - - | wl-copy'';
         "Ctrl+F12" = "exec grim - | wl-copy";
       };
 
