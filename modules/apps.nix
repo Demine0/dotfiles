@@ -93,9 +93,8 @@
     bottles
     wine64
     winetricks
-    # systen
-    zenpower
-    #linuxKernel.packages.linux_testing.zenpower
+    # system
+    dd_rescue
     lm_sensors
   ];
 }

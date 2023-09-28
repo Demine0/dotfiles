@@ -62,6 +62,8 @@ in
   fontDir.enable = true;
     packages = with pkgs; [
       cascadia-code
+      times-newer-roman
+      liberation_ttf
       cantarell-fonts
       noto-fonts
       noto-fonts-emoji

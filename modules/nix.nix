@@ -13,6 +13,12 @@
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/ba417403-3f3d-4802-939d-87a1c88e70b9";
       fsType = "btrfs";
+      options = [ 
+	"ssd"
+	"noatime"
+	"compress=zstd:1"
+	"discard=async"
+	];
     };
 
   fileSystems."/boot" =
@@ -21,10 +27,15 @@
     };
 
   fileSystems."/mnt/Data" =
-   {  device = "/dev/disk/by-uuid/28163cf6-e97b-4fa7-8ce3-8b72e0232c3a";
-      fsType = "ext4";
-   };
-
+   {  device = "/dev/disk/by-uuid/1f663a79-b938-4f9a-bc25-47c91691aa5d";
+      fsType = "btrfs";
+      options = [ 
+	"ssd"
+	"noatime"
+	"compress=zstd:1"
+	"discard=async"
+   ];
+};
   services = {
     usbmuxd.enable = true;
     smartd = {
@@ -64,6 +75,7 @@
   hardware.bluetooth.enable = true;
   boot= {
   kernelPackages = pkgs.linuxPackages_testing;
+  kernel.sysctl = { "net.ipv4.ip_default_ttl" = 65;};
   #extraModulePackages = with config.boot.kernelPackages; [ zenpower ];
   loader.timeout = 15;
   #bootspec.enable = true;
