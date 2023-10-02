@@ -25,6 +25,11 @@ services = {
    hitori # sudoku game
    atomix # puzzle game
  ]);
+  programs = { 
+   kdeconnect = { 
+   enable = true;
+   package = pkgs.gnomeExtensions.gsconnect;
+ }; };
   hardware.pulseaudio.enable = false;
   environment = {
     sessionVariables = {

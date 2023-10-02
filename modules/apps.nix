@@ -26,12 +26,14 @@
     mission-center
     adw-gtk3
     authenticator
+    gnomeExtensions.gsconnect
     gnomeExtensions.just-perfection
     gnomeExtensions.quick-settings-audio-panel
     # editors
     neovim
     vim
     # tools
+    bottles
     ventoy-full
     xorg.xlsclients
     mpv
@@ -49,6 +51,7 @@
     # cli
     libimobiledevice
     uwufetch
+    parted
     lynx
     w3m
     zsh
