@@ -30,7 +30,7 @@
 	{ home-manager = 
 	  { useGlobalPkgs = true;
 	    useUserPackages = true;
-	    users.demine.import = [ ./home ];
+	    users.demine.imports = [ ./home ];
 	};
 	}
 
