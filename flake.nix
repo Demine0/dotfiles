@@ -6,13 +6,40 @@
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     stable.url =  "github:nixos/nixpkgs/nixos-23.05";
     lanzaboote.url = "github:nix-community/lanzaboote";
+    nix-darwin.url = "github:LnL7/nix-darwin/master";
+     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "unstable";
     };
   };
-  outputs =  inputs@{ self , stable , lanzaboote,  unstable , nixpkgs , home-manager }: 
+  outputs =  inputs@{ self , stable , lanzaboote, nix-darwin, nix-dar,  unstable , nixpkgs , home-manager }: 
 {
+ darwinConfigurations = nixpkgs.lib.genAttrs self.hosts self.mkNix-DarwinHost;
+  mkNix-DarwinHost = name:
+ nixpkgs.lib.darwinSystem {
+  system = "x86_64-darwin";
+  specialArgs = 
+   inputs
+   // { 
+	inherit inputs;
+      };
+    modules = 
+     [ ./darwin-hosts (./darwin-hosts + "/${name}")]
+ ++ [
+     ./modules
+     home-manager.nixosModules.home-manager
+	{ home-manager = 
+	  { useGlobalPkgs = true;
+	    useUserPackages = true;
+	    users.demine.imports = [ ./home ];
+	};
+	}
+     ]; 
+     #++ __attrValues (builtins.listToAttrs (findModules ./modules));
+  };
+  hosts = builtins.attrNames (builtins.readDir ./darwin-hosts);
+};
  nixosConfigurations = nixpkgs.lib.genAttrs self.hosts self.mkNixOSHost;
   mkNixOSHost = name:
  nixpkgs.lib.nixosSystem {
