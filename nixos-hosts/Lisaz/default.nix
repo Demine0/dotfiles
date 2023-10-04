@@ -1,9 +1,11 @@
 { config, pkgs, lib, modulesPath, ...}:
 {
-	imports = [
+	imports = 
+		[
 		(modulesPath + "/installer/scan/not-detected.nix") 
 		./hardware.nix
-		#./tlp.nix ];
+		#./tlp.nix 
+		];
 
   boot = {
   	kernelPackages = pkgs.linuxPackages_testing;
@@ -24,5 +26,5 @@
   	initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ]; };
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-	networking.hostName = "Lisaz"
+	networking.hostName = "Lisaz";
 }
