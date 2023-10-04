@@ -3,10 +3,7 @@
   imports = [
     ./apps.nix
     ./doas.nix
-    ./dwl.nix
-    ./dwm.nix
     ./fonts.nix
-   #./tlp.nix
     ./gdm.nix
     ./gnome.nix
     ./kde.nix
@@ -36,7 +33,6 @@
 
   i18n.defaultLocale = "ru_RU.UTF-8";
   console = {
-    #font = "ter-v16n";
     keyMap = "ru";
   };
 
@@ -47,7 +43,6 @@
   services.openssh.enable = true;
   hardware.opengl.driSupport32Bit = true;
   services.printing.enable = true;
-  # Don't wait for network startup
   systemd = {
     targets.network-online.wantedBy = pkgs.lib.mkForce [];
     services.NetworkManager-wait-online.wantedBy = pkgs.lib.mkForce [];

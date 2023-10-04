@@ -45,27 +45,6 @@
   system.autoUpgrade.enable = true;
   system.stateVersion = "23.05";
   networking.useDHCP = lib.mkDefault true;
-  hardware.bluetooth.enable = true;
-  boot= {
-  #extraModulePackages = with config.boot.kernelPackages; [ zenpower ];
-  loader.timeout = 15;
-  bootspec.enable = true;
-  lanzaboote = {
-    enable = true;
-    pkiBundle = "/etc/secureboot"; 
-  };
-  plymouth.enable = true;
-  loader.systemd-boot = {
-   enable = lib.mkForce false;
-   editor = false; };
-    kernelParams = [
-    "initcall_blacklist=acpi_cpufreq_init"
-    "amd_pstate=active"
-  ];
-  kernelModules = ["amd-pstate" "kvm-amd"];
-  initrd.availableKernelModules = [ "nvme" "xhci_pci" "usb_storage" "sd_mod" ];
-  initrd.kernelModules = [ ];
-  };
   nixpkgs.config.allowUnfree = true;
 
 
