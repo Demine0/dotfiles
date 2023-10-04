@@ -27,18 +27,18 @@
     modules = 
      [ ./darwin-hosts (./darwin-hosts + "/${name}")]
  ++ [
-     ./modules
-     home-manager.nixosModules.home-manager
+     ./darwin-modules
+     home-manager.darwinModules.home-manager
 	{ home-manager = 
 	  { useGlobalPkgs = true;
 	    useUserPackages = true;
-	    users.demine.imports = [ ./home ];
+	    users.demine.imports = [ ./darwin-home ];
 	};
 	}
      ]; 
      #++ __attrValues (builtins.listToAttrs (findModules ./modules));
   };
-  hosts = builtins.attrNames (builtins.readDir ./darwin-hosts);
+ darwin-hosts = builtins.attrNames (builtins.readDir ./darwin-hosts);
 };
  nixosConfigurations = nixpkgs.lib.genAttrs self.hosts self.mkNixOSHost;
   mkNixOSHost = name:
@@ -52,12 +52,12 @@
     modules = 
      [ ./nixos-hosts (./nixos-hosts + "/${name}")]
  ++ [
-     ./modules
+     ./nixos-modules
      home-manager.nixosModules.home-manager
 	{ home-manager = 
 	  { useGlobalPkgs = true;
 	    useUserPackages = true;
-	    users.demine.imports = [ ./home ];
+	    users.demine.imports = [ ./nixos-home ];
 	};
 	}
 
