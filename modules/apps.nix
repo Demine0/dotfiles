@@ -53,7 +53,6 @@
     uwufetch
     parted
     lynx
-    fscrypt
     w3m
     zsh
     fakechroot
