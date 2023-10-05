@@ -13,7 +13,7 @@
       inputs.nixpkgs.follows = "unstable";
     };
   };
-  outputs =  inputs@{ self , stable , lanzaboote, nix-darwin, nix-dar,  unstable , nixpkgs , home-manager }: 
+  outputs =  inputs@{ self , stable , lanzaboote, nix-darwin,  unstable , nixpkgs , home-manager }: 
 {
  darwinConfigurations = nixpkgs.lib.genAttrs self.hosts self.mkNix-DarwinHost;
   mkNix-DarwinHost = name:
@@ -39,7 +39,6 @@
      #++ __attrValues (builtins.listToAttrs (findModules ./modules));
   };
  darwin-hosts = builtins.attrNames (builtins.readDir ./darwin-hosts);
-};
  nixosConfigurations = nixpkgs.lib.genAttrs self.hosts self.mkNixOSHost;
   mkNixOSHost = name:
  nixpkgs.lib.nixosSystem {
