@@ -491,7 +491,7 @@ disk_percent="on"
 # xmms2d
 # xnoise
 # yarock
-music_player="spotify"
+music_player="auto"
 
 # Format to display song information.
 #
@@ -539,7 +539,7 @@ mpc_args=()
 # Example:
 # colors=(distro)      - Text is colored based on Distro colors.
 # colors=(4 6 1 8 8 6) - Text is colored in the order above.
-colors=(distro)
+colors=(15 15 15 6 15 15 6)
 
 
 # Text Options
@@ -783,7 +783,7 @@ ascii_distro="auto"
 # Example:
 # ascii_colors=(distro)      - Ascii is colored based on Distro colors.
 # ascii_colors=(4 6 1 8 8 6) - Ascii is colored using these colors.
-ascii_colors=(distro)
+ascii_colors=(6 6 6 6 6 6)
 
 # Bold ascii logo
 # Whether or not to bold the ascii logo.
