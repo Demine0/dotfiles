@@ -39,6 +39,7 @@
      #++ __attrValues (builtins.listToAttrs (findModules ./modules));
   };
  darwin-hosts = builtins.attrNames (builtins.readDir ./darwin-hosts);
+
  nixosConfigurations = nixpkgs.lib.genAttrs self.hosts self.mkNixOSHost;
   mkNixOSHost = name:
  nixpkgs.lib.nixosSystem {
