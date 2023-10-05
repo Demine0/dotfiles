@@ -9,4 +9,5 @@
     services.nix-daemon.enable = true;
     environment.shells = [ pkgs.zsh ];
     time.timeZone = "Europe/Moscow";
+    nixpkgs.config.allowUnfree = true;
 }
