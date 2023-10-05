@@ -17,7 +17,7 @@
 {
  darwinConfigurations = nixpkgs.lib.genAttrs self.hosts self.mkNix-DarwinHost;
   mkNix-DarwinHost = name:
- nixpkgs.lib.darwinSystem {
+ nix-darwin.lib.darwinSystem {
   system = "x86_64-darwin";
   specialArgs = 
    inputs
