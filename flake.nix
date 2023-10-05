@@ -15,7 +15,7 @@
   };
   outputs =  inputs@{ self , stable , lanzaboote, nix-darwin,  unstable , nixpkgs , home-manager }: 
 {
- darwinConfigurations = nixpkgs.lib.genAttrs self.hosts self.mkNix-DarwinHost;
+ darwinConfigurations = nixpkgs.lib.genAttrs self.darwin-hosts self.mkNix-DarwinHost;
   mkNix-DarwinHost = name:
  nix-darwin.lib.darwinSystem {
   system = "x86_64-darwin";

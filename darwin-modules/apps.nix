@@ -6,7 +6,6 @@
     vim
     neovim 
     # cli
-    cava
     mc
     ffmpeg
     neofetch
@@ -14,7 +13,6 @@
     lynx
     fzf
     tmux
-    dd_rescue
     toipe
     ];
 }

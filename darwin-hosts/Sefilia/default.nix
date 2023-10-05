@@ -1,11 +1,11 @@
 { pkgs, lib, modules, config, ... }:
 {
-  import = [
-  
+  imports = [
+           ./networking.nix
            ];
     system = { defaults = { trackpad = 
     { Clicking = true;
       Dragging = true;
     }; }; }; 
-  nixpkgs.hostPlatform = "x86_64-darwin"
-  }
+  nixpkgs.hostPlatform = "x86_64-darwin";
+}
