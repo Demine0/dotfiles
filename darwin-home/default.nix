@@ -1,6 +1,8 @@
 { pkgs, lib, config, ...}:
 {
-  imports = [
+  imports = 
+  [
+    ./vim.nix
   ];
 
   home = {

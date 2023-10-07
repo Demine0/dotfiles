@@ -6,14 +6,17 @@
     unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     stable.url =  "github:nixos/nixpkgs/nixos-23.05";
     lanzaboote.url = "github:nix-community/lanzaboote";
+    nixvim = {
+    url = "github:nix-community/nixvim";
+    inputs.nixpkgs.follows = "nixpkgs"; };
     nix-darwin.url = "github:LnL7/nix-darwin/master";
-     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "unstable";
     };
   };
-  outputs =  inputs@{ self , stable , lanzaboote, nix-darwin,  unstable , nixpkgs , home-manager }: 
+  outputs =  inputs@{ self, stable, lanzaboote, nix-darwin,  unstable, nixpkgs, nixvim, home-manager }: 
 {
  darwinConfigurations = nixpkgs.lib.genAttrs self.darwin-hosts self.mkNix-DarwinHost;
   mkNix-DarwinHost = name:
@@ -28,6 +31,7 @@
      [ ./darwin-hosts (./darwin-hosts + "/${name}")]
  ++ [
      ./darwin-modules
+    inputs.nixvim.nixDarwinModules.nixvim
      home-manager.darwinModules.home-manager
 	{ home-manager = 
 	  { useGlobalPkgs = true;
@@ -53,6 +57,7 @@
      [ ./nixos-hosts (./nixos-hosts + "/${name}")]
  ++ [
      ./nixos-modules
+    inputs.nixvim.nixosModules.nixvim
      home-manager.nixosModules.home-manager
 	{ home-manager = 
 	  { useGlobalPkgs = true;
