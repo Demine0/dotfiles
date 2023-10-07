@@ -5,6 +5,7 @@
     ./doas.nix
     ./fonts.nix
     ./gdm.nix
+    ./nixvim.nix
     ./gnome.nix
     ./kde.nix
     ./networking.nix
