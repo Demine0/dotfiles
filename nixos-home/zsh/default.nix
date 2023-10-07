@@ -9,8 +9,7 @@
       };
       enable = true;
       shellAliases = {
-        "doas" = "sudo";
-        "please" = "sudo";
+        "please" = "doas";
         "v" = "nvim";
         "vi" = "nvim";
         "vim" = "nvim";

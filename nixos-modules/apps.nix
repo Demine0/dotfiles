@@ -30,7 +30,7 @@
     gnomeExtensions.just-perfection
     gnomeExtensions.quick-settings-audio-panel
     # editors
-    neovim
+    emacs
     vim
     # tools
     bottles
