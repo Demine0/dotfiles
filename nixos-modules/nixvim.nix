@@ -4,6 +4,7 @@
   { enable = true;
     plugins = { 
       nix.enable = true;
+      nvim-cmp.enable = true;
       lualine.enable = true;
       nvim-tree = {
         enable = true; 
