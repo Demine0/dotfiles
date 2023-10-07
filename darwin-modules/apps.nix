@@ -11,7 +11,7 @@
     spotify
     # editors
     vim
-    neovim 
+    #neovim 
     # cli
     libimobiledevice
     mc
