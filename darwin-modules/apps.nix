@@ -10,6 +10,7 @@
     # music
     spotify
     # editors
+    emacs
     vim
     #neovim 
     # cli
