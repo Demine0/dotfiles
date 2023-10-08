@@ -81,7 +81,7 @@ in
         "waybar"
       ]);
       fonts = {
-       names = [ "menlo" ];
+       names = [ "Menlo Nerd Font" ];
       style = "monospace";
       size = 11.0;
      };

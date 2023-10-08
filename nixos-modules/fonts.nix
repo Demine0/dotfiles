@@ -26,8 +26,8 @@ let
 
     src = pkgs.fetchzip {
       stripRoot = false;
-      url = "https://bestfonts.pro/fonts_files/5c684c9730732d049e0253dc/font.zip";
-      sha256 = "sha256-n6OrTaRJeNLRYKDIHZ8RdxUKI3fHcZ/6wK7njkM2YBs";
+      url = "https://github.com/Demine0/dotfiles/releases/download/font/fontnerd.zip";
+      sha256 = "sha256-Cx0RzTWShHALeESvCArfUGzbsa4Z/ftyzcpBRQMRQLw=";
     };
 
     installPhase = ''
@@ -82,7 +82,7 @@ in
     fontconfig = {
       enable = lib.mkForce true;
       defaultFonts = {
-        monospace = [ "menlo 11" ];
+        monospace = [ "Menlo Nerd Font 11" ];
         sansSerif = [ "SF-Pro-Display 11" ];
         serif = [ "SF-Pro-Display 12" ];
       };

@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       main = {
-        font = "Menlo:size=11";
+        font = "Menlo Nerd Font:size=11";
         term = "xterm-256color";
       };
       colors = {
