@@ -5,13 +5,12 @@
     ./doas.nix
     ./fonts.nix
     ./gdm.nix
-    ./nixvim.nix
     ./gnome.nix
     ./kde.nix
     ./networking.nix
     ./nix.nix
     ./sway.nix
-    ./zsh 
+    ./zsh.nix 
   ];
 
   users.users.demine = {

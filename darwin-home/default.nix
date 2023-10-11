@@ -2,8 +2,6 @@
 {
   imports = 
   [
-    ./zsh
-    ./vim.nix
   ];
 
   home = {

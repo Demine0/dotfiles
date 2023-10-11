@@ -28,15 +28,16 @@
 	inherit inputs;
       };
     modules = 
-     [ ./darwin-hosts (./darwin-hosts + "/${name}")]
+     [(./darwin-hosts + "/${name}")]
  ++ [
-     ./darwin-modules
+   ./darwin-modules 
+   ./all/nixvim.nix
     inputs.nixvim.nixDarwinModules.nixvim
      home-manager.darwinModules.home-manager
 	{ home-manager = 
 	  { useGlobalPkgs = true;
 	    useUserPackages = true;
-	    users.demine.imports = [ ./darwin-home ];
+	    users.demine.imports = [ ./darwin-home ./all/zsh.nix ./all/vim.nix ];
 	};
 	}
      ]; 
@@ -54,15 +55,16 @@
 	inherit inputs;
       };
     modules = 
-     [ ./nixos-hosts (./nixos-hosts + "/${name}")]
+     [(./nixos-hosts + "/${name}")]
  ++ [
-     ./nixos-modules
+   ./nixos-modules
+   ./nixvim.nix
     inputs.nixvim.nixosModules.nixvim
      home-manager.nixosModules.home-manager
 	{ home-manager = 
 	  { useGlobalPkgs = true;
 	    useUserPackages = true;
-	    users.demine.imports = [ ./nixos-home ];
+            users.demine.imports = [ ./nixos-home ./all/zsh.nix ./all/vim.nix ];
 	};
 	}
 

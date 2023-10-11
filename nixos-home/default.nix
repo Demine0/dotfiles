@@ -1,8 +1,6 @@
 {
   imports = [
   ./dconf.nix
-  ./vim.nix
-  ./zsh
   ./sway
   ];
 
