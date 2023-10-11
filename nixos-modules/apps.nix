@@ -3,8 +3,6 @@
  environment.systemPackages = with pkgs; [
     # compilers
     fpc
-    gcc
-    clang
     # sway
     sway
     swaybg
