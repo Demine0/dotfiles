@@ -4,7 +4,7 @@
   [
     ./nixvim.nix
     ./apps.nix
-    ./zsh
+    ./zsh.nix
   ];
     nix.settings.trusted-users = [ "root" "demine" ];
     services.nix-daemon.enable = true;
