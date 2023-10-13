@@ -19,6 +19,7 @@
     ffmpeg
     neofetch
     uwufetch
+    onefetch
     lynx
     fzf
     tmux

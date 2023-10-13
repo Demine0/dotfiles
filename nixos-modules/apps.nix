@@ -55,6 +55,7 @@
     # cli
     libimobiledevice
     uwufetch
+    onefetch
     parted
     lynx
     w3m
