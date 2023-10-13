@@ -7,8 +7,13 @@
         enable = true;
         nixvimInjections = true; };
       treesitter-context.enable = true;
+      lsp.enable = true;
+      lsp-lines.enable = true;
       rainbow-delimiters.enable = true;
+      nvim-osc52.enable = true;
+      presence-nvim.enable = true;
       nix.enable = true;
+      intellitab.enable = true;
       nvim-cmp.enable = true;
       lualine.enable = true;
       nvim-tree = {
