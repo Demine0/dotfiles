@@ -2,6 +2,13 @@
 {                              
   programs.nixvim =            
   { enable = true;
+  colorschemes = { 
+    base16 = { 
+      enable = true;
+      package = pkgs.vimPlugins.nvim-base16;
+      colorscheme = "material-darker";
+    };
+  };
     plugins = { 
       treesitter = {
         enable = true;
@@ -9,7 +16,9 @@
       treesitter-context.enable = true;
       lsp.enable = true;
       lsp-lines.enable = true;
+      lastplace.enable = true;
       rainbow-delimiters.enable = true;
+      indent-blankline.enable = true;
       nvim-osc52.enable = true;
       presence-nvim.enable = true;
       nix.enable = true;
