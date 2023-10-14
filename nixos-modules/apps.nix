@@ -61,8 +61,6 @@
     lynx
     w3m
     zsh
-    fakechroot
-    proot
     dconf2nix
     smartmontools
     bluez5
@@ -77,6 +75,7 @@
     unzip
     unrar
     ffmpeg
+    hdparm
     gptfdisk
     wireguard-tools
     neofetch
