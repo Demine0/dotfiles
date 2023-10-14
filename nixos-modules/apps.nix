@@ -19,6 +19,7 @@
     bemenu # wayland clone of dmenu
     mako # notification system developed by swaywm maintainer
     networkmanagerapplet
+    cool-retro-term
     cava #visual
     wdisplays # tool to configure displays
     foot
