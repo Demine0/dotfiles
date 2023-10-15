@@ -51,11 +51,11 @@
     komikku
     tmux
     gnome.gnome-power-manager
-    libreoffice
     transmission-gtk
     # cli
     libimobiledevice
     uwufetch
+    ncmpcpp
     onefetch
     parted
     lynx
