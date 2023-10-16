@@ -6,7 +6,7 @@
     gcc
     clang
     nasm
-    make
+    gnumake
     gdb
     # sway
     sway
