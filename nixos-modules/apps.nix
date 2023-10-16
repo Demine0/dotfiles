@@ -1,10 +1,13 @@
 { config, lib, pkgs, inputs, ...}:
 { 
  environment.systemPackages = with pkgs; [
-    # compilers
+    # programistic?
     fpc
     gcc
     clang
+    nasm
+    make
+    gdb
     # sway
     sway
     swaybg
@@ -80,6 +83,7 @@
     wireguard-tools
     neofetch
     sbctl
+    openssl
     # browsers
     google-chrome
     # media
