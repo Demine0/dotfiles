@@ -28,22 +28,22 @@
 	inherit inputs;
       };
     modules = 
-     [(./darwin-hosts + "/${name}")]
+     [(./hosts + "/${name}")]
  ++ [
-   ./darwin-modules 
+   ./darwin/modules 
    ./all
     inputs.nixvim.nixDarwinModules.nixvim
      home-manager.darwinModules.home-manager
 	{ home-manager = 
 	  { useGlobalPkgs = true;
 	    useUserPackages = true;
-	    users.demine.imports = [ ./darwin-home ./all/vim.nix ];
+	    users.demine.imports = [ ./darwin/home ./all/vim.nix ];
 	};
 	}
      ]; 
      #++ __attrValues (builtins.listToAttrs (findModules ./modules));
   };
- darwin-hosts = builtins.attrNames (builtins.readDir ./darwin-hosts);
+ darwin-hosts = builtins.attrNames (builtins.readDir ./hosts);
 
  nixosConfigurations = nixpkgs.lib.genAttrs self.hosts self.mkNixOSHost;
   mkNixOSHost = name:
@@ -55,16 +55,16 @@
 	inherit inputs;
       };
     modules = 
-     [(./nixos-hosts + "/${name}")]
+     [(./hosts + "/${name}")]
  ++ [
-   ./nixos-modules
+   ./nixos/modules
    ./all
     inputs.nixvim.nixosModules.nixvim
      home-manager.nixosModules.home-manager
 	{ home-manager = 
 	  { useGlobalPkgs = true;
 	    useUserPackages = true;
-            users.demine.imports = [ ./nixos-home ./all/vim.nix ];
+            users.demine.imports = [ ./nixos/home ./all/vim.nix ];
 	};
 	}
 
@@ -72,6 +72,6 @@
      ]; 
      #++ __attrValues (builtins.listToAttrs (findModules ./modules));
   };
-  hosts = builtins.attrNames (builtins.readDir ./nixos-hosts);
+  hosts = builtins.attrNames (builtins.readDir ./hosts);
 };
 }
