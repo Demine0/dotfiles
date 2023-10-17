@@ -31,7 +31,14 @@
     ];
   };
 
-  i18n.defaultLocale = "ru_RU.UTF-8";
+  i18n = { 
+    defaultLocale = "ru_RU.UTF-8";
+    extraLocaleSettings =  
+    { 
+      LANGUAGE = "ru_RU.UTF-8";
+      LC_ALL = "ru_RU.UTF-8";
+    };
+   };
   console = {
     keyMap = "ru";
   };

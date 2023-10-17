@@ -25,6 +25,9 @@
 	networking = {
 		interfaces.wlp2s0.useDHCP = true; };
 
-	hardware = {
-	bluetooth.enable = true; };
+        hardware =
+                {
+                  bluetooth.powerOnBoot = true;
+                  bluetooth.enable = true; 
+                };
 }

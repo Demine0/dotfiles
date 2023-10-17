@@ -1,6 +1,6 @@
 {pkgs, lib, config, ...}:
 {
-  import = {
+  imports = [
     ./nixvim.nix
-  };
+  ];
 }

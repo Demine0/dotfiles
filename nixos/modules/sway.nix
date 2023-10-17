@@ -29,7 +29,9 @@
     };
   };
 
-
+  services = {
+    blueman.enable = true;
+  };
   programs = {
     light.enable = true;
     sway = {
