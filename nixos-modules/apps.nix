@@ -8,6 +8,7 @@
     nasm
     gnumake
     gdb
+    nil
     # sway
     sway
     swaybg

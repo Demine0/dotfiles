@@ -31,7 +31,7 @@
      [(./darwin-hosts + "/${name}")]
  ++ [
    ./darwin-modules 
-   ./all/nixvim.nix
+   ./all
     inputs.nixvim.nixDarwinModules.nixvim
      home-manager.darwinModules.home-manager
 	{ home-manager = 
@@ -58,7 +58,7 @@
      [(./nixos-hosts + "/${name}")]
  ++ [
    ./nixos-modules
-   ./all/nixvim.nix
+   ./all
     inputs.nixvim.nixosModules.nixvim
      home-manager.nixosModules.home-manager
 	{ home-manager = 

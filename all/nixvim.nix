@@ -32,6 +32,7 @@
     };
   extraPlugins = with pkgs; with pkgs.vimPlugins; [
     fzf-lua
+    nil-vim
     nvim-web-devicons
     nvim-treesitter-parsers.pascal
   ];
