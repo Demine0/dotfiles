@@ -30,14 +30,14 @@
     modules = 
      [(./hosts + "/${name}")]
  ++ [
-   ./darwin/modules 
+   ./modules/darwin 
    ./all
     inputs.nixvim.nixDarwinModules.nixvim
      home-manager.darwinModules.home-manager
 	{ home-manager = 
 	  { useGlobalPkgs = true;
 	    useUserPackages = true;
-	    users.demine.imports = [ ./darwin/home ./all/vim.nix ];
+	    users.demine.imports = [ ./darwin/home ];
 	};
 	}
      ]; 
@@ -57,14 +57,14 @@
     modules = 
      [(./hosts + "/${name}")]
  ++ [
-   ./nixos/modules
+   ./modules/nixos
    ./all
     inputs.nixvim.nixosModules.nixvim
      home-manager.nixosModules.home-manager
 	{ home-manager = 
 	  { useGlobalPkgs = true;
 	    useUserPackages = true;
-            users.demine.imports = [ ./nixos/home ./all/vim.nix ];
+            users.demine.imports = [ ];
 	};
 	}
 

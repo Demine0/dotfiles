@@ -1,9 +1,4 @@
 {
-  imports = [
-  ./dconf.nix
-  ./sway
-  ./zsh.nix
-  ];
 
   home = {
     username = "demine";

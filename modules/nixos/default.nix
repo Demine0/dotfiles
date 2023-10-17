@@ -4,14 +4,19 @@
     ./apps.nix
     ./doas.nix
     ./fonts.nix
-    ./gdm.nix
-    ./gnome.nix
-    ./kde.nix
+    ./gnome
+    ./kde
     ./networking.nix
     ./nix.nix
-    ./sway.nix
-    ./zsh.nix 
+    ./sway
   ];
+
+  home-manager.users.demine = {
+    imports = [
+      ./home.nix
+      ./zsh-home.nix
+    ];
+  };
 
   users.users.demine = {
     isNormalUser = true;
@@ -44,7 +49,7 @@
   };
 
   time.timeZone = "Europe/Moscow";
-
+  programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
   nix.settings.trusted-users = [ "root" "demine" ];
   services.openssh.enable = true;
