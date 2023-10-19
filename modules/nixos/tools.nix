@@ -1,0 +1,54 @@
+{ config, lib, pkgs, inputs, ...}:
+{
+  environment.systemPackages = with pkgs; [
+   # editors
+    emacs
+    vim
+   # tools
+    libimobiledevice
+    uwufetch
+    ncmpcpp
+    onefetch
+    parted
+    lynx
+    w3m
+    zsh
+    dconf2nix
+    smartmontools
+    bluez5
+    doas
+    doas-sudo-shim
+    coreutils
+    usbutils
+    pciutils
+    wget
+    git
+    man
+    unzip
+    unrar
+    ffmpeg
+    hdparm
+    gptfdisk
+    wireguard-tools
+    neofetch
+    sbctl
+    openssl
+    bottles
+    ventoy-full
+    xorg.xlsclients
+    mpv
+    gparted
+    fzf
+    dd_rescue
+    lm_sensors
+    darktable
+    gimp
+    tlp
+    easyeffects
+    mc
+    openshot-qt
+    komikku
+    tmux
+    transmission-gtk
+  ];
+}

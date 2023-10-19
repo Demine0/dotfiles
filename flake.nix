@@ -1,5 +1,5 @@
 {
-  description = "flake?";
+  description = "flake for nix-darwin & NixOS";
 
   inputs = 
    {

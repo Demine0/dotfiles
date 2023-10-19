@@ -2,6 +2,7 @@
 {
   imports = [
     ./gdm.nix
+    ./apps.nix
     ./gnome.nix
   ];
   home-manager.users.demine.imports = [

@@ -8,6 +8,7 @@
     ./kde
     ./networking.nix
     ./nix.nix
+    ./tools.nix
     ./sway
   ];
 

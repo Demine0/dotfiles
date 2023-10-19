@@ -40,7 +40,11 @@
     };
   };
 
-home-manager.users.demine.imports = [
+  imports = [
+    ./apps.nix
+  ];
+  
+  home-manager.users.demine.imports = [
  ./foot.nix
  ./htop.nix
  ./mako.nix
