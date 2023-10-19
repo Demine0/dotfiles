@@ -5,6 +5,8 @@
     emacs
     vim
    # tools
+    gcc
+    clang
     libimobiledevice
     uwufetch
     ncmpcpp
