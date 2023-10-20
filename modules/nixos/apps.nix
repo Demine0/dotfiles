@@ -13,6 +13,7 @@
     element-desktop
     # games
     jdk
+    cartridges
     toipe
     gzdoom
     minecraft

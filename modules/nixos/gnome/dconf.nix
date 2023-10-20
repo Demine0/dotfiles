@@ -1303,20 +1303,12 @@ with lib.hm.gvariant;
       last-folder-path = "/home/demine/Pictures";
     };
 
-    "org/gnome/portal/filechooser/com/usebottles/bottles" = {
-      last-folder-path = "/mnt/Data/Bottles/Games/drive_c/users/demine/Downloads";
-    };
-
     "org/gnome/portal/filechooser/fr/handbrake/ghb" = {
       last-folder-path = "/mnt/Data/Screenrecord/OSU";
     };
 
     "org/gnome/portal/filechooser/io/bassi/Amberol" = {
       last-folder-path = "/mnt/usb-Netac_OnlyDisk_A980CFF18C2B3397-0:0-part1/Music";
-    };
-
-    "org/gnome/portal/filechooser/io/github/kotatogram" = {
-      last-folder-path = "/home/demine/Documents/files";
     };
 
     "org/gnome/portal/filechooser/io/gitlab/adhami3310/Impression" = {
