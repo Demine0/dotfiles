@@ -17,12 +17,15 @@
     zsh
     dconf2nix
     smartmontools
+    aircrack-ng
+    bettercap
     bluez5
     doas
     doas-sudo-shim
     coreutils
     usbutils
     pciutils
+    efibootmgr
     wget
     git
     man
