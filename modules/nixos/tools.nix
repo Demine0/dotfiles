@@ -1,9 +1,6 @@
 { config, lib, pkgs, inputs, ...}:
 {
   environment.systemPackages = with pkgs; [
-   # editors
-    emacs
-    vim
    # tools
     gcc
     clang

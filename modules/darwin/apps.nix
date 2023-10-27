@@ -9,10 +9,6 @@
     discord
     # music
     spotify
-    # editors
-    emacs
-    vim
-    #neovim 
     # cli
     libimobiledevice
     mc
