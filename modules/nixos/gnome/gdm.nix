@@ -1,10 +1,15 @@
-{ config, lib, pkgs, ... }: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   services = {
-  #xserver.displayManager.gdm.enable = true;
-  xserver.displayManager.gdm.wayland = true;
-  xserver.displayManager.lightdm.enable = lib.mkForce false;
-  xserver.displayManager.defaultSession = "gnome";
-};
+    #xserver.displayManager.gdm.enable = true;
+    xserver.displayManager.gdm.wayland = true;
+    xserver.displayManager.lightdm.enable = lib.mkForce false;
+    xserver.displayManager.defaultSession = "gnome";
+  };
   systemd = with lib; {
     defaultUnit = "graphical.target";
     services.display-manager = {
@@ -18,9 +23,10 @@
         "systemd-user-sessions.service"
       ];
 
-      environment = config.services.xserver.displayManager.job.environment //
-        optionalAttrs config.hardware.opengl.setLdLibraryPath
-          { LD_LIBRARY_PATH = makeLibraryPath [ pkgs.addOpenGLRunpath.driverLink ]; };
+      environment =
+        config.services.xserver.displayManager.job.environment
+        // optionalAttrs config.hardware.opengl.setLdLibraryPath
+        {LD_LIBRARY_PATH = makeLibraryPath [pkgs.addOpenGLRunpath.driverLink];};
 
       serviceConfig = {
         Restart = "always";

@@ -1,5 +1,4 @@
 {
-
   home = {
     username = "demine";
     homeDirectory = "/home/demine";

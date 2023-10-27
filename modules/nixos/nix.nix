@@ -1,24 +1,28 @@
-{ config, pkgs, lib, modulesPath, ...}:
 {
-
- imports = [ (modulesPath + "/installer/scan/not-detected.nix")  ];
+  config,
+  pkgs,
+  lib,
+  modulesPath,
+  ...
+}: {
+  imports = [(modulesPath + "/installer/scan/not-detected.nix")];
 
   nix = {
     settings = {
-      experimental-features = [ "nix-command" "flakes" ];
+      experimental-features = ["nix-command" "flakes"];
       auto-optimise-store = true;
     };
   };
   services = {
     usbmuxd.enable = true;
     smartd = {
-    enable = true;
+      enable = true;
     };
-    fstrim.enable = true;  
+    fstrim.enable = true;
     dbus.enable = true;
     mpd = {
-      enable = true; 
-      };
+      enable = true;
+    };
     pipewire = {
       enable = true;
       alsa.enable = true;
@@ -32,10 +36,11 @@
     algorithm = "zstd";
     #memoryMax = 100;
     memoryPercent = 100;
-};
- programs = {
- java.enable = true; };
- services.flatpak.enable = true;
+  };
+  programs = {
+    java.enable = true;
+  };
+  services.flatpak.enable = true;
   users.users.demine = {
     packages = with pkgs; [
       flatpak
@@ -46,6 +51,4 @@
   system.stateVersion = "23.05";
   networking.useDHCP = lib.mkDefault true;
   nixpkgs.config.allowUnfree = true;
-
-
 }

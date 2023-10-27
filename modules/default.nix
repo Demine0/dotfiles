@@ -1,5 +1,9 @@
-{pkgs, lib, config, ...}:
 {
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   imports = [
     ./development.nix
     ./nixvim.nix

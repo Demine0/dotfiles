@@ -1,5 +1,9 @@
-{ lib, pkgs, config, ... }:
-let
+{
+  lib,
+  pkgs,
+  config,
+  ...
+}: let
   wobsock = "$XDG_RUNTIME_DIR/wob.sock";
   floatin = "exec ${pkgs.foot}/bin/foot --class floatin";
   fzf-menu = ''exec ${pkgs.fzf}/bin/fzf --margin 1,2 --height 100'';
@@ -44,10 +48,7 @@ let
         | ${pkgs.wl-clipboard}/bin/wl-copy
     '';
   };
-
-
-in
-{
+in {
   home.packages = with pkgs; [
     power-menu
     app-menu
@@ -62,7 +63,7 @@ in
       seat seat0 xcursor_theme Qogir-dark 16
     '';
     config = rec {
-      startup = builtins.map (x: { command = x; }) (with pkgs; [
+      startup = builtins.map (x: {command = x;}) (with pkgs; [
         # NetworkManager applet in tray
         "${networkmanagerapplet}/bin/nm-applet --indicator"
         # Blueman applet in tray
@@ -70,48 +71,46 @@ in
         # Clipboard buffer
         "${wl-clipboard}/bin/wl-paste \\
           --watch ${cliphist}/bin/cliphist store"
-	         #footserver
-          "${foot}/bin/foot \\
+        #footserver
+        "${foot}/bin/foot \\
           --server \\
           --log-level=none \\
           --log-no-syslog"
         # Do i need to explain
-	"swayosd --max-volume=140"
-	"google-chrome-stable"
+        "swayosd --max-volume=140"
+        "google-chrome-stable"
         "waybar"
       ]);
       fonts = {
-       names = [ "Menlo Nerd Font" ];
-      style = "monospace";
-      size = 11.0;
-     };
+        names = ["Menlo Nerd Font"];
+        style = "monospace";
+        size = 11.0;
+      };
+    };
   };
-};
-wayland.windowManager.sway.config = {
-  gaps = {
-    inner = 10;
-  };
+  wayland.windowManager.sway.config = {
+    gaps = {
+      inner = 10;
+    };
 
-  colors = 
-    let 
-     base00 = "#212121";
-     base01 = "#303030";
-     base02 = "#353535";
-     base03 = "#4a4a4a";
-     base04 = "#b2ccd6";
-     base05 = "#eeffff";
-     base06 = "#eeffff";
-     base07 = "#ffffff";
-     base08 = "#f07178";
-     base09 = "#f78c6c";
-     base0A = "#ffcb6b";
-     base0B = "#c3e88d";
-     base0C = "#89ddff";
-     base0D = "#82aaff";
-     base0E = "#c792ea";
-     base0F = "#ff5370"; 
-    in
-    rec {
+    colors = let
+      base00 = "#212121";
+      base01 = "#303030";
+      base02 = "#353535";
+      base03 = "#4a4a4a";
+      base04 = "#b2ccd6";
+      base05 = "#eeffff";
+      base06 = "#eeffff";
+      base07 = "#ffffff";
+      base08 = "#f07178";
+      base09 = "#f78c6c";
+      base0A = "#ffcb6b";
+      base0B = "#c3e88d";
+      base0C = "#89ddff";
+      base0D = "#82aaff";
+      base0E = "#c792ea";
+      base0F = "#ff5370";
+    in rec {
       background = base07;
       unfocused = {
         text = base05;
@@ -125,56 +124,56 @@ wayland.windowManager.sway.config = {
         border = base00;
         background = base00;
         childBorder = base00;
-        indicator = base00; 
-     };
+        indicator = base00;
+      };
       focusedInactive = {
-       text = base05;
-       border = base01;
-       background = base01;
-       childBorder = base01;
-       indicator = base03;
-     };
+        text = base05;
+        border = base01;
+        background = base01;
+        childBorder = base01;
+        indicator = base03;
+      };
       urgent = {
-       text = base00;
-       border = base08;
-       background = base08;
-       childBorder = base08;
-       indicator = base08;
-       };
+        text = base00;
+        border = base08;
+        background = base08;
+        childBorder = base08;
+        indicator = base08;
+      };
       focused = {
         text = base00;
-	background = base0D;
+        background = base0D;
         indicator = base0D;
         childBorder = base0D;
         border = base05;
       };
     };
 
-  floating = {
-   criteria = [
-   { app_id = "floatin"; }
-    #class = "floatin"; 
-    #instance = "foot"; }
-   ];
-  };
+    floating = {
+      criteria = [
+        {app_id = "floatin";}
+        #class = "floatin";
+        #instance = "foot"; }
+      ];
+    };
 
-    bars = [ ];
-  modifier = "Mod4";
-  window = {
-    border = 1;
-    titlebar = false;
-    commands = [
-      {
-        command = "border pixel 2px";
-        criteria = { window_role = "popup"; };
-      }
-    ];
-  };
-  
-  bindkeysToCode = true;
-  
-  keybindings =
-    lib.mkOptionDefault
+    bars = [];
+    modifier = "Mod4";
+    window = {
+      border = 1;
+      titlebar = false;
+      commands = [
+        {
+          command = "border pixel 2px";
+          criteria = {window_role = "popup";};
+        }
+      ];
+    };
+
+    bindkeysToCode = true;
+
+    keybindings =
+      lib.mkOptionDefault
       {
         # Brightness
         "XF86MonBrightnessUp" = "exec swayosd --brightness raise";
@@ -196,42 +195,42 @@ wayland.windowManager.sway.config = {
         "${modifier}+a" = "fullscreen toggle";
         "${modifier}+q" = "kill";
         "${modifier}+f" = " floating toggle";
-	"Alt+F12" = ''exec exec grim '-g' "$(slurp -d)" - | wl-copy '';
-	"Alt+Ctrl" = ''exec swaymsg -t get_tree | jq -r '.. | (.nodes? // empty)[] | if (.focused) then select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)" else (.floating_nodes? // empty)[] | select(.visible) | select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)" end' | grim -g - - | wl-copy'';
+        "Alt+F12" = ''exec exec grim '-g' "$(slurp -d)" - | wl-copy '';
+        "Alt+Ctrl" = ''exec swaymsg -t get_tree | jq -r '.. | (.nodes? // empty)[] | if (.focused) then select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)" else (.floating_nodes? // empty)[] | select(.visible) | select(.focused) | "\(.rect.x),\(.rect.y) \(.rect.width)x\(.rect.height)" end' | grim -g - - | wl-copy'';
         "Ctrl+F12" = "exec grim - | wl-copy";
       };
 
- modes = {
-    resize = {
-      Down = "resize grow height 50 px";
-      Escape = "mode default";
-      Left = "resize shrink width 50 px";
-      Return = "mode default";
-      Right = "resize grow width 50 px";
-      Up = "resize shrink height 50 px";
-      h = "resize shrink width 50 px";
-      j = "resize grow height 50 px";
-      k = "resize shrink height 50 px";
-      l = "resize grow width 50 px";
+    modes = {
+      resize = {
+        Down = "resize grow height 50 px";
+        Escape = "mode default";
+        Left = "resize shrink width 50 px";
+        Return = "mode default";
+        Right = "resize grow width 50 px";
+        Up = "resize shrink height 50 px";
+        h = "resize shrink width 50 px";
+        j = "resize grow height 50 px";
+        k = "resize shrink height 50 px";
+        l = "resize grow width 50 px";
+      };
     };
-  };
 
-  # Input
- input = {
-    "type:keyboard" = {
-      xkb_layout = "us,ru";
-      xkb_options = "grp:caps_toggle";
+    # Input
+    input = {
+      "type:keyboard" = {
+        xkb_layout = "us,ru";
+        xkb_options = "grp:caps_toggle";
+      };
+      "type:pointer" = {
+        natural_scroll = "disabled";
+        accel_profile = "adaptive";
+        pointer_accel = "-0.28315400000000002"; # set mouse sensitivity (between -1 and 1)
+      };
+      "type:touchpad" = {
+        tap = "enabled";
+        natural_scroll = "enabled";
+      };
     };
-    "type:pointer" = {
-    natural_scroll = "disabled";
-    accel_profile = "adaptive";
-    pointer_accel = "-0.28315400000000002"; # set mouse sensitivity (between -1 and 1)
-    };
-    "type:touchpad" = {
-      tap = "enabled";
-      natural_scroll = "enabled";
-    };
+    output."*".bg = "/home/demine/.local/share/User/background fill";
   };
-	   output."*".bg = "/home/demine/.local/share/User/background fill";
-};
 }

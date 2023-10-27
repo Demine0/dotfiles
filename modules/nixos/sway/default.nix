@@ -1,14 +1,17 @@
-  { pkgs, lib, ... }:
 {
+  pkgs,
+  lib,
+  ...
+}: {
   xdg.portal = {
     enable = true;
     wlr.enable = true;
-   extraPortals = with pkgs; [
+    extraPortals = with pkgs; [
       xdg-desktop-portal
-    #  xdg-desktop-portal-gtk
+      #  xdg-desktop-portal-gtk
       xdg-desktop-portal-wlr
     ];
-  }; 
+  };
 
   environment = {
     sessionVariables = {
@@ -43,15 +46,15 @@
   imports = [
     ./apps.nix
   ];
-  
+
   home-manager.users.demine.imports = [
- ./foot.nix
- ./htop.nix
- ./mako.nix
- ./sway.nix
- ./swayidle.nix
- ./swaylock.nix
- ./swaynag.nix
- ./waybar.nix
-];
+    ./foot.nix
+    ./htop.nix
+    ./mako.nix
+    ./sway.nix
+    ./swayidle.nix
+    ./swaylock.nix
+    ./swaynag.nix
+    ./waybar.nix
+  ];
 }

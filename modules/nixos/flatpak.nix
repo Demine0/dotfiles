@@ -1,5 +1,9 @@
-{ config, pkgs, ... }: {
- services.flatpak.enable = true;
+{
+  config,
+  pkgs,
+  ...
+}: {
+  services.flatpak.enable = true;
   users.users.demine = {
     packages = with pkgs; [
       flatpak

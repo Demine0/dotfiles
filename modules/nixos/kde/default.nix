@@ -1,4 +1,8 @@
-{ pkgs, lib, config, ... }:
 {
-  imports = [ ./kde.nix ];
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
+  imports = [./kde.nix];
 }

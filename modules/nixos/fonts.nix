@@ -1,6 +1,9 @@
-{ inputs, pkgs, lib, ... }:
-
-let
+{
+  inputs,
+  pkgs,
+  lib,
+  ...
+}: let
   san-francisco-pro = pkgs.stdenvNoCC.mkDerivation {
     pname = "san-francisco-pro";
     version = "0";
@@ -17,10 +20,8 @@ let
       runHook postInstall
     '';
   };
-in
-
-let
-   menlo = pkgs.stdenvNoCC.mkDerivation {
+in let
+  menlo = pkgs.stdenvNoCC.mkDerivation {
     pname = "menlo";
     version = "0";
 
@@ -36,10 +37,8 @@ let
       runHook postInstall
     '';
   };
-in
-
-let
-   sf-mono = pkgs.stdenvNoCC.mkDerivation {
+in let
+  sf-mono = pkgs.stdenvNoCC.mkDerivation {
     pname = "sf-mono";
     version = "0";
 
@@ -55,11 +54,9 @@ let
       runHook postInstall
     '';
   };
-in
-
-{
+in {
   fonts = {
-  fontDir.enable = true;
+    fontDir.enable = true;
     packages = with pkgs; [
       cascadia-code
       times-newer-roman
@@ -78,13 +75,14 @@ in
       cooper-hewitt
       menlo
       sf-mono
-      iosevka ];
+      iosevka
+    ];
     fontconfig = {
       enable = lib.mkForce true;
       defaultFonts = {
-        monospace = [ "Menlo Nerd Font 11" ];
-        sansSerif = [ "SF-Pro-Display 11" ];
-        serif = [ "SF-Pro-Display 12" ];
+        monospace = ["Menlo Nerd Font 11"];
+        sansSerif = ["SF-Pro-Display 11"];
+        serif = ["SF-Pro-Display 12"];
       };
     };
   };

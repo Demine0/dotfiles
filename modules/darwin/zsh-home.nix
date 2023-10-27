@@ -1,10 +1,14 @@
-{ pkgs, lib, config, ...}:
 {
-  programs = { 
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
+  programs = {
     zsh = {
       oh-my-zsh = {
         enable = true;
-        plugins = [ "git" "python" "man" ];
+        plugins = ["git" "python" "man"];
         theme = "agnoster";
       };
       enable = true;
@@ -14,5 +18,7 @@
         "v" = "nvim";
         "vi" = "nvim";
         "vim" = "nvim";
-      }; }; };
-    }
+      };
+    };
+  };
+}

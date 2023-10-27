@@ -1,11 +1,14 @@
-{ pkgs, config, ... }: 
 {
-   programs.zsh = {
+  pkgs,
+  config,
+  ...
+}: {
+  programs.zsh = {
     enable = true;
   };
-   programs.zsh.ohMyZsh = {
+  programs.zsh.ohMyZsh = {
     enable = true;
-    plugins = [ "git" "python" "man" ];
+    plugins = ["git" "python" "man"];
     theme = "agnoster";
   };
 }

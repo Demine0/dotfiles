@@ -1,18 +1,23 @@
-{ pkgs, lib, config, ... }:    
-{                              
-  programs.nixvim =            
-  { enable = true;
-  colorschemes = { 
-    base16 = { 
-      enable = true;
-      package = pkgs.vimPlugins.nvim-base16;
-      colorscheme = "material-darker";
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
+  programs.nixvim = {
+    enable = true;
+    colorschemes = {
+      base16 = {
+        enable = true;
+        package = pkgs.vimPlugins.nvim-base16;
+        colorscheme = "material-darker";
+      };
     };
-  };
-    plugins = { 
+    plugins = {
       treesitter = {
         enable = true;
-        nixvimInjections = true; };
+        nixvimInjections = true;
+      };
       treesitter-context.enable = true;
       lsp.enable = true;
       lsp-lines.enable = true;
@@ -26,19 +31,21 @@
       nvim-cmp.enable = true;
       lualine.enable = true;
       nvim-tree = {
-        enable = true; 
+        enable = true;
         openOnSetup = true;
-        openOnSetupFile = true; };
+        openOnSetupFile = true;
+      };
     };
-  extraPlugins = with pkgs; with pkgs.vimPlugins; [
-    fzf-lua
-    nim-vim
-    nvim-web-devicons
-    nvim-treesitter-parsers.pascal
-  ];
-    extraConfigVim = ''                
-      syntax on                
-      set encoding=UTF-8       
-      '';
-};
+    extraPlugins = with pkgs;
+    with pkgs.vimPlugins; [
+      fzf-lua
+      nim-vim
+      nvim-web-devicons
+      nvim-treesitter-parsers.pascal
+    ];
+    extraConfigVim = ''
+      syntax on
+      set encoding=UTF-8
+    '';
+  };
 }

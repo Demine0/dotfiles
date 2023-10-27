@@ -1,7 +1,7 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   services.swayidle = {
     enable = true;
-    extraArgs = [ ];
+    extraArgs = [];
     events = [
       {
         event = "before-sleep";

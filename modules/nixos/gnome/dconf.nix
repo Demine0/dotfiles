@@ -1,13 +1,10 @@
 # Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
-{ lib, ... }:
-
-with lib.hm.gvariant;
-
-{
+{lib, ...}:
+with lib.hm.gvariant; {
   dconf.settings = {
     "apps/seahorse/listing" = {
       item-filter = "any";
-      keyrings-selected = [ "openssh:///home/demine/.ssh" ];
+      keyrings-selected = ["openssh:///home/demine/.ssh"];
     };
 
     "apps/seahorse/windows/key-manager" = {
@@ -42,8 +39,8 @@ with lib.hm.gvariant;
     };
 
     "com/github/wwmm/easyeffects/spectrum" = {
-      color = mkTuple [ 1.0 1.0 ];
-      color-axis-labels = mkTuple [ 1.0 1.0 ];
+      color = mkTuple [1.0 1.0];
+      color-axis-labels = mkTuple [1.0 1.0];
       fill = true;
       height = 151;
       line-width = 1.2;
@@ -56,7 +53,7 @@ with lib.hm.gvariant;
     "com/github/wwmm/easyeffects/streaminputs" = {
       blocklist = [];
       input-device = "alsa_input.pci-0000_04_00.6.analog-stereo";
-      plugins = [ "gate#0" "compressor#0" "filter#0" "deesser#0" "rnnoise#0" "limiter#0" ];
+      plugins = ["gate#0" "compressor#0" "filter#0" "deesser#0" "rnnoise#0" "limiter#0"];
     };
 
     "com/github/wwmm/easyeffects/streaminputs/compressor/0" = {
@@ -82,7 +79,7 @@ with lib.hm.gvariant;
     "com/github/wwmm/easyeffects/streamoutputs" = {
       blocklist = [];
       output-device = "bluez_output.44_F0_9E_73_F0_E4.1";
-      plugins = [ "limiter#0" "convolver#0" "equalizer#0" "bass_enhancer#0" "compressor#0" "crossfeed#0" ];
+      plugins = ["limiter#0" "convolver#0" "equalizer#0" "bass_enhancer#0" "compressor#0" "crossfeed#0"];
       show-blocklisted-apps = false;
     };
 
@@ -520,7 +517,7 @@ with lib.hm.gvariant;
 
     "info/febvre/Komikku" = {
       window-maximized-state = false;
-      window-size = [ 720 600 ];
+      window-size = [720 600];
     };
 
     "io/bassi/Amberol" = {
@@ -549,9 +546,9 @@ with lib.hm.gvariant;
     };
 
     "org/blueman/general" = {
-      plugin-list = [ "!PPPSupport" "NMDUNSupport" "!DhcpClient" "NMPANSupport" ];
+      plugin-list = ["!PPPSupport" "NMDUNSupport" "!DhcpClient" "NMPANSupport"];
       services-last-item = 1;
-      window-properties = [ 1898 332 0 0 ];
+      window-properties = [1898 332 0 0];
     };
 
     "org/blueman/network" = {
@@ -559,7 +556,7 @@ with lib.hm.gvariant;
     };
 
     "org/blueman/plugins/autoconnect" = {
-      services = [ (mkTuple [ "/org/bluez/hci0/dev_40_ED_98_18_F7_D9" "00000000-0000-0000-0000-000000000000" ]) ];
+      services = [(mkTuple ["/org/bluez/hci0/dev_40_ED_98_18_F7_D9" "00000000-0000-0000-0000-000000000000"])];
     };
 
     "org/blueman/plugins/powermanager" = {
@@ -575,7 +572,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/Console" = {
-      last-window-size = mkTuple [ 1334 818 ];
+      last-window-size = mkTuple [1334 818];
       theme = "night";
     };
 
@@ -606,7 +603,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/Totem" = {
-      active-plugins = [ "movie-properties" "apple-trailers" "screensaver" "recent" "screenshot" "rotation" "vimeo" "mpris" "autoload-subtitles" "skipto" "variable-rate" "open-directory" "save-file" ];
+      active-plugins = ["movie-properties" "apple-trailers" "screensaver" "recent" "screenshot" "rotation" "vimeo" "mpris" "autoload-subtitles" "skipto" "variable-rate" "open-directory" "save-file"];
       subtitle-encoding = "UTF-8";
     };
 
@@ -628,7 +625,7 @@ with lib.hm.gvariant;
     "org/gnome/calendar" = {
       active-view = "month";
       window-maximized = true;
-      window-size = mkTuple [ 768 600 ];
+      window-size = mkTuple [768 600];
     };
 
     "org/gnome/clocks" = {
@@ -638,12 +635,12 @@ with lib.hm.gvariant;
     "org/gnome/clocks/state/window" = {
       maximized = false;
       panel-id = "world";
-      size = mkTuple [ 870 690 ];
+      size = mkTuple [870 690];
     };
 
     "org/gnome/control-center" = {
       last-panel = "wifi";
-      window-state = mkTuple [ 980 833 ];
+      window-state = mkTuple [980 833];
     };
 
     "org/gnome/desktop/a11y" = {
@@ -665,100 +662,100 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/app-folders" = {
-      folder-children = [ "Utilities" "YaST" "0dea3f6d-020f-41f5-ac1e-477a9c320a34" "2d94385c-577a-460a-a388-24d93ac4596b" "e1485ecd-b605-49fd-8a1d-20d324f1ab70" "65cb1aa3-822a-4ec8-a42b-7f5dc70adf13" "09e85eec-5de4-4c72-95a5-1e129b81eb23" "56032ff7-064a-4bdb-9af3-2ef7c35c91ee" "1bf3fc55-0e17-45f3-b21a-04c1b55b1c92" "c1f99882-e3db-4653-a851-fc03137bd821" "090908be-40ae-46ba-a32d-90e86cfc44b6" "c9b6cb70-39bd-43e5-8c68-832e30c52f04" "cd1c40e5-c0dc-4eab-b2a5-a01c280382d0" "44b820be-8dcf-423e-8797-8ff382f5591f" "fbf24472-af67-40b6-a550-72b7cfd2022c" ];
+      folder-children = ["Utilities" "YaST" "0dea3f6d-020f-41f5-ac1e-477a9c320a34" "2d94385c-577a-460a-a388-24d93ac4596b" "e1485ecd-b605-49fd-8a1d-20d324f1ab70" "65cb1aa3-822a-4ec8-a42b-7f5dc70adf13" "09e85eec-5de4-4c72-95a5-1e129b81eb23" "56032ff7-064a-4bdb-9af3-2ef7c35c91ee" "1bf3fc55-0e17-45f3-b21a-04c1b55b1c92" "c1f99882-e3db-4653-a851-fc03137bd821" "090908be-40ae-46ba-a32d-90e86cfc44b6" "c9b6cb70-39bd-43e5-8c68-832e30c52f04" "cd1c40e5-c0dc-4eab-b2a5-a01c280382d0" "44b820be-8dcf-423e-8797-8ff382f5591f" "fbf24472-af67-40b6-a550-72b7cfd2022c"];
     };
 
     "org/gnome/desktop/app-folders/folders/090908be-40ae-46ba-a32d-90e86cfc44b6" = {
-      apps = [ "minecraft-launcher.desktop" "cyberpunk--Cyberpunk2077--1692311717.494868.desktop" "gzdoom.desktop" "Cyberpunk 2077--Cyberpunk2077--1696072733.897095.desktop" "fl-studio--FL Studio--1697564768.281225.desktop" ];
+      apps = ["minecraft-launcher.desktop" "cyberpunk--Cyberpunk2077--1692311717.494868.desktop" "gzdoom.desktop" "Cyberpunk 2077--Cyberpunk2077--1696072733.897095.desktop" "fl-studio--FL Studio--1697564768.281225.desktop"];
       name = "Игры";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/09e85eec-5de4-4c72-95a5-1e129b81eb23" = {
-      apps = [ "ckb-next.desktop" "cpu-x.desktop" "org.kde.isoimagewriter.desktop" ];
+      apps = ["ckb-next.desktop" "cpu-x.desktop" "org.kde.isoimagewriter.desktop"];
       name = "Hardware";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/0dea3f6d-020f-41f5-ac1e-477a9c320a34" = {
-      apps = [ "avahi-discover.desktop" "lstopo.desktop" "bvnc.desktop" "bssh.desktop" "gda-browser-5.0.desktop" "gda-control-center-5.0.desktop" ];
+      apps = ["avahi-discover.desktop" "lstopo.desktop" "bvnc.desktop" "bssh.desktop" "gda-browser-5.0.desktop" "gda-control-center-5.0.desktop"];
       name = "Progr";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/1bf3fc55-0e17-45f3-b21a-04c1b55b1c92" = {
-      apps = [ "org.zdoom.GZDoom.desktop" "Counter-Strike Global Offensive.desktop" ];
+      apps = ["org.zdoom.GZDoom.desktop" "Counter-Strike Global Offensive.desktop"];
       name = "Игры";
     };
 
     "org/gnome/desktop/app-folders/folders/2d94385c-577a-460a-a388-24d93ac4596b" = {
-      apps = [ "org.libreoffice.LibreOffice.desktop" "org.libreoffice.LibreOffice.base.desktop" "org.libreoffice.LibreOffice.calc.desktop" "org.libreoffice.LibreOffice.draw.desktop" "org.libreoffice.LibreOffice.impress.desktop" "org.libreoffice.LibreOffice.math.desktop" "org.libreoffice.LibreOffice.writer.desktop" ];
+      apps = ["org.libreoffice.LibreOffice.desktop" "org.libreoffice.LibreOffice.base.desktop" "org.libreoffice.LibreOffice.calc.desktop" "org.libreoffice.LibreOffice.draw.desktop" "org.libreoffice.LibreOffice.impress.desktop" "org.libreoffice.LibreOffice.math.desktop" "org.libreoffice.LibreOffice.writer.desktop"];
       name = "Офис";
     };
 
     "org/gnome/desktop/app-folders/folders/44b820be-8dcf-423e-8797-8ff382f5591f" = {
-      apps = [ "elementary_config.desktop" "elementary_test.desktop" "econnman.desktop" "econnman-agent.desktop" "ecrire.desktop" "elementary_perf.desktop" "ephoto.desktop" "enlightenment_fprint.desktop" "enlightenment_paledit.desktop" "rage.desktop" "terminology.desktop" ];
+      apps = ["elementary_config.desktop" "elementary_test.desktop" "econnman.desktop" "econnman-agent.desktop" "ecrire.desktop" "elementary_perf.desktop" "ephoto.desktop" "enlightenment_fprint.desktop" "enlightenment_paledit.desktop" "rage.desktop" "terminology.desktop"];
       name = "Pantheon";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/56032ff7-064a-4bdb-9af3-2ef7c35c91ee" = {
-      apps = [ "cu.axel.waydroidsettings.desktop" "waydroid.com.android.inputmethod.latin.desktop" "waydroid.org.lineageos.jelly.desktop" "waydroid.com.android.calculator2.desktop" "waydroid.org.lineageos.etar.desktop" "waydroid.com.android.camera2.desktop" "waydroid.com.android.deskclock.desktop" "waydroid.com.android.contacts.desktop" "waydroid.com.android.documentsui.desktop" "waydroid.com.android.gallery3d.desktop" "waydroid.org.lineageos.eleven.desktop" "waydroid.com.android.vending.desktop" "waydroid.org.lineageos.recorder.desktop" "waydroid.com.android.settings.desktop" "waydroid.com.github.axet.filemanager.desktop" "waydroid.com.topjohnwu.magisk.desktop" "Waydroid.desktop" "waydroid.com.aurora.store.desktop" "waydroid.org.telegram.messenger.desktop" ];
+      apps = ["cu.axel.waydroidsettings.desktop" "waydroid.com.android.inputmethod.latin.desktop" "waydroid.org.lineageos.jelly.desktop" "waydroid.com.android.calculator2.desktop" "waydroid.org.lineageos.etar.desktop" "waydroid.com.android.camera2.desktop" "waydroid.com.android.deskclock.desktop" "waydroid.com.android.contacts.desktop" "waydroid.com.android.documentsui.desktop" "waydroid.com.android.gallery3d.desktop" "waydroid.org.lineageos.eleven.desktop" "waydroid.com.android.vending.desktop" "waydroid.org.lineageos.recorder.desktop" "waydroid.com.android.settings.desktop" "waydroid.com.github.axet.filemanager.desktop" "waydroid.com.topjohnwu.magisk.desktop" "Waydroid.desktop" "waydroid.com.aurora.store.desktop" "waydroid.org.telegram.messenger.desktop"];
       name = "Waydroid";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/65cb1aa3-822a-4ec8-a42b-7f5dc70adf13" = {
-      apps = [ "protontricks.desktop" "appimagelaunchersettings.desktop" "org.bleachbit.BleachBit.desktop" "it.mijorus.gearlever.desktop" ];
+      apps = ["protontricks.desktop" "appimagelaunchersettings.desktop" "org.bleachbit.BleachBit.desktop" "it.mijorus.gearlever.desktop"];
       name = "Настройка приложений";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/Utilities" = {
-      apps = [ "org.gnome.DiskUtility.desktop" "org.gnome.baobab.desktop" "org.gnome.PowerStats.desktop" "gnome-system-monitor.desktop" "org.gnome.Console.desktop" "org.gnome.font-viewer.desktop" "com.github.tchx84.Flatseal.desktop" "org.gnome.Logs.desktop" "org.gnome.Extensions.desktop" "org.gnome.tweaks.desktop" "nixos-manual.desktop" "xterm.desktop" "org.gnome.Connections.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.FileRoller.desktop" "cups.desktop" "simple-scan.desktop" "com.usebottles.bottles.desktop" "winetricks.desktop" "org.codeberg.dnkl.foot.desktop" "org.codeberg.dnkl.footclient.desktop" "org.codeberg.dnkl.foot-server.desktop" "htop.desktop" "network.cycles.wdisplays.desktop" "org.gnome.SimpleScan.desktop" "nm-connection-editor.desktop" "gparted.desktop" "io.missioncenter.MissionCenter.desktop" "cool-retro-term.desktop" "blueman-manager.desktop" ];
-      categories = [ "X-GNOME-Utilities" ];
-      excluded-apps = [ "io.bassi.Amberol.desktop" "mpv.desktop" "bvnc.desktop" "lstopo.desktop" "bssh.desktop" "org.gnome.Photos.desktop" "nvim.desktop" "gvim.desktop" "vim.desktop" "org.gnome.TextEditor.desktop" ];
+      apps = ["org.gnome.DiskUtility.desktop" "org.gnome.baobab.desktop" "org.gnome.PowerStats.desktop" "gnome-system-monitor.desktop" "org.gnome.Console.desktop" "org.gnome.font-viewer.desktop" "com.github.tchx84.Flatseal.desktop" "org.gnome.Logs.desktop" "org.gnome.Extensions.desktop" "org.gnome.tweaks.desktop" "nixos-manual.desktop" "xterm.desktop" "org.gnome.Connections.desktop" "org.gnome.seahorse.Application.desktop" "org.gnome.FileRoller.desktop" "cups.desktop" "simple-scan.desktop" "com.usebottles.bottles.desktop" "winetricks.desktop" "org.codeberg.dnkl.foot.desktop" "org.codeberg.dnkl.footclient.desktop" "org.codeberg.dnkl.foot-server.desktop" "htop.desktop" "network.cycles.wdisplays.desktop" "org.gnome.SimpleScan.desktop" "nm-connection-editor.desktop" "gparted.desktop" "io.missioncenter.MissionCenter.desktop" "cool-retro-term.desktop" "blueman-manager.desktop"];
+      categories = ["X-GNOME-Utilities"];
+      excluded-apps = ["io.bassi.Amberol.desktop" "mpv.desktop" "bvnc.desktop" "lstopo.desktop" "bssh.desktop" "org.gnome.Photos.desktop" "nvim.desktop" "gvim.desktop" "vim.desktop" "org.gnome.TextEditor.desktop"];
       name = "X-GNOME-Utilities.directory";
       translate = true;
     };
 
     "org/gnome/desktop/app-folders/folders/YaST" = {
-      categories = [ "X-SuSE-YaST" ];
+      categories = ["X-SuSE-YaST"];
       name = "suse-yast.directory";
       translate = true;
     };
 
     "org/gnome/desktop/app-folders/folders/bd213e21-65c7-4cdb-857b-44861fd93bbc" = {
-      apps = [ "kdesystemsettings.desktop" "org.kde.plasma-systemmonitor.desktop" "org.kde.ark.desktop" "org.kde.dolphin.desktop" "org.kde.elisa.desktop" "org.kde.gwenview.desktop" "org.kde.klipper.desktop" "org.kde.konsole.desktop" "org.kde.kwalletmanager5.desktop" "org.kde.okular.desktop" "org.kde.spectacle.desktop" ];
+      apps = ["kdesystemsettings.desktop" "org.kde.plasma-systemmonitor.desktop" "org.kde.ark.desktop" "org.kde.dolphin.desktop" "org.kde.elisa.desktop" "org.kde.gwenview.desktop" "org.kde.klipper.desktop" "org.kde.konsole.desktop" "org.kde.kwalletmanager5.desktop" "org.kde.okular.desktop" "org.kde.spectacle.desktop"];
       name = "KDE";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/c1f99882-e3db-4653-a851-fc03137bd821" = {
-      apps = [ "draw.desktop" "base.desktop" "impress.desktop" "math.desktop" "startcenter.desktop" "writer.desktop" "calc.desktop" ];
+      apps = ["draw.desktop" "base.desktop" "impress.desktop" "math.desktop" "startcenter.desktop" "writer.desktop" "calc.desktop"];
       name = "Офис";
     };
 
     "org/gnome/desktop/app-folders/folders/c9b6cb70-39bd-43e5-8c68-832e30c52f04" = {
-      apps = [ "kdesystemsettings.desktop" "org.kde.plasma-systemmonitor.desktop" "org.kde.ark.desktop" "org.kde.dolphin.desktop" "org.kde.elisa.desktop" "org.kde.gwenview.desktop" "org.kde.klipper.desktop" "org.kde.konsole.desktop" "org.kde.kwalletmanager5.desktop" "org.kde.okular.desktop" "org.kde.spectacle.desktop" ];
+      apps = ["kdesystemsettings.desktop" "org.kde.plasma-systemmonitor.desktop" "org.kde.ark.desktop" "org.kde.dolphin.desktop" "org.kde.elisa.desktop" "org.kde.gwenview.desktop" "org.kde.klipper.desktop" "org.kde.konsole.desktop" "org.kde.kwalletmanager5.desktop" "org.kde.okular.desktop" "org.kde.spectacle.desktop"];
       name = "KDE";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/cd1c40e5-c0dc-4eab-b2a5-a01c280382d0" = {
-      apps = [ "deepin-album.desktop" "dde-calendar.desktop" "deepin-calculator.desktop" "deepin-camera.desktop" "deepin-movie.desktop" "deepin-compressor.desktop" "deepin-music.desktop" "onboard-settings.desktop" "dde-control-center.desktop" "deepin-image-viewer.desktop" "deepin-draw.desktop" "deepin-picker.desktop" "deepin-system-monitor.desktop" "deepin-editor.desktop" "deepin-terminal.desktop" "dde-file-manager.desktop" "onboard.desktop" ];
+      apps = ["deepin-album.desktop" "dde-calendar.desktop" "deepin-calculator.desktop" "deepin-camera.desktop" "deepin-movie.desktop" "deepin-compressor.desktop" "deepin-music.desktop" "onboard-settings.desktop" "dde-control-center.desktop" "deepin-image-viewer.desktop" "deepin-draw.desktop" "deepin-picker.desktop" "deepin-system-monitor.desktop" "deepin-editor.desktop" "deepin-terminal.desktop" "dde-file-manager.desktop" "onboard.desktop"];
       name = "Deepin";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/e1485ecd-b605-49fd-8a1d-20d324f1ab70" = {
-      apps = [ "io.bassi.Amberol.desktop" "com.github.wwmm.easyeffects.desktop" "mpv.desktop" "org.gnome.eog.desktop" "org.gnome.Totem.desktop" "org.gnome.Photos.desktop" ];
+      apps = ["io.bassi.Amberol.desktop" "com.github.wwmm.easyeffects.desktop" "mpv.desktop" "org.gnome.eog.desktop" "org.gnome.Totem.desktop" "org.gnome.Photos.desktop"];
       name = "Медия";
       translate = false;
     };
 
     "org/gnome/desktop/app-folders/folders/fbf24472-af67-40b6-a550-72b7cfd2022c" = {
-      apps = [ "emacs.desktop" "emacsclient.desktop" "nvim.desktop" "gvim.desktop" "vim.desktop" "org.gnome.TextEditor.desktop" ];
+      apps = ["emacs.desktop" "emacsclient.desktop" "nvim.desktop" "gvim.desktop" "vim.desktop" "org.gnome.TextEditor.desktop"];
       name = "Текстовые редакторы";
       translate = false;
     };
@@ -781,8 +778,8 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/input-sources" = {
-      sources = [ (mkTuple [ "xkb" "us" ]) (mkTuple [ "xkb" "ru" ]) ];
-      xkb-options = [ "lv3:ralt_switch" "grp:caps_toggle" ];
+      sources = [(mkTuple ["xkb" "us"]) (mkTuple ["xkb" "ru"])];
+      xkb-options = ["lv3:ralt_switch" "grp:caps_toggle"];
     };
 
     "org/gnome/desktop/interface" = {
@@ -810,13 +807,13 @@ with lib.hm.gvariant;
 
     "org/gnome/desktop/media-handling" = {
       autorun-never = true;
-      autorun-x-content-ignore = [ "x-content/unix-software" "x-content/image-dcf" "x-content/audio-player" ];
+      autorun-x-content-ignore = ["x-content/unix-software" "x-content/image-dcf" "x-content/audio-player"];
       autorun-x-content-open-folder = [];
-      autorun-x-content-start-app = [ "x-content/ostree-repository" ];
+      autorun-x-content-start-app = ["x-content/ostree-repository"];
     };
 
     "org/gnome/desktop/notifications" = {
-      application-children = [ "org-telegram-desktop" "org-gnome-console" "org-gnome-software" "org-gnome-epiphany" "org-gnome-nautilus" "org-gnome-fileroller" "gnome-power-panel" "firefox" "cider" "org-gnome-settings" "org-gnome-shell-extensions-gsconnect" "com-usebottles-bottles" "org-gnome-extensions-desktop" "gnome-network-panel" "com-valvesoftware-steam" "ryzen-controller" "steam" "microsoft-edge" "de-haeckerfelix-fragments" "org-qbittorrent-qbittorrent" "photoshop" "minecraft-launcher" "page-codeberg-jakobdev-jddesktopentryedit" "appimagekit-a6d9ede25932d52f8f4f2f3255b6d24f-wiregui" "appimagekit-ad45268b9d47f3bf1b8b3288f20ec82f-cider" "ckb-next" "tor-browser" "com-spotify-client" "com-discordapp-discord" "com-obsproject-studio" "org-ryujinx-ryujinx" "com-rawtherapee-rawtherapee" "org-gimp-gimp" "org-openshot-openshot" "mpv" "org-gnome-diskutility" "com-github-unrud-videodownloader" "io-gitlab-adhami3310-impression" "org-deluge-torrent-deluge" "fr-handbrake-ghb" "gnome-system-monitor" "com-github-wwmm-easyeffects" "org-gnome-texteditor" "spotify" "google-chrome" "draw" "org-gnome-eog" "discord" "transmission-gtk" "org-gnome-baobab" "gnome-printers-panel" "gimp" "org-gnome-tweaks" ];
+      application-children = ["org-telegram-desktop" "org-gnome-console" "org-gnome-software" "org-gnome-epiphany" "org-gnome-nautilus" "org-gnome-fileroller" "gnome-power-panel" "firefox" "cider" "org-gnome-settings" "org-gnome-shell-extensions-gsconnect" "com-usebottles-bottles" "org-gnome-extensions-desktop" "gnome-network-panel" "com-valvesoftware-steam" "ryzen-controller" "steam" "microsoft-edge" "de-haeckerfelix-fragments" "org-qbittorrent-qbittorrent" "photoshop" "minecraft-launcher" "page-codeberg-jakobdev-jddesktopentryedit" "appimagekit-a6d9ede25932d52f8f4f2f3255b6d24f-wiregui" "appimagekit-ad45268b9d47f3bf1b8b3288f20ec82f-cider" "ckb-next" "tor-browser" "com-spotify-client" "com-discordapp-discord" "com-obsproject-studio" "org-ryujinx-ryujinx" "com-rawtherapee-rawtherapee" "org-gimp-gimp" "org-openshot-openshot" "mpv" "org-gnome-diskutility" "com-github-unrud-videodownloader" "io-gitlab-adhami3310-impression" "org-deluge-torrent-deluge" "fr-handbrake-ghb" "gnome-system-monitor" "com-github-wwmm-easyeffects" "org-gnome-texteditor" "spotify" "google-chrome" "draw" "org-gnome-eog" "discord" "transmission-gtk" "org-gnome-baobab" "gnome-printers-panel" "gimp" "org-gnome-tweaks"];
       show-banners = true;
     };
 
@@ -1075,7 +1072,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/desktop/search-providers" = {
-      sort-order = [ "org.gnome.Contacts.desktop" "org.gnome.Documents.desktop" "org.gnome.Nautilus.desktop" ];
+      sort-order = ["org.gnome.Contacts.desktop" "org.gnome.Documents.desktop" "org.gnome.Nautilus.desktop"];
     };
 
     "org/gnome/desktop/session" = {
@@ -1091,24 +1088,24 @@ with lib.hm.gvariant;
     "org/gnome/desktop/wm/keybindings" = {
       activate-window-menu = [];
       begin-move = [];
-      begin-resize = [ "<Shift><Super>r" ];
-      close = [ "<Super>q" ];
+      begin-resize = ["<Shift><Super>r"];
+      close = ["<Super>q"];
       cycle-group = [];
       cycle-group-backward = [];
       cycle-windows = [];
       cycle-windows-backward = [];
-      move-to-workspace-1 = [ "<Shift><Super>1" ];
-      move-to-workspace-2 = [ "<Shift><Super>2" ];
-      move-to-workspace-3 = [ "<Shift><Super>3" ];
-      move-to-workspace-4 = [ "<Shift><Super>4" ];
+      move-to-workspace-1 = ["<Shift><Super>1"];
+      move-to-workspace-2 = ["<Shift><Super>2"];
+      move-to-workspace-3 = ["<Shift><Super>3"];
+      move-to-workspace-4 = ["<Shift><Super>4"];
       switch-group = [];
       switch-group-backward = [];
       switch-input-source = [];
       switch-input-source-backward = [];
-      switch-to-workspace-1 = [ "<Super>1" ];
-      switch-to-workspace-2 = [ "<Super>2" ];
-      switch-to-workspace-3 = [ "<Super>3" ];
-      switch-to-workspace-4 = [ "<Super>4" ];
+      switch-to-workspace-1 = ["<Super>1"];
+      switch-to-workspace-2 = ["<Super>2"];
+      switch-to-workspace-3 = ["<Super>3"];
+      switch-to-workspace-4 = ["<Super>4"];
     };
 
     "org/gnome/desktop/wm/preferences" = {
@@ -1126,7 +1123,7 @@ with lib.hm.gvariant;
 
     "org/gnome/epiphany/state" = {
       is-maximized = true;
-      window-size = mkTuple [ 1920 1048 ];
+      window-size = mkTuple [1920 1048];
     };
 
     "org/gnome/epiphany/web" = {
@@ -1141,7 +1138,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/evince/default" = {
-      window-ratio = mkTuple [ 1.554943 1.095618 ];
+      window-ratio = mkTuple [1.554943 1.095618];
     };
 
     "org/gnome/evolution-data-server" = {
@@ -1166,7 +1163,7 @@ with lib.hm.gvariant;
     "org/gnome/file-roller/file-selector" = {
       show-hidden = false;
       sidebar-size = 168;
-      window-size = mkTuple [ 840 781 ];
+      window-size = mkTuple [840 781];
     };
 
     "org/gnome/file-roller/listing" = {
@@ -1192,7 +1189,7 @@ with lib.hm.gvariant;
       show-whose-processes = "all";
       smooth-refresh = true;
       update-interval = 2000;
-      window-state = mkTuple [ 1920 1048 ];
+      window-state = mkTuple [1920 1048];
     };
 
     "org/gnome/gnome-system-monitor/disktreenew" = {
@@ -1249,7 +1246,7 @@ with lib.hm.gvariant;
       col-8-width = 66;
       col-9-visible = false;
       col-9-width = 80;
-      columns-order = [ 0 8 15 1 2 3 4 6 9 10 11 12 13 14 16 17 18 19 20 21 22 23 24 25 26 ];
+      columns-order = [0 8 15 1 2 3 4 6 9 10 11 12 13 14 16 17 18 19 20 21 22 23 24 25 26];
       sort-col = 15;
       sort-order = 0;
     };
@@ -1258,7 +1255,7 @@ with lib.hm.gvariant;
       attach-modal-dialogs = true;
       center-new-windows = false;
       edge-tiling = true;
-      experimental-features = [ "scale-monitor-framebuffer" ];
+      experimental-features = ["scale-monitor-framebuffer"];
     };
 
     "org/gnome/mutter/wayland/keybindings" = {
@@ -1283,7 +1280,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/nautilus/window-state" = {
-      initial-size = mkTuple [ 952 864 ];
+      initial-size = mkTuple [952 864];
       maximized = false;
     };
 
@@ -1361,7 +1358,7 @@ with lib.hm.gvariant;
 
     "org/gnome/settings-daemon/plugins/color" = {
       night-light-enabled = true;
-      night-light-last-coordinates = mkTuple [ 45.199583567466206 33.3460297 ];
+      night-light-last-coordinates = mkTuple [45.199583567466206 33.3460297];
       night-light-schedule-automatic = false;
       night-light-schedule-from = 23.0;
       night-light-schedule-to = 5.0;
@@ -1369,7 +1366,7 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/settings-daemon/plugins/media-keys" = {
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" ];
+      custom-keybindings = ["/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"];
       help = [];
       magnifier = [];
       magnifier-zoom-in = [];
@@ -1395,11 +1392,11 @@ with lib.hm.gvariant;
 
     "org/gnome/shell" = {
       app-picker-layout = "[{'Utilities': <{'position': <0>}>, 'e1485ecd-b605-49fd-8a1d-20d324f1ab70': <{'position': <1>}>, '090908be-40ae-46ba-a32d-90e86cfc44b6': <{'position': <2>}>, 'c9b6cb70-39bd-43e5-8c68-832e30c52f04': <{'position': <3>}>, 'fbf24472-af67-40b6-a550-72b7cfd2022c': <{'position': <4>}>, 'info.febvre.Komikku.desktop': <{'position': <5>}>, 'org.gnome.Epiphany.desktop': <{'position': <6>}>, 'org.gnome.Settings.desktop': <{'position': <7>}>, 'org.gnome.Calculator.desktop': <{'position': <8>}>, 'com.belmoussaoui.Authenticator.desktop': <{'position': <9>}>}]";
-      command-history = [ "sudp pacman -S wiregui" "r" "rt" "restart" ];
+      command-history = ["sudp pacman -S wiregui" "r" "rt" "restart"];
       disable-user-extensions = false;
-      disabled-extensions = [ "hanabi-extension@jeffshee.github.io" "freq-boost-switch@metal03326" "vertical-workspaces@G-dH.github.com" "hibernate-status@dromi" "gestureImprovements@gestures" "grand-theft-focus@zalckos.github.com" "mousefollowsfocus@matthes.biz" "SwitchFocusType@romano.rgtti.com" "burn-my-windows@schneegans.github.com" "caffeine@patapon.info" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "windowsNavigator@gnome-shell-extensions.gcampax.github.com" "apps-menu@gnome-shell-extensions.gcampax.github.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" "user-theme@gnome-shell-extensions.gcampax.github.com" "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com" "drive-menu@gnome-shell-extensions.gcampax.github.com" "places-menu@gnome-shell-extensions.gcampax.github.com" "native-window-placement@gnome-shell-extensions.gcampax.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com" ];
-      enabled-extensions = [ "x11gestures@joseexposito.github.io" "display-scale-switcher@knokelmaat.gitlab.com" "material-you-theme@asubbiah.com" "trash-indicator@Dieg0Js.github.io" "app-hider@lynith.dev" "huawei-wmi@apps.sdore.me" "gnome-wireguard-extension@SJBERTRAND.github.com" "transparent-top-bar@zhanghai.me" "pano@elhan.io" "transparent-shell@siroj42.github.io" "gnome-compact-top-bar@metehan-arslan.github.io" "dynamic-panel-transparency@rockon999.github.io" "transparent-top-bar@ftpix.com" "blur-my-shell@aunetx" "tophat@fflewddur.github.io" "cpufreq@konkor" "supergfxctl-gex@asus-linux.org" "GPU_profile_selector@lorenzo9904.gmail.com" "advanced-alt-tab@G-dH.github.com" "rounded-window-corners@yilozt" "dock-from-dash@fthx" "search-light@icedman.github.com" "appindicatorsupport@rgcjonas.gmail.com" "clipboard-indicator@tudmotu.com" "Battery-Health-Charging@maniacx.github.com" "nightthemeswitcher@romainvigier.fr" "just-perfection-desktop@just-perfection" "quick-settings-audio-panel@rayzeq.github.io" "airpods-battery-status@ju.wtf" "gsconnect@andyholmes.github.io" ];
-      favorite-apps = [ "com.valvesoftware.Steam.desktop" "org.gnome.Nautilus.desktop" "org.telegram.desktop.desktop" "element-desktop.desktop" "discord.desktop" "google-chrome.desktop" "transmission-gtk.desktop" "spotify.desktop" "org.darktable.darktable.desktop" "gimp.desktop" "org.openshot.OpenShot.desktop" "OSU--osu!--1688498594.394172.desktop" "Genshin--launcher--1691777822.493673.desktop" "org.gnome.Software.desktop" "com.obsproject.Studio.desktop" "fr.handbrake.ghb.desktop" ];
+      disabled-extensions = ["hanabi-extension@jeffshee.github.io" "freq-boost-switch@metal03326" "vertical-workspaces@G-dH.github.com" "hibernate-status@dromi" "gestureImprovements@gestures" "grand-theft-focus@zalckos.github.com" "mousefollowsfocus@matthes.biz" "SwitchFocusType@romano.rgtti.com" "burn-my-windows@schneegans.github.com" "caffeine@patapon.info" "workspace-indicator@gnome-shell-extensions.gcampax.github.com" "windowsNavigator@gnome-shell-extensions.gcampax.github.com" "apps-menu@gnome-shell-extensions.gcampax.github.com" "auto-move-windows@gnome-shell-extensions.gcampax.github.com" "window-list@gnome-shell-extensions.gcampax.github.com" "user-theme@gnome-shell-extensions.gcampax.github.com" "screenshot-window-sizer@gnome-shell-extensions.gcampax.github.com" "drive-menu@gnome-shell-extensions.gcampax.github.com" "places-menu@gnome-shell-extensions.gcampax.github.com" "native-window-placement@gnome-shell-extensions.gcampax.github.com" "launch-new-instance@gnome-shell-extensions.gcampax.github.com"];
+      enabled-extensions = ["x11gestures@joseexposito.github.io" "display-scale-switcher@knokelmaat.gitlab.com" "material-you-theme@asubbiah.com" "trash-indicator@Dieg0Js.github.io" "app-hider@lynith.dev" "huawei-wmi@apps.sdore.me" "gnome-wireguard-extension@SJBERTRAND.github.com" "transparent-top-bar@zhanghai.me" "pano@elhan.io" "transparent-shell@siroj42.github.io" "gnome-compact-top-bar@metehan-arslan.github.io" "dynamic-panel-transparency@rockon999.github.io" "transparent-top-bar@ftpix.com" "blur-my-shell@aunetx" "tophat@fflewddur.github.io" "cpufreq@konkor" "supergfxctl-gex@asus-linux.org" "GPU_profile_selector@lorenzo9904.gmail.com" "advanced-alt-tab@G-dH.github.com" "rounded-window-corners@yilozt" "dock-from-dash@fthx" "search-light@icedman.github.com" "appindicatorsupport@rgcjonas.gmail.com" "clipboard-indicator@tudmotu.com" "Battery-Health-Charging@maniacx.github.com" "nightthemeswitcher@romainvigier.fr" "just-perfection-desktop@just-perfection" "quick-settings-audio-panel@rayzeq.github.io" "airpods-battery-status@ju.wtf" "gsconnect@andyholmes.github.io"];
+      favorite-apps = ["com.valvesoftware.Steam.desktop" "org.gnome.Nautilus.desktop" "org.telegram.desktop.desktop" "element-desktop.desktop" "discord.desktop" "google-chrome.desktop" "transmission-gtk.desktop" "spotify.desktop" "org.darktable.darktable.desktop" "gimp.desktop" "org.openshot.OpenShot.desktop" "OSU--osu!--1688498594.394172.desktop" "Genshin--launcher--1691777822.493673.desktop" "org.gnome.Software.desktop" "com.obsproject.Studio.desktop" "fr.handbrake.ghb.desktop"];
       last-selected-power-profile = "power-saver";
       remember-mount-password = true;
       welcome-dialog-last-shown-version = "43.5";
@@ -1504,9 +1501,9 @@ with lib.hm.gvariant;
     };
 
     "org/gnome/shell/extensions/nightthemeswitcher/time" = {
-      location = mkTuple [ 45.175046 33.346035 ];
+      location = mkTuple [45.175046 33.346035];
       manual-schedule = true;
-      nightthemeswitcher-ondemand-keybinding = [ "<Shift><Super>t" ];
+      nightthemeswitcher-ondemand-keybinding = ["<Shift><Super>t"];
       sunrise = 5.0;
       sunset = 22.0;
     };
@@ -1523,10 +1520,10 @@ with lib.hm.gvariant;
     "org/gnome/shell/keybindings" = {
       focus-active-notification = [];
       open-application-menu = [];
-      screenshot = [ "<Control>Delete" ];
-      screenshot-window = [ "<Control>F12" ];
-      show-screen-recording-ui = [ "<Shift>F11" ];
-      show-screenshot-ui = [ "<Alt>F12" ];
+      screenshot = ["<Control>Delete"];
+      screenshot-window = ["<Control>F12"];
+      show-screen-recording-ui = ["<Shift>F11"];
+      show-screenshot-ui = ["<Alt>F12"];
       switch-to-application-1 = [];
       switch-to-application-2 = [];
       switch-to-application-3 = [];
@@ -1555,8 +1552,8 @@ with lib.hm.gvariant;
     };
 
     "org/gtk/gtk4/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 1.0 1.0 ]) (mkTuple [ 0.0 0.0 ]) (mkTuple [ 1.0 1.0 ]) (mkTuple [ 0.0 0.0 ]) (mkTuple [ 0.980392 0.980392 ]) (mkTuple [ 0.0 0.0 ]) (mkTuple [ 0.0 0.0 ]) (mkTuple [ 0.74902 0.25098 ]) ];
-      selected-color = mkTuple [ true 1.0 ];
+      custom-colors = [(mkTuple [1.0 1.0]) (mkTuple [0.0 0.0]) (mkTuple [1.0 1.0]) (mkTuple [0.0 0.0]) (mkTuple [0.980392 0.980392]) (mkTuple [0.0 0.0]) (mkTuple [0.0 0.0]) (mkTuple [0.74902 0.25098])];
+      selected-color = mkTuple [true 1.0];
     };
 
     "org/gtk/gtk4/settings/file-chooser" = {
@@ -1571,12 +1568,12 @@ with lib.hm.gvariant;
       sort-order = "ascending";
       type-format = "category";
       view-type = "list";
-      window-size = mkTuple [ 1159 651 ];
+      window-size = mkTuple [1159 651];
     };
 
     "org/gtk/settings/color-chooser" = {
-      custom-colors = [ (mkTuple [ 0.796078431372549 0.592156862745098 ]) (mkTuple [ 0.20392156862745098 0.596078431372549 ]) ];
-      selected-color = mkTuple [ true 1.0 ];
+      custom-colors = [(mkTuple [0.796078431372549 0.592156862745098]) (mkTuple [0.20392156862745098 0.596078431372549])];
+      selected-color = mkTuple [true 1.0];
     };
 
     "org/gtk/settings/file-chooser" = {
@@ -1590,13 +1587,12 @@ with lib.hm.gvariant;
       sort-directories-first = false;
       sort-order = "descending";
       type-format = "category";
-      window-position = mkTuple [ 35 32 ];
-      window-size = mkTuple [ 1231 902 ];
+      window-position = mkTuple [35 32];
+      window-size = mkTuple [1231 902];
     };
 
     "system/locale" = {
       region = "ru_RU.UTF-8";
     };
-
   };
 }

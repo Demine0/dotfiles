@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   imports = [
     ./apps.nix
     ./doas.nix
@@ -38,14 +37,13 @@
     ];
   };
 
-  i18n = { 
+  i18n = {
     defaultLocale = "ru_RU.UTF-8";
-    extraLocaleSettings =  
-    { 
+    extraLocaleSettings = {
       LANGUAGE = "ru_RU.UTF-8";
       LC_ALL = "ru_RU.UTF-8";
     };
-   };
+  };
   console = {
     keyMap = "ru";
   };
@@ -53,7 +51,7 @@
   time.timeZone = "Europe/Moscow";
   programs.zsh.enable = true;
   users.defaultUserShell = pkgs.zsh;
-  nix.settings.trusted-users = [ "root" "demine" ];
+  nix.settings.trusted-users = ["root" "demine"];
   services.openssh.enable = true;
   hardware.opengl.driSupport32Bit = true;
   services.printing.enable = true;
@@ -62,4 +60,3 @@
     services.NetworkManager-wait-online.wantedBy = pkgs.lib.mkForce [];
   };
 }
-

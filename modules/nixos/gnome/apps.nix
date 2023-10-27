@@ -1,7 +1,12 @@
-{ config, lib, pkgs, inputs, ...}:
 {
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
-        # gnome
+    # gnome
     gnomeExtensions.night-theme-switcher
     gnome.gnome-tweaks
     gnome.gnome-power-manager
@@ -13,4 +18,3 @@
     gnomeExtensions.quick-settings-audio-panel
   ];
 }
-

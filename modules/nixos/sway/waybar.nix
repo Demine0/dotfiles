@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.waybar = {
     enable = true;
     style = builtins.readFile ./waybar.css;
@@ -30,12 +30,12 @@
         "sway/workspaces" = {
           disable-scroll = true;
           persistent_workspaces = {
-            "1" = [ ];
-            "2" = [ ];
-            "3" = [ ];
-            "4" = [ ];
+            "1" = [];
+            "2" = [];
+            "3" = [];
+            "4" = [];
           };
-        }; 
+        };
         "cpu" = {
           interval = 2;
           format = "{usage}% 󰍛  {avg_frequency}GHz 󰐰 ";
@@ -92,7 +92,7 @@
             phone = " ";
             portable = " ";
             car = " ";
-            default = [ "奄" "奔" "墳" ];
+            default = ["奄" "奔" "墳"];
           };
           on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
           min-length = 13;
@@ -108,7 +108,7 @@
             critical = 15;
           };
           format = "{power:0.1f}W 󰥜  {capacity}% {icon}";
-          format-icons = [ " " " " " " " " " " ];
+          format-icons = [" " " " " " " " " "];
         };
         # /Right
       };

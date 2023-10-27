@@ -1,8 +1,14 @@
-{ config, lib, pkgs, inputs, ...}:
 {
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
-   # tools
+    # tools
     gcc
+    alejandra
     clang
     libimobiledevice
     uwufetch
