@@ -1,16 +1,20 @@
-{ pkgs, lib, config, ... }:
 {
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
-    dwl 
+    dwl
   ];
   services.xserver.displayManager.session = [
-    { manage = "window";
+    {
+      manage = "window";
       name = "dwl";
-        start =
-          ''
-            ${pkgs.dwl}/bin/dwl &
-            waitPID=$!
-          '';
-        }
-      ];
+      start = ''
+        ${pkgs.dwl}/bin/dwl &
+        waitPID=$!
+      '';
+    }
+  ];
 }
