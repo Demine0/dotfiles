@@ -10,6 +10,7 @@
     ./tools.nix
     ./sway
     ./dwl
+    ./dwm
   ];
 
   home-manager.users.demine = {
